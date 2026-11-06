@@ -1,0 +1,354 @@
+/* Styles globaux. AUCUNE couleur écrite ici : tout passe par les variables de theme/theme.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texte);
+  background: var(--fond-a);
+}
+
+/* Fond de page : dégradé très doux + deux grandes taches de couleur,
+   pour que le verre translucide se voie. Fixe, donc il ne bouge pas au défilement. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 40rem at 10% -10%, var(--halo-1), transparent 60%),
+    radial-gradient(50rem 40rem at 100% 100%, var(--halo-2), transparent 60%),
+    linear-gradient(160deg, var(--fond-a), var(--fond-b));
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+/* Contour visible quand on navigue au clavier */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* ---------- Mise en page ---------- */
+
+.page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.contenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.barre-haut {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Surface en verre (base commune) ---------- */
+
+.carte,
+.panneau,
+.verre,
+.bouton--verre,
+.selecteur {
+  background: var(--verre);
+  -webkit-backdrop-filter: blur(var(--flou)) saturate(160%);
+  backdrop-filter: blur(var(--flou)) saturate(160%);
+  border: 1px solid var(--verre-bord);
+  box-shadow: var(--ombre-legere);
+}
+
+/* ---------- Grand en-tête ---------- */
+
+.en-tete {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.en-tete__titre {
+  font-size: 1.75rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.en-tete__sous-titre {
+  margin-top: 0.35rem;
+  color: var(--texte-2);
+}
+
+/* ---------- Pastille d'icône ---------- */
+
+.pastille {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--pastille);
+  color: var(--sur-couleur);
+}
+
+.pastille svg {
+  width: 56%;
+  height: 56%;
+}
+
+.pastille--moyenne {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+}
+
+.pastille--grande {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 1.1rem;
+}
+
+.pastille--grisee {
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+/* ---------- Grille de cartes : 1 colonne, puis 2 dès ~700 px ---------- */
+
+.grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+@media (min-width: 700px) {
+  .grille {
+    grid-template-columns: 1fr 1fr;
+  }
+  .page {
+    padding-top: 1.5rem;
+  }
+  .en-tete__titre {
+    font-size: 2.1rem;
+  }
+}
+
+/* ---------- Carte ---------- */
+
+.carte {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: var(--rayon);
+  color: var(--texte);
+  font: inherit;
+  text-align: left;
+}
+
+.carte__corps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.carte__nom {
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.carte__texte {
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--texte-2);
+}
+
+.carte__fleche {
+  color: var(--texte-2);
+}
+
+.carte--active {
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.carte--active:hover {
+  background: var(--verre-survol);
+  transform: translateY(-1px);
+}
+
+/* Carte « Bientôt » : aucun effet au survol, aucun curseur cliquable */
+.carte--grisee {
+  cursor: default;
+}
+
+.carte--grisee .carte__nom {
+  color: var(--texte-2);
+}
+
+.etiquette {
+  flex-shrink: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--etiquette-fond);
+  color: var(--etiquette-texte);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---------- Texte « Et maintenant ? » ---------- */
+
+.et-maintenant {
+  color: var(--texte-2);
+  text-align: center;
+}
+
+.et-maintenant strong {
+  color: var(--texte);
+}
+
+/* ---------- Panneau (pages en construction / introuvable) ---------- */
+
+.panneau {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: var(--rayon);
+}
+
+.panneau__titre {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* ---------- Boutons ---------- */
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--texte);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.bouton svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.bouton--verre:hover {
+  background: var(--verre-survol);
+}
+
+.bouton--plein {
+  background: var(--accent);
+  color: var(--accent-texte);
+  border: 1px solid transparent;
+}
+
+.bouton--plein:hover {
+  filter: brightness(1.08);
+}
+
+/* ---------- Choix du thème (Automatique / Clair / Sombre) ---------- */
+
+.selecteur {
+  display: inline-flex;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border-radius: 999px;
+}
+
+.selecteur__bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--texte-2);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.selecteur__bouton svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.selecteur__bouton:hover {
+  color: var(--texte);
+}
+
+.selecteur__bouton[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--accent-texte);
+}
+
+/* ---------- Animations réduites si l'appareil le demande ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .carte--active:hover {
+    transform: none;
+  }
+}

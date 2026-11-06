@@ -1,0 +1,303 @@
+/* Composants réutilisables des sessions d'exercices (chrono, correction, score, confirmation).
+   AUCUNE couleur écrite ici : tout passe par les variables de theme/theme.css. */
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Éléments qui reçoivent le focus par programme (titre, correction) : pas de contour parasite. */
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+/* Bouton plein désactivé (ex. « Valider » tant qu'aucun choix n'est fait) */
+.bouton--plein:disabled {
+  opacity: 0.55;
+  filter: grayscale(0.5);
+  cursor: not-allowed;
+}
+
+.bouton--plein:disabled:hover {
+  filter: grayscale(0.5);
+}
+
+/* ---------- Chrono ---------- */
+
+.chrono {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: var(--texte);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.chrono svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.chrono__valeur {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.chrono.chrono--alerte {
+  color: var(--alerte);
+  background: var(--alerte-fond);
+  border-color: var(--alerte);
+}
+
+/* ---------- Correction ---------- */
+
+.correction {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--rayon);
+}
+
+.correction.correction--bonne {
+  background: var(--bonne-fond);
+  border-color: var(--bonne);
+}
+
+.correction.correction--mauvaise {
+  background: var(--mauvaise-fond);
+  border-color: var(--mauvaise);
+}
+
+.correction__titre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.correction__titre svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.correction--bonne .correction__titre {
+  color: var(--bonne);
+}
+
+.correction--mauvaise .correction__titre {
+  color: var(--mauvaise);
+}
+
+.correction__explication {
+  line-height: 1.6;
+}
+
+/* ---------- Écran de score ---------- */
+
+.score {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.score__resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem;
+  border-radius: var(--rayon);
+  text-align: center;
+}
+
+.score__etiquette {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texte-2);
+}
+
+.score__grand {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.score__duree {
+  color: var(--texte-2);
+}
+
+.score__avertissement {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--alerte);
+  border-radius: 12px;
+  background: var(--alerte-fond);
+  color: var(--alerte);
+  font-weight: 600;
+}
+
+.score__sous-titre {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.lignes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ligne {
+  border-radius: 16px;
+}
+
+/* Toute la ligne est cliquable : c'est le <summary> qui la remplit. */
+.ligne__resume {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ligne__resume::-webkit-details-marker {
+  display: none;
+}
+
+.ligne__resume:hover {
+  background: var(--verre-survol);
+}
+
+.ligne__numero {
+  flex: 1;
+  font-weight: 600;
+}
+
+.ligne__statut {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.ligne__statut svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.ligne__statut--bonne {
+  color: var(--bonne);
+}
+
+.ligne__statut--mauvaise {
+  color: var(--mauvaise);
+}
+
+.ligne__chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--texte-2);
+  transition: transform 0.15s ease;
+}
+
+.ligne[open] .ligne__chevron {
+  transform: rotate(180deg);
+}
+
+.ligne__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.25rem 1rem 1rem;
+}
+
+.ligne__contexte {
+  font-size: 0.85rem;
+  color: var(--texte-2);
+}
+
+.ligne__enonce {
+  font-weight: 600;
+}
+
+.ligne__reponses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin: 0;
+}
+
+.ligne__reponses dt {
+  font-size: 0.85rem;
+  color: var(--texte-2);
+}
+
+.ligne__reponses dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.ligne__correction {
+  line-height: 1.6;
+}
+
+/* ---------- Fenêtre de confirmation ---------- */
+
+.fenetre-voile {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: var(--voile);
+}
+
+.fenetre {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: min(100%, 26rem);
+  padding: 1.5rem;
+  border-radius: var(--rayon);
+  background: var(--verre-survol);
+}
+
+.fenetre__titre {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.fenetre__boutons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .score__grand {
+    font-size: 3.25rem;
+  }
+  .ligne__statut {
+    font-size: 0.9rem;
+  }
+}

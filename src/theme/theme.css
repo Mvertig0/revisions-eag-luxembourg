@@ -1,0 +1,139 @@
+/* ==========================================================================
+   THÈME — c'est le SEUL fichier où les couleurs sont écrites.
+   Pour changer l'allure de l'app, modifie les valeurs ci-dessous.
+
+   Trois modes :
+   - automatique : suit le réglage de l'appareil (aucun attribut)
+   - clair       : <html data-theme="clair">
+   - sombre      : <html data-theme="sombre">
+   ========================================================================== */
+
+/* ---------- Valeurs communes aux deux thèmes ---------- */
+:root {
+  /* Une couleur par module */
+  --couleur-verbal: #3b82f6; /* bleu */
+  --couleur-numerique: #f59e0b; /* orange */
+  --couleur-abstrait: #8b5cf6; /* violet */
+  --couleur-planification: #10b981; /* vert */
+  --couleur-situationnel: #ec4899; /* rose */
+
+  /* Icône posée sur une pastille colorée */
+  --sur-couleur: #ffffff;
+
+  /* Formes */
+  --rayon: 20px;
+  --flou: 18px;
+}
+
+/* ---------- Thème CLAIR (par défaut) ---------- */
+:root {
+  color-scheme: light;
+
+  --fond-a: #f1f5fc; /* dégradé de page : début */
+  --fond-b: #f6f1fb; /* dégradé de page : fin */
+  --halo-1: rgba(59, 130, 246, 0.2); /* grandes taches douces derrière le verre */
+  --halo-2: rgba(139, 92, 246, 0.16);
+
+  --verre: rgba(255, 255, 255, 0.6); /* surface en verre */
+  --verre-survol: rgba(255, 255, 255, 0.82);
+  --verre-bord: rgba(255, 255, 255, 0.9); /* liseré 1 px */
+  --ombre-legere: 0 1px 3px rgba(15, 23, 42, 0.08);
+
+  --texte: #111827;
+  --texte-2: #4b5563; /* texte secondaire */
+  --accent: #2563eb;
+  --accent-texte: #ffffff; /* texte posé sur l'accent */
+  --focus: #2563eb; /* contour de focus clavier */
+
+  --etiquette-fond: rgba(17, 24, 39, 0.08); /* étiquette « Bientôt » */
+  --etiquette-texte: #374151;
+
+  /* Retours d'exercice : bonne réponse, mauvaise réponse, alerte du chrono */
+  --bonne: #166534; /* texte et liseré « bonne réponse » */
+  --bonne-fond: rgba(22, 163, 74, 0.14);
+  --mauvaise: #b91c1c; /* texte et liseré « mauvaise réponse » */
+  --mauvaise-fond: rgba(220, 38, 38, 0.12);
+  --alerte: #92400e; /* chrono quand le temps est écoulé */
+  --alerte-fond: rgba(217, 119, 6, 0.16);
+  --voile: rgba(15, 23, 42, 0.45); /* voile derrière les fenêtres de confirmation */
+
+  /* Outil de test (développement seulement) : pastille « TEST » */
+  --test-fond: rgba(124, 58, 237, 0.12);
+  --test-texte: #5b21b6;
+  --test-bord: rgba(91, 33, 182, 0.35);
+}
+
+/* ---------- Thème SOMBRE ---------- */
+/* Automatique + appareil en mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='clair']) {
+    color-scheme: dark;
+
+    --fond-a: #0b1020;
+    --fond-b: #161126;
+    --halo-1: rgba(59, 130, 246, 0.28);
+    --halo-2: rgba(139, 92, 246, 0.22);
+
+    --verre: rgba(255, 255, 255, 0.07);
+    --verre-survol: rgba(255, 255, 255, 0.13);
+    --verre-bord: rgba(255, 255, 255, 0.16);
+    --ombre-legere: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    --texte: #f3f4f6;
+    --texte-2: #a9b2c3;
+    --accent: #60a5fa;
+    --accent-texte: #0b1020;
+    --focus: #93c5fd;
+
+    --etiquette-fond: rgba(255, 255, 255, 0.13);
+    --etiquette-texte: #e5e7eb;
+
+    --bonne: #4ade80;
+    --bonne-fond: rgba(74, 222, 128, 0.14);
+    --mauvaise: #fca5a5;
+    --mauvaise-fond: rgba(248, 113, 113, 0.16);
+    --alerte: #fdba74;
+    --alerte-fond: rgba(251, 146, 60, 0.18);
+    --voile: rgba(0, 0, 0, 0.6);
+
+    --test-fond: rgba(167, 139, 250, 0.18);
+    --test-texte: #ddd6fe;
+    --test-bord: rgba(196, 181, 253, 0.45);
+  }
+}
+
+/* Choix manuel « sombre » (mêmes valeurs que ci-dessus) */
+:root[data-theme='sombre'] {
+  color-scheme: dark;
+
+  --fond-a: #0b1020;
+  --fond-b: #161126;
+  --halo-1: rgba(59, 130, 246, 0.28);
+  --halo-2: rgba(139, 92, 246, 0.22);
+
+  --verre: rgba(255, 255, 255, 0.07);
+  --verre-survol: rgba(255, 255, 255, 0.13);
+  --verre-bord: rgba(255, 255, 255, 0.16);
+  --ombre-legere: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  --texte: #f3f4f6;
+  --texte-2: #a9b2c3;
+  --accent: #60a5fa;
+  --accent-texte: #0b1020;
+  --focus: #93c5fd;
+
+  --etiquette-fond: rgba(255, 255, 255, 0.13);
+  --etiquette-texte: #e5e7eb;
+
+  --bonne: #4ade80;
+  --bonne-fond: rgba(74, 222, 128, 0.14);
+  --mauvaise: #fca5a5;
+  --mauvaise-fond: rgba(248, 113, 113, 0.16);
+  --alerte: #fdba74;
+  --alerte-fond: rgba(251, 146, 60, 0.18);
+  --voile: rgba(0, 0, 0, 0.6);
+
+  --test-fond: rgba(167, 139, 250, 0.18);
+  --test-texte: #ddd6fe;
+  --test-bord: rgba(196, 181, 253, 0.45);
+}

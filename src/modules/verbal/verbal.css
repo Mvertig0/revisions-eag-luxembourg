@@ -1,0 +1,335 @@
+/* Styles propres au module « Raisonnement verbal ».
+   AUCUNE couleur écrite ici : tout passe par les variables de theme/theme.css. */
+
+/* ---------- Accueil du module ---------- */
+
+.regles {
+  align-items: flex-start;
+}
+
+.regles__liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.regles__liste li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.regles__liste svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: 0.1rem;
+  color: var(--accent);
+}
+
+.derniere {
+  gap: 0.35rem;
+}
+
+.derniere__entete {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.derniere__titre {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texte-2);
+}
+
+.derniere__score {
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.derniere__date {
+  color: var(--texte-2);
+}
+
+/* ---------- Outil de test (développement seulement) ---------- */
+
+.pastille-test {
+  flex-shrink: 0;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--test-bord);
+  border-radius: 999px;
+  background: var(--test-fond);
+  color: var(--test-texte);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.panneau.cartouche-test {
+  gap: 0;
+}
+
+.cartouche-test__entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cartouche-test__texte {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--texte-2);
+}
+
+.cartouche-test__texte svg {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.cartouche-test__boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cartouche-test__message {
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .cartouche-test__boutons {
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  .cartouche-test__boutons .bouton {
+    justify-content: center;
+    min-height: 3rem;
+  }
+}
+
+/* ---------- Question ---------- */
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.question__haut {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.question__progression {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.question__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.texte-ref {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: var(--rayon);
+}
+
+.texte-ref__etiquette {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texte-2);
+}
+
+.texte-ref__titre {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.texte-ref__corps {
+  line-height: 1.65;
+}
+
+/* ---------- Affirmation et choix ---------- */
+
+.choix-groupe {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.affirmation {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.9rem;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.choix-liste {
+  display: grid;
+  gap: 0.6rem;
+}
+
+/* Toute la surface du choix est cliquable : le bouton radio (invisible) recouvre l'étiquette entière. */
+.choix {
+  position: relative;
+  display: block;
+}
+
+.choix__entree {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.choix__entree:disabled {
+  cursor: default;
+}
+
+.choix .choix__corps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+  min-height: 3.5rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--verre-bord);
+  border-radius: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.choix__entree:not(:disabled):hover + .choix__corps {
+  background: var(--verre-survol);
+}
+
+.choix__entree:checked + .choix__corps {
+  border-color: var(--accent);
+  background: var(--verre-survol);
+}
+
+.choix__entree:focus-visible + .choix__corps {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.choix__puce {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid var(--texte-2);
+  border-radius: 50%;
+  color: transparent;
+}
+
+.choix__puce svg {
+  width: 70%;
+  height: 70%;
+  stroke-width: 3;
+}
+
+.choix__entree:checked + .choix__corps .choix__puce {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-texte);
+}
+
+/* Après validation */
+.choix .choix__corps.choix__corps--bonne {
+  border-color: var(--bonne);
+  background: var(--bonne-fond);
+}
+
+.choix .choix__corps.choix__corps--mauvaise {
+  border-color: var(--mauvaise);
+  background: var(--mauvaise-fond);
+}
+
+.choix__entree:checked + .choix__corps--bonne .choix__puce {
+  border-color: var(--bonne);
+  background: transparent;
+  color: var(--bonne);
+}
+
+.choix__entree:checked + .choix__corps--mauvaise .choix__puce {
+  border-color: var(--mauvaise);
+  background: transparent;
+  color: transparent;
+}
+
+.choix__entree:disabled:not(:checked) + .choix__corps:not(.choix__corps--bonne) {
+  opacity: 0.7;
+}
+
+.choix__marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.choix__marque svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.choix__marque--bonne {
+  color: var(--bonne);
+}
+
+.choix__marque--mauvaise {
+  color: var(--mauvaise);
+}
+
+/* ---------- Fin de session ---------- */
+
+.fin-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fin-actions__boutons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .question__actions .bouton {
+    justify-content: center;
+    width: 100%;
+  }
+}
