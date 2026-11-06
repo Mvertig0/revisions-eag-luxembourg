@@ -30,8 +30,8 @@ export const modules = [
     texte: 'Repérer la logique dans des suites de formes.',
     Icone: Shapes,
     couleur: 'var(--couleur-abstrait)',
-    statut: 'bientot',
-    version: 'v2',
+    statut: 'disponible',
+    version: 'v1',
     chemin: '/abstrait',
   },
   {

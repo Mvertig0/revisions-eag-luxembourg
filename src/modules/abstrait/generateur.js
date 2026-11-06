@@ -4,7 +4,7 @@
 
 export const ATTRIBUTS = {
   forme: { nom: "la forme", valeurs: ["cercle", "carré", "triangle"] },
-  remplissage: { nom: "le remplissage", valeurs: ["vide", "gris", "noir"] },
+  remplissage: { nom: "le remplissage", valeurs: ["vide", "gris", "plein"] }, // « plein » plutôt que « noir » : la forme est blanche en thème sombre
   nombre: { nom: "le nombre de formes", valeurs: ["1", "2", "3"] },
   taille: { nom: "la taille", valeurs: ["petite", "moyenne", "grande"] },
   rotation: { nom: "la position du point", valeurs: ["en haut", "en bas à droite", "en bas à gauche"] },

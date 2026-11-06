@@ -5,6 +5,7 @@ import { GardeSortieProvider, retourOuAccueil, useSortie } from './components/se
 import Accueil from './pages/Accueil'
 import EnConstruction from './pages/EnConstruction'
 import NonTrouvee from './pages/NonTrouvee'
+import Abstrait from './pages/Abstrait'
 import Verbal from './pages/Verbal'
 import { modulesDisponibles } from './data/modules'
 
@@ -52,8 +53,9 @@ function Contenu() {
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/verbal" element={<Verbal />} />
+          <Route path="/abstrait" element={<Abstrait />} />
           {modulesDisponibles
-            .filter((m) => m.id !== 'verbal')
+            .filter((m) => m.id !== 'verbal' && m.id !== 'abstrait')
             .map((m) => (
               <Route key={m.id} path={m.chemin} element={<EnConstruction moduleId={m.id} />} />
             ))}

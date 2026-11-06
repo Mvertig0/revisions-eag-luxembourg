@@ -122,3 +122,27 @@ for (const niveau of LISTE_NIVEAUX) {
   }
 }
 console.log("OK : intrus, analogies, dés (angles), rotations et pliages vérifiés", compte);
+
+// ----- branchement dans l'app : tirage d'une session et images des réponses -----
+import { tirerSession, FAMILLES } from "./tirage.js";
+import { imagesOptions, enonceVisible } from "./rendu.js";
+import { NB_QUESTIONS } from "./config.js";
+for (const niveau of LISTE_NIVEAUX) {
+  for (const famille of ["tous", ...FAMILLES.map((f) => f.id)]) {
+    const session = tirerSession(niveau, famille);
+    assert.equal(session.length, NB_QUESTIONS);
+    assert.equal(new Set(session.map((q) => q.id)).size, NB_QUESTIONS, "ids en double");
+    for (const q of session) {
+      const ex = q.exercice;
+      assert.ok(ex.indexBonne >= 0 && ex.indexBonne <= 4);
+      const images = imagesOptions(ex);
+      assert.equal(images.length, 5);
+      assert.ok(images.every((s) => s.startsWith("<svg")), `${q.famille} : image de réponse invalide`);
+      assert.ok(typeof enonceVisible(ex) === "string");
+      assert.ok(ex.explication.length > 10);
+    }
+    if (famille === "tous") assert.equal(new Set(session.map((q) => q.famille)).size, FAMILLES.length, "toutes les familles doivent apparaître");
+    else assert.ok(session.every((q) => q.famille === famille));
+  }
+}
+console.log("OK : tirage de session vérifié (4 niveaux × 9 choix de type)");

@@ -61,6 +61,9 @@
   --test-fond: rgba(124, 58, 237, 0.12);
   --test-texte: #5b21b6;
   --test-bord: rgba(91, 33, 182, 0.35);
+
+  /* Raisonnement abstrait : couleur de fond sous les formes (liseré du point sur une forme noire) */
+  --abs-fond: #f4f6fb;
 }
 
 /* ---------- Thème SOMBRE ---------- */
@@ -99,6 +102,7 @@
     --test-fond: rgba(167, 139, 250, 0.18);
     --test-texte: #ddd6fe;
     --test-bord: rgba(196, 181, 253, 0.45);
+    --abs-fond: #121626;
   }
 }
 
@@ -136,4 +140,5 @@
   --test-fond: rgba(167, 139, 250, 0.18);
   --test-texte: #ddd6fe;
   --test-bord: rgba(196, 181, 253, 0.45);
+  --abs-fond: #121626;
 }

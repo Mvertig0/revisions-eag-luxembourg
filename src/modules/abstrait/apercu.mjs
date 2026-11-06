@@ -15,7 +15,7 @@ for (const niveau of LISTE_NIVEAUX)
       const ex = gen(graine, niveau);
       const titre = { matrice: "Matrice 3×3 (caractéristiques)", motifs: "Matrice 3×3 (motifs)", serie: "Série de figures" }[ex.type];
       blocs.push(`<section><h2>${num++}. ${titre} — niveau ${niveau}</h2>
-<p>${questionTexte(ex)}</p>${enonceSvg(ex)}<div class="options">${optionsSvg(ex)}</div>
+<p>${questionTexte(ex)}</p>${enonceSvg(ex)}<div class="abs-options">${optionsSvg(ex)}</div>
 <details><summary>Réponse et explication</summary><p><b>Réponse : ${"ABCDE"[ex.indexBonne]}.</b> ${ex.explication}</p></details></section>`);
     }
 
@@ -24,13 +24,13 @@ let numVar = 1;
 for (const gen of [genererIntrus, genererAnalogie, genererDes3, genererRotation, genererPliage])
   for (const niveau of LISTE_NIVEAUX) {
     const ex = gen(31, niveau);
-    blocsVar.push(`<section><h2>${numVar++}. ${TITRES[ex.type]} — niveau ${niveau}</h2><p>${questionTexte(ex)}</p>${enonceSvg(ex)}<div class="options">${optionsSvg(ex)}</div>
+    blocsVar.push(`<section><h2>${numVar++}. ${TITRES[ex.type]} — niveau ${niveau}</h2><p>${questionTexte(ex)}</p>${enonceSvg(ex)}<div class="abs-options">${optionsSvg(ex)}</div>
 <details><summary>Réponse et explication</summary><p><b>Réponse : ${"ABCDE"[ex.indexBonne]}.</b> ${ex.explication}</p></details></section>`);
   }
 
 for (const graine of [21, 22, 23, 24]) {
   const ex = genererDe(graine);
-  blocs.push(`<section><h2>${num++}. Dé déplié</h2><p>Quel cube obtient-on en pliant ce patron ?</p>${enonceSvg(ex)}<div class="options">${optionsSvg(ex)}</div>
+  blocs.push(`<section><h2>${num++}. Dé déplié</h2><p>Quel cube obtient-on en pliant ce patron ?</p>${enonceSvg(ex)}<div class="abs-options">${optionsSvg(ex)}</div>
 <details><summary>Réponse et explication</summary><p><b>Réponse : ${"ABCDE"[ex.indexBonne]}.</b> ${ex.explication}</p></details></section>`);
 }
 
@@ -42,10 +42,10 @@ const page = (titre, intro, corps) => `<!doctype html><html lang="fr"><meta char
 body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:16px}
 section{border:1px solid currentColor;border-color:#8884;border-radius:14px;padding:12px 16px;margin:16px 0}
 h2{font-size:1rem;margin:.2em 0}
-.grille{display:grid;gap:6px;margin:8px 0}
-.patron{margin:8px 0}
-.options{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
-.option{display:flex;flex-direction:column;align-items:center;gap:2px}
+.abs-grille{display:grid;gap:6px;margin:8px 0}.abs-grille svg{width:100%;height:auto}
+.abs-patron{margin:8px 0}
+.abs-options{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+.abs-option{display:flex;flex-direction:column;align-items:center;gap:2px}
 </style><h1>${titre}</h1><p>${intro}</p>
 ${corps.join("\n")}</html>`;
 

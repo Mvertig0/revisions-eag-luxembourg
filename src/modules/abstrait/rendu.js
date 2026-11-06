@@ -56,35 +56,35 @@ export function caseSvg(fig, taille = 100) {
 
 // Énoncé : matrice 3×3 (9e case « ? ») ou série (6e figure « ? »).
 export function enonceSvg(ex, taille = 100) {
-  if (ex.type === "intrus") return `<div class="options">${ex.cellules.map((f, i) => `<div class="option"><b>${"ABCDE"[i]}</b>${caseSvg(f, taille)}</div>`).join("")}</div>`;
+  if (ex.type === "intrus") return `<div class="abs-options">${ex.cellules.map((f, i) => `<div class="abs-option"><b>${"ABCDE"[i]}</b>${caseSvg(f, taille)}</div>`).join("")}</div>`;
   if (ex.type === "analogie") {
     const [A, B, C] = ex.cellules, fleche = '<div style="text-align:center;font-size:28px">→</div>';
-    return `<div class="analogie" style="display:grid;grid-template-columns:${taille}px 30px ${taille}px;align-items:center;gap:6px;margin:8px 0">` +
+    return `<div class="abs-analogie" style="display:grid;grid-template-columns:minmax(0,${taille}px) 30px minmax(0,${taille}px);align-items:center;gap:6px;margin:8px 0">` +
       [caseSvg(A, taille), fleche, caseSvg(B, taille), caseSvg(C, taille), fleche, caseSvg(null, taille)].join("") + `</div>`;
   }
-  if (ex.type === "rotation") return `<div class="option"><b>Modèle</b>${caseSvg({ poly: ex.ref, g: ex.g }, taille * 1.3)}</div>`;
+  if (ex.type === "rotation") return `<div class="abs-option"><b>Modèle</b>${caseSvg({ poly: ex.ref, g: ex.g }, taille * 1.3)}</div>`;
   if (ex.type === "des3")
-    return `<div class="options">${ex.vues.map((v) => cubeSvg(v)).join("")}</div><p>Quel symbole est sur la face opposée à : ${symboleSvg(ex.cible, 40)}</p>`;
+    return `<div class="abs-options">${ex.vues.map((v) => cubeSvg(v)).join("")}</div><p>Quel symbole est sur la face opposée à : ${symboleSvg(ex.cible, 40)}</p>`;
   if (ex.type === "pliage")
-    return `<div class="options" style="align-items:center">` + ex.etapes.map((e, i) =>
-      `<div class="option">${papierSvg(ex.N, e.region, { trous: e.trous, pli: e.pli }, 110)}<span>${e.pli ? `Pli ${i + 1}` : "Feuille percée"}</span></div>`).join("<b>→</b>") + `</div>`;
-  if (ex.type === "de") return `<div class="patron">${patronSvg(ex.patron)}</div>`;
+    return `<div class="abs-options" style="align-items:center">` + ex.etapes.map((e, i) =>
+      `<div class="abs-option">${papierSvg(ex.N, e.region, { trous: e.trous, pli: e.pli }, 110)}<span>${e.pli ? `Pli ${i + 1}` : "Feuille percée"}</span></div>`).join("<b>→</b>") + `</div>`;
+  if (ex.type === "de") return `<div class="abs-patron">${patronSvg(ex.patron)}</div>`;
   const cases = [...ex.cellules, null];
   const colonnes = ex.type === "serie" ? 6 : 3;
-  return `<div class="grille grille-${ex.type}" style="grid-template-columns:repeat(${colonnes},${taille}px)">` +
+  return `<div class="abs-grille abs-grille-${ex.type}" style="grid-template-columns:repeat(${colonnes},minmax(0,1fr));max-width:${colonnes * (taille + 6)}px">` +
     cases.map((f) => caseSvg(f, taille)).join("") + `</div>`;
 }
 
 export function optionsSvg(ex, taille = 90) {
   if (ex.type === "intrus") return "";
-  if (ex.type === "des3") return ex.options.map((sy, i) => `<div class="option"><b>${"ABCDE"[i]}</b>${symboleSvg(sy, 70)}</div>`).join("");
-  if (ex.type === "rotation") return ex.options.map((c, i) => `<div class="option"><b>${"ABCDE"[i]}</b>${caseSvg({ poly: c, g: ex.g }, taille)}</div>`).join("");
+  if (ex.type === "des3") return ex.options.map((sy, i) => `<div class="abs-option"><b>${"ABCDE"[i]}</b>${symboleSvg(sy, 70)}</div>`).join("");
+  if (ex.type === "rotation") return ex.options.map((c, i) => `<div class="abs-option"><b>${"ABCDE"[i]}</b>${caseSvg({ poly: c, g: ex.g }, taille)}</div>`).join("");
   if (ex.type === "pliage") {
     const tous = []; for (let x = 0; x < ex.N; x++) for (let y = 0; y < ex.N; y++) tous.push([x, y]);
-    return ex.options.map((t, i) => `<div class="option"><b>${"ABCDE"[i]}</b>${papierSvg(ex.N, tous, { trous: t }, taille)}</div>`).join("");
+    return ex.options.map((t, i) => `<div class="abs-option"><b>${"ABCDE"[i]}</b>${papierSvg(ex.N, tous, { trous: t }, taille)}</div>`).join("");
   }
-  if (ex.type === "de") return ex.options.map((t, i) => `<div class="option"><b>${"ABCDE"[i]}</b>${cubeSvg(t)}</div>`).join("");
-  return ex.options.map((f, i) => `<div class="option"><b>${"ABCDE"[i]}</b>${caseSvg(f, taille)}</div>`).join("");
+  if (ex.type === "de") return ex.options.map((t, i) => `<div class="abs-option"><b>${"ABCDE"[i]}</b>${cubeSvg(t)}</div>`).join("");
+  return ex.options.map((f, i) => `<div class="abs-option"><b>${"ABCDE"[i]}</b>${caseSvg(f, taille)}</div>`).join("");
 }
 
 // ---------- dé déplié ----------
@@ -158,3 +158,23 @@ export function questionTexte(ex) {
     rotation: "Quelle figure est le modèle simplement tourné (sans le retourner) ?", pliage: "La feuille est pliée puis percée. À quoi ressemble-t-elle dépliée ?",
   }[ex.type];
 }
+
+// ---------- pour l'application ----------
+// Image de chaque réponse (une par option). Pour l'intrus, les 5 figures de l'énoncé sont elles-mêmes les réponses.
+export function imagesOptions(ex, taille = 90) {
+  switch (ex.type) {
+    case "intrus": return ex.cellules.map((f) => caseSvg(f, taille));
+    case "des3": return ex.options.map((s) => symboleSvg(s, taille));
+    case "rotation": return ex.options.map((c) => caseSvg({ poly: c, g: ex.g }, taille));
+    case "pliage": {
+      const tous = [];
+      for (let x = 0; x < ex.N; x++) for (let y = 0; y < ex.N; y++) tous.push([x, y]);
+      return ex.options.map((t) => papierSvg(ex.N, tous, { trous: t }, taille));
+    }
+    case "de": return ex.options.map((t) => cubeSvg(t, taille));
+    default: return ex.options.map((f) => caseSvg(f, taille));
+  }
+}
+
+// Énoncé à dessiner au-dessus des réponses (vide pour l'intrus).
+export const enonceVisible = (ex) => (ex.type === "intrus" ? "" : enonceSvg(ex));

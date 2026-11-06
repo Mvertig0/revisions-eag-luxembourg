@@ -1,0 +1,102 @@
+/* Raisonnement abstrait : seulement ce que le verbal et la session n'ont pas déjà.
+   Les couleurs viennent de theme.css (les formes se dessinent en « currentColor »). */
+
+.abs-enonce {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-radius: var(--rayon);
+}
+
+.abs-enonce__corps svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Dessins d'énoncé */
+.abs-grille {
+  display: grid;
+  gap: 6px;
+  margin: 0.25rem auto 0 0;
+}
+
+.abs-grille svg {
+  width: 100%;
+  height: auto;
+}
+
+.abs-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+.abs-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.abs-patron svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Réponses sous forme d'images */
+.abs-choix-liste {
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+}
+
+.abs-choix-liste .choix__corps {
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding: 0.6rem;
+}
+
+.abs-lettre {
+  font-weight: 700;
+}
+
+.abs-image svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Choix du niveau et du type d'exercice (écran d'accueil) */
+.abs-reglages {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.abs-niveaux {
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+}
+
+.abs-niveaux .choix__corps {
+  justify-content: center;
+  min-height: 3rem;
+}
+
+.abs-select {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--verre-bord);
+  border-radius: 16px;
+  background: var(--verre);
+  color: var(--texte);
+  font: inherit;
+  font-weight: 600;
+}
+
+.abs-etiquette {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
