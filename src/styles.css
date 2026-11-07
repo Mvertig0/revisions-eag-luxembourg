@@ -368,3 +368,16 @@ svg {
 .a-propos strong {
   color: var(--texte);
 }
+
+/* ---------- Téléphone : plus de place pour les réponses pendant une session ---------- */
+
+@media (max-width: 640px) {
+  .en-tete--session .pastille,
+  .en-tete--session .en-tete__sous-titre {
+    display: none;
+  }
+
+  .en-tete--session .en-tete__titre {
+    font-size: 1.15rem;
+  }
+}

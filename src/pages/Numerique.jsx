@@ -113,7 +113,7 @@ export default function Numerique() {
 
   return (
     <>
-      <EnTete titre={module.nom} sousTitre={module.texte} Icone={module.Icone} couleur={module.couleur} />
+      <EnTete titre={module.nom} sousTitre={module.texte} Icone={module.Icone} couleur={module.couleur} compact={phase === 'question' || phase === 'correction'} />
 
       {phase === 'accueil' && <AccueilNumerique onCommencer={commencer} />}
 

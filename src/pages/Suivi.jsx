@@ -212,7 +212,7 @@ export default function Suivi() {
           <section className="panneau suivi-panneau" aria-labelledby="note-titre">
             <h2 id="note-titre" className="panneau__titre">À savoir</h2>
             <ul className="suivi-notes">
-              <li>Les pourcentages sont ceux de <strong>cette application</strong>. L'examen note chaque test de 1 à 9 (stanine) et réussit avec une moyenne d'au moins 5 : cette note dépend des autres candidats, elle ne peut pas se déduire d'un pourcentage.</li>
+              <li>Les pourcentages sont ceux de <strong>cette application</strong>. D'après la loi (art. 7), chaque test est évalué sur une échelle standardisée de 1 à 9 (stanine), tous les tests ont le même poids et il faut une moyenne d'au moins 5. Cette note ne se déduit pas d'un simple pourcentage.</li>
               <li>Le nombre de questions et le temps par module sont des estimations : le format réel de l'EAG n'est pas publié.</li>
               <li>Tes résultats ne sont pas envoyés sur internet. Si tu vides les données du navigateur ou changes d'appareil, ils disparaissent : exporte-les pour en garder une copie.</li>
             </ul>

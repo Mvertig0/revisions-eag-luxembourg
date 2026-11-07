@@ -420,3 +420,45 @@
   font-weight: 700;
   color: var(--texte-2);
 }
+
+/* Téléphone : le bouton « Valider » / « Question suivante » reste toujours visible en bas de l'écran,
+   sans avoir à faire défiler jusqu'à la fin de la page. */
+@media (max-width: 640px) {
+  .question__actions {
+    position: sticky;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    z-index: 10;
+  }
+
+  .question__actions .bouton {
+    width: 100%;
+    justify-content: center;
+    box-shadow: var(--ombre-legere);
+  }
+
+  /* Un peu plus compact : on voit davantage de texte et de réponses à la fois. */
+  .question {
+    gap: 1rem;
+  }
+
+  .texte-ref,
+  .abs-enonce {
+    padding: 1rem;
+  }
+
+  .texte-ref__corps {
+    font-size: 0.97rem;
+    line-height: 1.5;
+  }
+
+  .affirmation {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .choix .choix__corps {
+    min-height: 3rem;
+    padding: 0.6rem 0.85rem;
+    font-size: 1rem;
+  }
+}

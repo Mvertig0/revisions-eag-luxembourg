@@ -113,7 +113,7 @@ export default function Abstrait() {
 
   return (
     <>
-      <EnTete titre={module.nom} sousTitre={module.texte} Icone={module.Icone} couleur={module.couleur} />
+      <EnTete titre={module.nom} sousTitre={module.texte} Icone={module.Icone} couleur={module.couleur} compact={phase === 'question' || phase === 'correction'} />
 
       {phase === 'accueil' && <AccueilAbstrait onCommencer={commencer} />}
 
