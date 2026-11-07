@@ -352,3 +352,19 @@ svg {
     transform: none;
   }
 }
+
+/* Note « À propos » de l'accueil */
+.a-propos {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--texte-2);
+}
+
+.a-propos p {
+  margin: 0;
+}
+
+.a-propos strong {
+  color: var(--texte);
+}

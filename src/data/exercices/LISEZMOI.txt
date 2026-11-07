@@ -1,1 +1,0 @@
-Les exercices (fichiers JSON) iront dans ce dossier, dans les lots « verbal » et « numerique ».
