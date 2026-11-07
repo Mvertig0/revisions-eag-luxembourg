@@ -1,0 +1,866 @@
+{
+  "scenarios": [
+    {
+      "id": "S-001",
+      "titre": "Un usager en colère au guichet",
+      "competence": "service",
+      "niveau": "moyen",
+      "contexte": "Vous travaillez au guichet d'un service d'état civil. Un usager arrive très énervé : il a attendu quarante minutes et son dossier est incomplet, car il manque un justificatif. Il élève la voix devant les autres personnes qui attendent.",
+      "principe": "face à un usager en colère, on l'écoute d'abord, on reste courtois, puis on explique clairement la marche à suivre sans déroger aux règles.",
+      "reactions": [
+        {
+          "texte": "Vous restez calme, vous le laissez exprimer son mécontentement, puis vous reformulez sa situation et vous lui expliquez précisément quel justificatif manque et comment l'obtenir.",
+          "tags": [
+            "ecoute",
+            "respect",
+            "solution"
+          ],
+          "score": 5
+        },
+        {
+          "texte": "Vous lui expliquez fermement que les règles sont les mêmes pour tout le monde et qu'il aurait dû vérifier la liste des pièces avant de venir, puis vous lui demandez de repasser.",
+          "tags": [
+            "regles",
+            "agressivite"
+          ],
+          "score": -1
+        },
+        {
+          "texte": "Vous acceptez son dossier incomplet pour qu'il se calme, en lui disant que vous le compléterez vous-même plus tard et que cela restera entre vous.",
+          "tags": [
+            "passe-droit",
+            "promesse"
+          ],
+          "score": -7
+        },
+        {
+          "texte": "Vous lui demandez de baisser la voix et de revenir un autre jour avec un dossier complet, en lui rappelant que d'autres personnes attendent après lui.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 0,
+      "pire": 2
+    },
+    {
+      "id": "S-002",
+      "titre": "Une demande qui relève d'un autre service",
+      "competence": "service",
+      "niveau": "facile",
+      "contexte": "Un usager vous téléphone pour obtenir des informations sur une aide au logement. Ce sujet relève d'un autre service de votre administration, que vous connaissez peu.",
+      "principe": "quand une demande ne relève pas de son service, on oriente précisément l'usager plutôt que de le renvoyer sans explication.",
+      "reactions": [
+        {
+          "texte": "Vous lui répondez que ce n'est pas votre service, qu'il doit se débrouiller pour trouver le bon interlocuteur, et vous mettez fin à l'appel poliment mais rapidement, puis vous passez à l'appel suivant.",
+          "tags": [
+            "renvoi",
+            "ignore"
+          ],
+          "score": -5
+        },
+        {
+          "texte": "Vous essayez de répondre de mémoire, même si vous n'êtes pas sûr des conditions, pour éviter qu'il ait à rappeler un autre service.",
+          "tags": [
+            "approximation"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous lui indiquez le service compétent, ses coordonnées et ses horaires d'ouverture, et vous proposez de transférer l'appel ou de lui envoyer ces informations par courriel.",
+          "tags": [
+            "solution",
+            "suivi",
+            "respect"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous notez ses coordonnées et vous lui promettez que quelqu'un du bon service le rappellera dans l'heure, sans savoir si c'est possible.",
+          "tags": [
+            "suivi",
+            "promesse"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 2,
+      "pire": 0
+    },
+    {
+      "id": "S-003",
+      "titre": "Un courriel resté sans réponse",
+      "competence": "service",
+      "niveau": "moyen",
+      "contexte": "Vous reprenez le poste d'un collègue parti en congé. Vous découvrez un courriel d'usager resté sans réponse depuis trois semaines : l'usager y demande où en est son dossier.",
+      "principe": "une demande restée sans réponse se traite dès qu'on la découvre : on vérifie, on s'excuse du délai et on donne une information fiable.",
+      "reactions": [
+        {
+          "texte": "Vous classez le courriel : trop de temps a passé, et l'usager aura sûrement trouvé la réponse ailleurs ou relancé s'il en avait encore besoin.",
+          "tags": [
+            "ignore"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous vérifiez l'état du dossier, vous répondez dès aujourd'hui en vous excusant du retard, et vous indiquez la suite de la procédure avec des délais réalistes.",
+          "tags": [
+            "solution",
+            "respect",
+            "suivi"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous répondez immédiatement que son dossier sera traité très bientôt, sans regarder où il en est, pour montrer que son message ne vous a pas échappé, puis vous passez à autre chose.",
+          "tags": [
+            "promesse",
+            "approximation"
+          ],
+          "score": -6
+        },
+        {
+          "texte": "Vous transmettez le courriel à votre responsable en lui demandant de s'en occuper, sans écrire à l'usager et sans savoir si quelqu'un le fera.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 1,
+      "pire": 2
+    },
+    {
+      "id": "S-004",
+      "titre": "Un rendez-vous demandé par une connaissance",
+      "competence": "service",
+      "niveau": "difficile",
+      "contexte": "Un usager que vous connaissez bien vous demande de lui fixer rapidement un rendez-vous, en vous rappelant qu'il vous a rendu service autrefois. Il n'y a plus de créneau libre cette semaine pour personne.",
+      "principe": "l'égalité de traitement prime sur les relations personnelles : les mêmes règles s'appliquent à tous les usagers, avec courtoisie.",
+      "reactions": [
+        {
+          "texte": "Vous lui donnez le dernier créneau de la semaine, en prenant la place d'un autre usager inscrit, puisque vous lui devez bien ça et qu'il ne le saura jamais. Vous vous dites que ce petit arrangement ne fera de mal à personne.",
+          "tags": [
+            "passe-droit"
+          ],
+          "score": -4
+        },
+        {
+          "texte": "Vous lui expliquez que les rendez-vous sont attribués dans l'ordre des demandes, vous lui proposez le premier créneau disponible et vous l'inscrivez sur la liste d'attente en cas d'annulation.",
+          "tags": [
+            "regles",
+            "solution",
+            "respect"
+          ],
+          "score": 5
+        },
+        {
+          "texte": "Vous lui répondez avec un sourire que vous ne pouvez rien faire pour lui, car vous ne voulez pas d'ennuis avec votre responsable ni avec les autres usagers.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous lui dites de revenir à la fin du mois, sans préciser de date ni lui indiquer comment prendre rendez-vous dans l'intervalle.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "S-005",
+      "titre": "Des informations sur le dossier d'un tiers",
+      "competence": "service",
+      "niveau": "difficile",
+      "contexte": "Un homme se présente et demande des informations sur le dossier d'une personne qui se dit être sa sœur. Il affirme qu'elle l'a autorisé oralement et qu'il n'a pas le temps de revenir.",
+      "principe": "la confidentialité d'un dossier ne se négocie pas : on explique la règle et on indique comment obtenir légitimement les informations.",
+      "reactions": [
+        {
+          "texte": "Vous lui donnez les informations : il semble sincère, la situation paraît familiale, et vous ne voulez pas lui faire perdre son temps.",
+          "tags": [
+            "indiscretion",
+            "approximation"
+          ],
+          "score": -7
+        },
+        {
+          "texte": "Vous lui expliquez que vous ne pouvez rien communiquer sans accord écrit de la personne concernée, vous lui indiquez comment l'obtenir (procuration) et vous lui proposez de revenir avec ce document.",
+          "tags": [
+            "regles",
+            "solution",
+            "respect"
+          ],
+          "score": 5
+        },
+        {
+          "texte": "Vous lui répondez simplement que ces informations sont confidentielles, sans autre explication, puis vous appelez la personne suivante.",
+          "tags": [
+            "regles",
+            "renvoi"
+          ],
+          "score": 0
+        },
+        {
+          "texte": "Vous appelez la sœur à haute voix depuis le guichet pour vérifier son accord, en citant le nom de l'homme et l'objet de sa demande devant les autres usagers.",
+          "tags": [
+            "indiscretion"
+          ],
+          "score": -4
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "S-006",
+      "titre": "Une procédure qui vient de changer",
+      "competence": "service",
+      "niveau": "moyen",
+      "contexte": "Votre administration vient de rendre obligatoire la demande d'un document en ligne. Un usager âgé, peu à l'aise avec l'informatique, se présente avec l'ancien formulaire papier déjà rempli.",
+      "principe": "un changement de procédure s'explique et s'accompagne : on aide l'usager à s'y adapter sans contourner la règle.",
+      "reactions": [
+        {
+          "texte": "Vous lui expliquez que la procédure a changé et qu'il peut faire la demande en ligne depuis chez lui, puis vous passez à l'usager suivant.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous acceptez discrètement son formulaire papier, sans le signaler à vos collègues, pour lui éviter des difficultés, en vous disant que personne ne le saura et sans l'inscrire nulle part.",
+          "tags": [
+            "passe-droit"
+          ],
+          "score": -4
+        },
+        {
+          "texte": "Vous lui expliquez le changement, vous l'aidez à faire sa demande en ligne sur le poste en libre-service et vous lui indiquez où obtenir de l'aide la prochaine fois.",
+          "tags": [
+            "ecoute",
+            "solution",
+            "suivi",
+            "regles"
+          ],
+          "score": 7
+        },
+        {
+          "texte": "Vous lui remettez une notice imprimée depuis le site internet et vous lui demandez de revenir quand il aura bien compris la nouvelle démarche.",
+          "tags": [
+            "solution",
+            "renvoi"
+          ],
+          "score": 0
+        }
+      ],
+      "meilleure": 2,
+      "pire": 1
+    },
+    {
+      "id": "S-007",
+      "titre": "Une erreur dans une attestation",
+      "competence": "service",
+      "niveau": "moyen",
+      "contexte": "Vous constatez qu'une attestation délivrée hier par votre service à un usager contient une erreur de date qui pourrait lui faire manquer un délai important.",
+      "principe": "une erreur de son service se signale et se répare sans attendre, en informant l'usager des conséquences possibles.",
+      "reactions": [
+        {
+          "texte": "Vous ne dites rien en espérant que l'usager ne s'en rendra pas compte, car signaler l'erreur ferait mauvaise impression sur votre service et sur vous, puis vous continuez votre journée comme si de rien n'était.",
+          "tags": [
+            "ignore",
+            "approximation"
+          ],
+          "score": -6
+        },
+        {
+          "texte": "Vous contactez l'usager aujourd'hui, vous vous excusez, vous lui expliquez l'erreur et ses conséquences possibles, et vous préparez une attestation corrigée à lui remettre rapidement.",
+          "tags": [
+            "respect",
+            "solution",
+            "suivi"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous corrigez le document dans le système informatique sans prévenir personne, en pensant que cela suffit à régler le problème pour tout le monde.",
+          "tags": [
+            "ignore"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous informez votre responsable de l'erreur et vous attendez ses instructions avant de faire quoi que ce soit, même si le délai de l'usager approche.",
+          "tags": [
+            "regles"
+          ],
+          "score": 2
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "S-008",
+      "titre": "Un usager qui s'exprime avec difficulté",
+      "competence": "service",
+      "niveau": "facile",
+      "contexte": "Un usager vous téléphone et s'exprime difficilement dans la langue de votre service. Il vous demande comment renouveler un document important.",
+      "principe": "on adapte sa communication à l'usager : on s'assure d'être compris plutôt que d'aller vite.",
+      "reactions": [
+        {
+          "texte": "Vous parlez plus vite et utilisez le vocabulaire administratif habituel pour terminer l'appel rapidement, car d'autres appels vous attendent, et vous coupez court à ses questions.",
+          "tags": [
+            "impatience",
+            "approximation"
+          ],
+          "score": -5
+        },
+        {
+          "texte": "Vous lui demandez s'il préfère une autre langue que vous maîtrisez, puis vous parlez lentement, vous reformulez et vous confirmez avec lui les étapes importantes.",
+          "tags": [
+            "ecoute",
+            "respect",
+            "solution"
+          ],
+          "score": 5
+        },
+        {
+          "texte": "Vous lui demandez de rappeler plus tard avec quelqu'un de son entourage qui parle mieux la langue, puis vous raccrochez en le remerciant.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous lui répondez que toutes les informations sont sur le site internet de l'administration, sans autre explication, et vous clôturez la demande.",
+          "tags": [
+            "solution",
+            "renvoi"
+          ],
+          "score": 0
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "S-009",
+      "titre": "Un retard qui ne vient pas de votre service",
+      "competence": "service",
+      "niveau": "difficile",
+      "contexte": "Un usager se plaint du retard de versement d'une allocation. Après vérification, vous constatez que le retard vient d'un autre organisme, qui doit encore transmettre une pièce à votre service.",
+      "principe": "même quand le problème ne vient pas de son service, on prend en charge la situation de l'usager : on explique, on oriente et on relance si c'est possible.",
+      "reactions": [
+        {
+          "texte": "Vous lui expliquez la cause du retard et l'organisme concerné, vous lui indiquez ce qu'il peut faire de son côté et vous proposez de relancer cet organisme pour lui.",
+          "tags": [
+            "solution",
+            "suivi",
+            "respect"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous lui garantissez que l'allocation sera versée la semaine prochaine, pour le rassurer, même si cela dépend d'un organisme sur lequel vous n'avez aucun pouvoir.",
+          "tags": [
+            "promesse"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous lui dites sèchement que le retard n'est pas de votre faute et qu'il doit s'adresser directement à l'autre organisme, puis vous passez à autre chose et vous ne vous en occupez plus.",
+          "tags": [
+            "renvoi",
+            "agressivite"
+          ],
+          "score": -5
+        },
+        {
+          "texte": "Vous lui expliquez que le retard vient d'un autre organisme, sans lui dire qui contacter ni ce qu'il peut faire pour avancer son dossier.",
+          "tags": [
+            "solution",
+            "renvoi"
+          ],
+          "score": 0
+        }
+      ],
+      "meilleure": 0,
+      "pire": 2
+    },
+    {
+      "id": "S-010",
+      "titre": "Une file d'attente à l'approche de la fermeture",
+      "competence": "service",
+      "niveau": "moyen",
+      "contexte": "À 16 h 45, cinq personnes attendent encore et votre guichet ferme à 17 h. L'une d'elles vous demande une opération longue, qui ne pourra pas être terminée avant la fermeture.",
+      "principe": "on reste équitable avec tous les usagers : on explique la situation, on traite ce qui peut l'être et on propose une solution claire pour le reste.",
+      "reactions": [
+        {
+          "texte": "Vous refusez de la servir en lui disant qu'il est trop tard, sans proposer d'autre solution, puis vous appelez la personne suivante dans la file.",
+          "tags": [
+            "renvoi"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous commencez l'opération longue pour ne pas la faire attendre davantage, au risque de ne pas pouvoir servir les autres personnes avant la fermeture.",
+          "tags": [
+            "passe-droit"
+          ],
+          "score": -4
+        },
+        {
+          "texte": "Vous expliquez la situation, vous traitez d'abord les demandes rapides des autres personnes et vous proposez à celle-ci un rendez-vous prioritaire demain, en lui indiquant les pièces à apporter.",
+          "tags": [
+            "regles",
+            "solution",
+            "suivi",
+            "respect"
+          ],
+          "score": 6
+        },
+        {
+          "texte": "Vous fermez le guichet à 17 h précises sans prévenir les personnes encore présentes, en affichant simplement un panneau « fermé ».",
+          "tags": [
+            "ignore"
+          ],
+          "score": -3
+        }
+      ],
+      "meilleure": 2,
+      "pire": 1
+    },
+    {
+      "id": "C-001",
+      "titre": "Une règle dont on n'est pas sûr",
+      "competence": "conseil",
+      "niveau": "moyen",
+      "contexte": "Un collègue vous demande de confirmer une règle de calcul d'un délai de recours. Vous croyez la connaître, mais vous n'en êtes pas sûr.",
+      "principe": "un conseil se fonde sur des informations vérifiées ; en cas de doute, on contrôle la source ou on reconnaît ses limites.",
+      "reactions": [
+        {
+          "texte": "Vous lui répondez de mémoire avec assurance, pour ne pas perdre la face devant lui et parce que la règle vous paraît familière depuis longtemps.",
+          "tags": [
+            "improvise"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous vérifiez le texte de référence, vous lui donnez la règle exacte en citant la source et vous lui proposez de noter cette référence pour la suite.",
+          "tags": [
+            "verifie",
+            "trace"
+          ],
+          "score": 3
+        },
+        {
+          "texte": "Vous lui répondez que ce n'est pas votre rôle d'aider vos collègues et qu'il devrait s'adresser directement au service juridique pour ce genre de question.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous lui répondez de mémoire en précisant que vous n'êtes pas sûr et qu'il faudrait vérifier avant de l'appliquer, puis vous retournez à votre travail.",
+          "tags": [
+            "limites",
+            "refus"
+          ],
+          "score": 0
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "C-002",
+      "titre": "Un avis demandé par la hiérarchie",
+      "competence": "conseil",
+      "niveau": "difficile",
+      "contexte": "Votre responsable vous demande votre avis pour choisir entre deux logiciels de suivi des dossiers. Vous n'avez testé qu'un seul des deux.",
+      "principe": "un conseil à la hiérarchie est objectif et honnête sur ses limites, et la décision reste à celui qui en a la responsabilité.",
+      "reactions": [
+        {
+          "texte": "Vous recommandez le logiciel que vous avez testé : vous le connaissez bien, il vous convient, et c'est le plus pratique pour vous au quotidien.",
+          "tags": [
+            "opinion"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous présentez vos constats sur le logiciel testé, vous précisez que vous n'avez pas testé l'autre et vous proposez de comparer les deux sur des critères communs avant de décider.",
+          "tags": [
+            "verifie",
+            "options",
+            "limites",
+            "neutre"
+          ],
+          "score": 6
+        },
+        {
+          "texte": "Vous répondez que vous n'avez aucun avis à donner puisque la décision ne vous appartient pas, et vous reprenez votre travail en cours.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous choisissez à la place de votre responsable et vous passez commande du logiciel que vous connaissez, pour gagner du temps dans le projet.",
+          "tags": [
+            "hors-role"
+          ],
+          "score": -3
+        }
+      ],
+      "meilleure": 1,
+      "pire": 3
+    },
+    {
+      "id": "C-003",
+      "titre": "Un usager hésite entre deux démarches",
+      "competence": "conseil",
+      "niveau": "moyen",
+      "contexte": "Un usager hésite entre deux démarches pour obtenir une autorisation : l'une est rapide mais payante, l'autre gratuite mais prend plusieurs semaines. Il vous demande laquelle choisir.",
+      "principe": "on conseille en présentant les options et leurs conséquences, en fonction de la situation de la personne, sans choisir à sa place.",
+      "reactions": [
+        {
+          "texte": "Vous lui conseillez la démarche rapide, parce que vous préféreriez vous-même gagner du temps et que, selon vous, le temps vaut toujours plus que l'argent, et que cela vaut mieux pour lui.",
+          "tags": [
+            "impose",
+            "opinion"
+          ],
+          "score": -4
+        },
+        {
+          "texte": "Vous lui présentez les deux démarches avec leurs coûts, leurs délais et les conséquences d'un retard, puis vous l'aidez à choisir selon sa situation et son urgence.",
+          "tags": [
+            "options",
+            "adapte"
+          ],
+          "score": 2
+        },
+        {
+          "texte": "Vous lui répondez que le choix lui appartient, sans lui donner d'autre précision, et vous le laissez décider seul au guichet devant les deux formulaires.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous lui conseillez la démarche gratuite sans lui parler du délai, pour qu'il économise, en pensant qu'il ne remarquera pas la différence.",
+          "tags": [
+            "minimise"
+          ],
+          "score": -3
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "C-004",
+      "titre": "Un risque de non-conformité",
+      "competence": "conseil",
+      "niveau": "difficile",
+      "contexte": "En préparant une note, vous remarquez qu'une procédure appliquée depuis des années par votre service pourrait ne plus être conforme à un texte récent. Vous n'en êtes pas certain.",
+      "principe": "un risque suspecté se vérifie, puis se signale avec des éléments précis à la personne compétente, sans minimiser ni dramatiser.",
+      "reactions": [
+        {
+          "texte": "Vous ne dites rien : la procédure fonctionne depuis des années sans problème, et vous préférez ne pas remettre en cause le travail de vos collègues.",
+          "tags": [
+            "minimise"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous vérifiez le texte, vous rassemblez les références précises et vous signalez le risque à votre responsable, en proposant de demander l'avis du service juridique.",
+          "tags": [
+            "verifie",
+            "limites",
+            "trace"
+          ],
+          "score": 5
+        },
+        {
+          "texte": "Vous modifiez vous-même la procédure dans votre équipe, sans en parler à personne, pour être sûr d'être en règle dès maintenant.",
+          "tags": [
+            "hors-role"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous annoncez en réunion que tout le service travaille peut-être dans l'illégalité, sans avoir vérifié le texte, pour que le sujet soit pris au sérieux et pour qu'il n'y ait aucun doute.",
+          "tags": [
+            "improvise",
+            "opinion"
+          ],
+          "score": -5
+        }
+      ],
+      "meilleure": 1,
+      "pire": 3
+    },
+    {
+      "id": "C-005",
+      "titre": "Un nouveau collègue à accompagner",
+      "competence": "conseil",
+      "niveau": "facile",
+      "contexte": "Un nouveau collègue vous demande comment classer les dossiers urgents. La règle de votre service est claire et écrite.",
+      "principe": "conseiller un collègue, c'est lui donner la règle exacte, l'expliquer avec des exemples et vérifier qu'il l'a comprise.",
+      "reactions": [
+        {
+          "texte": "Vous lui montrez la règle écrite, vous l'expliquez avec un exemple concret et vous lui proposez de relire avec vous ses premiers classements.",
+          "tags": [
+            "verifie",
+            "adapte",
+            "trace"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous lui répondez qu'il suffit de faire comme tout le monde, car c'est ainsi que l'on apprend le mieux et que vous n'avez pas le temps de détailler.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous lui donnez votre méthode personnelle, différente de la règle écrite, car vous la trouvez bien plus efficace que celle de votre service.",
+          "tags": [
+            "opinion",
+            "impose"
+          ],
+          "score": -4
+        },
+        {
+          "texte": "Vous lui dites de lire le règlement et de revenir vous poser des questions plus tard, si quelque chose lui paraît encore compliqué.",
+          "tags": [
+            "verifie",
+            "refus"
+          ],
+          "score": 0
+        }
+      ],
+      "meilleure": 0,
+      "pire": 2
+    },
+    {
+      "id": "C-006",
+      "titre": "Un avis rapide sous pression",
+      "competence": "conseil",
+      "niveau": "difficile",
+      "contexte": "Un responsable vous demande un avis immédiat : peut-on verser une aide à un demandeur dont le dossier est incomplet, parce que sa situation est urgente ?",
+      "principe": "l'urgence ne dispense pas de vérifier : on prend le temps de contrôler la règle, puis on présente les options possibles et leurs risques.",
+      "reactions": [
+        {
+          "texte": "Vous répondez oui tout de suite : la situation est urgente, l'aide est utile, et le dossier pourra toujours être complété plus tard par le demandeur.",
+          "tags": [
+            "improvise",
+            "minimise"
+          ],
+          "score": -6
+        },
+        {
+          "texte": "Vous répondez que vous vérifiez ce que prévoit la réglementation pour les cas urgents et que vous revenez rapidement avec les options possibles et leurs risques.",
+          "tags": [
+            "verifie",
+            "options"
+          ],
+          "score": 3
+        },
+        {
+          "texte": "Vous répondez non sans donner d'explication, en précisant que les règles sont les règles et qu'il n'y a aucune discussion possible sur ce dossier.",
+          "tags": [
+            "impose"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous suggérez de verser l'aide puis de régulariser plus tard, en précisant que ce n'est pas à vous de décider mais que c'est ce que vous feriez, puisque l'urgence justifie de prendre ce risque.",
+          "tags": [
+            "hors-role"
+          ],
+          "score": -3
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "C-007",
+      "titre": "Une question sur les chances d'un recours",
+      "competence": "conseil",
+      "niveau": "moyen",
+      "contexte": "Un usager vous demande si, d'après vous, il a de bonnes chances de gagner un recours contre une décision de votre administration.",
+      "principe": "on conseille sur la procédure, pas sur l'issue : on reconnaît les limites de son rôle et on oriente vers l'expertise adaptée.",
+      "reactions": [
+        {
+          "texte": "Vous lui assurez qu'il va gagner, parce que la décision vous paraît injuste et que vous êtes sûr de votre jugement dans ce genre d'affaire et que vous connaissez bien ce type de dossiers.",
+          "tags": [
+            "opinion",
+            "improvise"
+          ],
+          "score": -5
+        },
+        {
+          "texte": "Vous lui expliquez la procédure de recours, les délais et les pièces à fournir, vous lui dites que vous ne pouvez pas évaluer ses chances et vous l'orientez vers un juriste.",
+          "tags": [
+            "options",
+            "limites",
+            "neutre"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous lui dites qu'il n'a aucune chance, car votre administration a toujours raison, et qu'il vaut mieux ne pas perdre de temps avec un recours.",
+          "tags": [
+            "opinion",
+            "impose"
+          ],
+          "score": -4
+        },
+        {
+          "texte": "Vous refusez de répondre à toute question sur le recours, en lui disant simplement que cela ne vous concerne pas, et vous passez à l'usager suivant.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "C-008",
+      "titre": "Un nouvel outil pour l'équipe",
+      "competence": "conseil",
+      "niveau": "moyen",
+      "contexte": "Votre équipe hésite à adopter un nouveau tableau de suivi. Une collègue expérimentée s'y oppose ; vous pensez que l'outil serait utile.",
+      "principe": "on appuie une proposition sur des éléments concrets et on écoute les objections, plutôt que d'imposer ou de contourner.",
+      "reactions": [
+        {
+          "texte": "Vous préparez une courte comparaison chiffrée (temps gagné, erreurs évitées), vous la présentez à l'équipe et vous écoutez les objections avant de proposer un essai.",
+          "tags": [
+            "verifie",
+            "options",
+            "adapte"
+          ],
+          "score": 4
+        },
+        {
+          "texte": "Vous installez le tableau sur votre poste et vous l'utilisez seul, sans rien dire, en pensant que les autres finiront par voir ses avantages.",
+          "tags": [
+            "hors-role"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous dites devant l'équipe que ceux qui s'y opposent n'aiment pas le changement et ne veulent rien apprendre, pour accélérer la discussion.",
+          "tags": [
+            "opinion"
+          ],
+          "score": -2
+        },
+        {
+          "texte": "Vous proposez d'attendre que la direction décide, sans donner votre avis, car vous préférez éviter une discussion difficile avec votre collègue et ne pas prendre position.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 0,
+      "pire": 1
+    },
+    {
+      "id": "C-009",
+      "titre": "Des détails sur un usager",
+      "competence": "conseil",
+      "niveau": "difficile",
+      "contexte": "Une collègue vous demande conseil pour répondre à un usager et vous donne, pour cela, beaucoup de détails personnels sur lui. Plus tard, un autre collègue vous demande de quoi il s'agissait.",
+      "principe": "un conseil échangé entre collègues reste confidentiel : on protège les informations personnelles et on ne partage que le nécessaire.",
+      "reactions": [
+        {
+          "texte": "Vous lui racontez le cas en détail : c'est intéressant pour toute l'équipe, et chacun pourra donner son avis sur la meilleure façon de répondre, et que cela ne prête pas à conséquence.",
+          "tags": [
+            "indiscretion",
+            "opinion"
+          ],
+          "score": -6
+        },
+        {
+          "texte": "Vous lui répondez que vous préférez ne pas détailler une situation individuelle et vous proposez d'aborder la question de façon générale en réunion, sans nommer l'usager.",
+          "tags": [
+            "discretion",
+            "adapte"
+          ],
+          "score": 3
+        },
+        {
+          "texte": "Vous inventez une autre histoire pour ne pas lui répondre, en espérant qu'il oublie rapidement sa question et n'en parle plus à personne.",
+          "tags": [
+            "improvise"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous lui donnez quelques éléments sans citer le nom, mais assez précis pour que tout le monde puisse reconnaître l'usager dont il s'agit.",
+          "tags": [
+            "indiscretion"
+          ],
+          "score": -4
+        }
+      ],
+      "meilleure": 1,
+      "pire": 0
+    },
+    {
+      "id": "C-010",
+      "titre": "Un conseil qui était faux",
+      "competence": "conseil",
+      "niveau": "moyen",
+      "contexte": "La semaine dernière, vous avez conseillé à un usager de déposer un document auprès d'un service. Vous réalisez aujourd'hui que ce n'était pas le bon service et que le délai court encore.",
+      "principe": "on reconnaît rapidement une erreur de conseil, on la corrige auprès de la personne et on vérifie qu'elle peut encore agir à temps.",
+      "reactions": [
+        {
+          "texte": "Vous contactez l'usager aujourd'hui, vous reconnaissez l'erreur, vous lui indiquez le bon service et la démarche à suivre, puis vous vérifiez avec lui qu'il peut tenir le délai.",
+          "tags": [
+            "verifie",
+            "limites",
+            "adapte"
+          ],
+          "score": 5
+        },
+        {
+          "texte": "Vous attendez de voir si l'usager revient vous voir, car il serait inutile de l'inquiéter alors que rien ne prouve qu'il y ait réellement un problème et qu'il vaut mieux ne pas déranger le service concerné.",
+          "tags": [
+            "minimise"
+          ],
+          "score": -3
+        },
+        {
+          "texte": "Vous espérez que le premier service transmettra le document de lui-même au bon service, en vous disant que cela se fait souvent dans ce genre de cas.",
+          "tags": [
+            "minimise",
+            "improvise"
+          ],
+          "score": -6
+        },
+        {
+          "texte": "Vous prévenez l'usager sans lui dire où aller : vous lui conseillez simplement de mieux se renseigner la prochaine fois avant de déposer ses documents.",
+          "tags": [
+            "refus"
+          ],
+          "score": -2
+        }
+      ],
+      "meilleure": 0,
+      "pire": 2
+    }
+  ]
+}

@@ -128,7 +128,7 @@ export default function QuestionVerbal({
       <fieldset className="choix-groupe">
         <legend className="affirmation">{question.affirmation}</legend>
         <div className="choix-liste">
-          {propositions.map((reponse) => {
+          {propositions.map((reponse, index) => {
             const attendue = valide && reponse === question.reponseAttendue
             const fausse = valide && reponse === choix && reponse !== question.reponseAttendue
             const etat = attendue ? ' choix__corps--bonne' : fausse ? ' choix__corps--mauvaise' : ''
@@ -142,11 +142,17 @@ export default function QuestionVerbal({
                   checked={choix === reponse}
                   disabled={valide}
                   onChange={() => onChoisir(reponse)}
+                  aria-label={question.lettres ? `Réaction ${'ABCD'[index]} : ${reponse}` : undefined}
                 />
                 <span className={`choix__corps verre${etat}`}>
                   <span className="choix__puce" aria-hidden="true">
                     <Check />
                   </span>
+                  {question.lettres && (
+                    <span className="choix__lettre" aria-hidden="true">
+                      {'ABCD'[index]}
+                    </span>
+                  )}
                   <span className="choix__texte">{reponse}</span>
                   {attendue && (
                     <span className="choix__marque choix__marque--bonne">

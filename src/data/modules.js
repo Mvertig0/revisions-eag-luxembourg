@@ -50,8 +50,8 @@ export const modules = [
     texte: 'Choisir la meilleure réaction face à une situation de travail.',
     Icone: Users,
     couleur: 'var(--couleur-situationnel)',
-    statut: 'bientot',
-    version: 'v2',
+    statut: 'disponible',
+    version: 'v1',
     chemin: '/situationnel',
   },
 ]

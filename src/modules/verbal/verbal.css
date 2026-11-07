@@ -414,3 +414,9 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Réponses repérées par une lettre (jugement situationnel : la correction parle de « la réaction B ») */
+.choix__lettre {
+  font-weight: 700;
+  color: var(--texte-2);
+}
