@@ -68,19 +68,21 @@ export default function QuestionVerbal({
       </div>
 
       {texte && (
-      <article className="texte-ref verre" aria-labelledby="texte-ref-titre">
-        <p className="texte-ref__etiquette">
-          {texte.regles ? 'Consignes' : texte.tableau ? `Tableau · ${texte.theme}` : texte.graphique ? 'Graphique' : `Texte de référence · ${texte.theme}`}
-        </p>
-        <h3 id="texte-ref-titre" className="texte-ref__titre">
-          {texte.titre}
-        </h3>
-        {texte.graphique ? (
-          // SVG fabriqué par notre propre programme (graphiques.js), jamais du texte saisi par quelqu'un
-          <div className="graphique" dangerouslySetInnerHTML={{ __html: texte.graphique }} />
-        ) : texte.tableau ? (
-          <>
-            {texte.intro && <p className="texte-ref__corps">{texte.intro}</p>}
+        <article className="texte-ref verre" aria-labelledby="texte-ref-titre">
+          <p className="texte-ref__etiquette">
+            {texte.etiquette ??
+              (texte.regles ? 'Consignes' : texte.tableau ? `Tableau · ${texte.theme}` : texte.graphique ? 'Graphique' : `Texte de référence · ${texte.theme}`)}
+          </p>
+          <h3 id="texte-ref-titre" className="texte-ref__titre">
+            {texte.titre}
+          </h3>
+          {/* Les parties s'affichent dans l'ordre : présentation, graphique, tableau, règles, texte. */}
+          {texte.intro && <p className="texte-ref__corps">{texte.intro}</p>}
+          {texte.graphique && (
+            // SVG fabriqué par notre propre programme (graphiques.js), jamais du texte saisi par quelqu'un
+            <div className="graphique" dangerouslySetInnerHTML={{ __html: texte.graphique }} />
+          )}
+          {texte.tableau && (
             <div className="tableau-defile">
               <table className="tableau-donnees">
                 <thead>
@@ -111,20 +113,16 @@ export default function QuestionVerbal({
                 </tbody>
               </table>
             </div>
-          </>
-        ) : texte.regles ? (
-          <>
-            <p className="texte-ref__corps">{texte.intro}</p>
+          )}
+          {texte.regles?.length > 0 && (
             <ol className="texte-ref__regles">
               {texte.regles.map((regle, i) => (
                 <li key={i}>{regle}</li>
               ))}
             </ol>
-          </>
-        ) : (
-          <p className="texte-ref__corps">{texte.texte}</p>
-        )}
-      </article>
+          )}
+          {texte.texte && <p className="texte-ref__corps">{texte.texte}</p>}
+        </article>
       )}
 
       <fieldset className="choix-groupe">

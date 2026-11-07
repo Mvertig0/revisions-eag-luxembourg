@@ -40,8 +40,8 @@ export const modules = [
     texte: 'Organiser des tâches, des horaires et des priorités.',
     Icone: CalendarClock,
     couleur: 'var(--couleur-planification)',
-    statut: 'bientot',
-    version: 'v2',
+    statut: 'disponible',
+    version: 'v1',
     chemin: '/planification',
   },
   {

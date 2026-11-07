@@ -7,6 +7,7 @@ import EnConstruction from './pages/EnConstruction'
 import NonTrouvee from './pages/NonTrouvee'
 import Abstrait from './pages/Abstrait'
 import Numerique from './pages/Numerique'
+import Planification from './pages/Planification'
 import Verbal from './pages/Verbal'
 import { modulesDisponibles } from './data/modules'
 
@@ -56,8 +57,9 @@ function Contenu() {
           <Route path="/verbal" element={<Verbal />} />
           <Route path="/abstrait" element={<Abstrait />} />
           <Route path="/numerique" element={<Numerique />} />
+          <Route path="/planification" element={<Planification />} />
           {modulesDisponibles
-            .filter((m) => m.id !== 'verbal' && m.id !== 'abstrait' && m.id !== 'numerique')
+            .filter((m) => m.id !== 'verbal' && m.id !== 'abstrait' && m.id !== 'numerique' && m.id !== 'planification')
             .map((m) => (
               <Route key={m.id} path={m.chemin} element={<EnConstruction moduleId={m.id} />} />
             ))}
