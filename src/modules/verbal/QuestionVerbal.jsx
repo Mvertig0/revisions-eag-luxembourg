@@ -67,12 +67,49 @@ export default function QuestionVerbal({
         <Chrono debut={debut} dureeSecondes={dureeSecondes} />
       </div>
 
+      {texte && (
       <article className="texte-ref verre" aria-labelledby="texte-ref-titre">
-        <p className="texte-ref__etiquette">{texte.regles ? 'Consignes' : `Texte de référence · ${texte.theme}`}</p>
+        <p className="texte-ref__etiquette">
+          {texte.regles ? 'Consignes' : texte.tableau ? `Tableau · ${texte.theme}` : `Texte de référence · ${texte.theme}`}
+        </p>
         <h3 id="texte-ref-titre" className="texte-ref__titre">
           {texte.titre}
         </h3>
-        {texte.regles ? (
+        {texte.tableau ? (
+          <>
+            {texte.intro && <p className="texte-ref__corps">{texte.intro}</p>}
+            <div className="tableau-defile">
+              <table className="tableau-donnees">
+                <thead>
+                  <tr>
+                    {texte.tableau.entetes.map((entete, j) => (
+                      <th key={j} scope="col" className={texte.tableau.alignements[j] === 'droite' ? 'tableau-donnees__droite' : undefined}>
+                        {entete}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {texte.tableau.lignes.map((ligne, i) => (
+                    <tr key={i}>
+                      {ligne.map((cellule, j) =>
+                        j === 0 ? (
+                          <th key={j} scope="row">
+                            {cellule}
+                          </th>
+                        ) : (
+                          <td key={j} className={texte.tableau.alignements[j] === 'droite' ? 'tableau-donnees__droite' : undefined}>
+                            {cellule}
+                          </td>
+                        ),
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        ) : texte.regles ? (
           <>
             <p className="texte-ref__corps">{texte.intro}</p>
             <ol className="texte-ref__regles">
@@ -85,6 +122,7 @@ export default function QuestionVerbal({
           <p className="texte-ref__corps">{texte.texte}</p>
         )}
       </article>
+      )}
 
       <fieldset className="choix-groupe">
         <legend className="affirmation">{question.affirmation}</legend>

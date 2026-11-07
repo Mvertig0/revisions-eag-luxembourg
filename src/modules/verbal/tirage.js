@@ -55,7 +55,7 @@ const compter = (groupes) => groupes.reduce((n, g) => n + g.questions.length, 0)
 
 // Tire des GROUPES entiers (comme à l'examen : quelques textes, plusieurs questions chacun) jusqu'à avoir
 // au moins `nb` questions. Si on dépasse, on retire l'excédent au hasard sans jamais vider un groupe.
-function piocher(groupes, nb, hasard) {
+export function piocher(groupes, nb, hasard) {
   const choisis = []
   let total = 0
   for (const g of melanger(groupes, hasard)) {

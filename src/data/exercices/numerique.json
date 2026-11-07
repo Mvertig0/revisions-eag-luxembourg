@@ -1,0 +1,619 @@
+{
+  "tableaux": [
+    {
+      "id": "N-001",
+      "titre": "Demandes traitées par un service communal",
+      "theme": "administration",
+      "niveau": "facile",
+      "intro": "Nombre de demandes traitées par le service population d'une commune, selon le type de document.",
+      "entetes": [
+        "Année",
+        "Passeports",
+        "Cartes d'identité",
+        "Certificats de résidence",
+        "Total"
+      ],
+      "alignements": [
+        "gauche",
+        "droite",
+        "droite",
+        "droite",
+        "droite"
+      ],
+      "lignes": [
+        [
+          "2022",
+          "1 200",
+          "800",
+          "2 000",
+          "4 000"
+        ],
+        [
+          "2023",
+          "1 500",
+          "750",
+          "2 250",
+          "4 500"
+        ],
+        [
+          "2024",
+          "1 350",
+          "900",
+          "2 750",
+          "5 000"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "N-001-1",
+          "affirmation": "Le nombre de passeports traités a augmenté de 25 % entre 2022 et 2023.",
+          "reponse": "Vrai",
+          "correction": "En 2022, 1 200 passeports ; en 2023, 1 500. L'augmentation est de 1 500 − 1 200 = 300. Par rapport à la base de 1 200, cela fait 300 ÷ 1 200 = 0,25, soit 25 %."
+        },
+        {
+          "id": "N-001-2",
+          "affirmation": "En 2024, les certificats de résidence représentent plus de 60 % des demandes traitées.",
+          "reponse": "Faux",
+          "correction": "En 2024, il y a 2 750 certificats pour un total de 5 000 demandes. Cela fait 2 750 ÷ 5 000 = 0,55, soit 55 %. Ce chiffre est inférieur à 60 %."
+        },
+        {
+          "id": "N-001-3",
+          "affirmation": "Le délai moyen de traitement d'un passeport a diminué entre 2022 et 2024.",
+          "reponse": "Indéterminé",
+          "correction": "Le tableau donne le nombre de demandes traitées, jamais le temps de traitement. On ne peut donc ni confirmer ni infirmer cette affirmation à partir du tableau."
+        },
+        {
+          "id": "N-001-4",
+          "affirmation": "Entre 2022 et 2024, le total des demandes traitées a augmenté de 25 %.",
+          "reponse": "Vrai",
+          "correction": "Le total passe de 4 000 (2022) à 5 000 (2024). L'augmentation est de 1 000. Par rapport à la base de 4 000, cela fait 1 000 ÷ 4 000 = 0,25, soit 25 %."
+        }
+      ]
+    },
+    {
+      "id": "N-002",
+      "titre": "Formation continue dans une administration",
+      "theme": "ressources humaines",
+      "niveau": "moyen",
+      "intro": "Effectifs et formation continue, par direction, pour une année donnée.",
+      "entetes": [
+        "Direction",
+        "Effectif",
+        "Agents ayant suivi au moins une formation",
+        "Jours de formation suivis (total)"
+      ],
+      "alignements": [
+        "gauche",
+        "droite",
+        "droite",
+        "droite"
+      ],
+      "lignes": [
+        [
+          "A",
+          "80",
+          "60",
+          "240"
+        ],
+        [
+          "B",
+          "120",
+          "90",
+          "300"
+        ],
+        [
+          "C",
+          "50",
+          "25",
+          "200"
+        ],
+        [
+          "Total",
+          "250",
+          "175",
+          "740"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "N-002-1",
+          "affirmation": "La direction B a la proportion d'agents formés la plus faible des trois directions.",
+          "reponse": "Faux",
+          "correction": "Proportion d'agents formés : A = 60 ÷ 80 = 75 % ; B = 90 ÷ 120 = 75 % ; C = 25 ÷ 50 = 50 %. La plus faible est la direction C. La direction B est à égalité avec A, au-dessus de C."
+        },
+        {
+          "id": "N-002-2",
+          "affirmation": "Les agents de la direction A ont suivi surtout des formations en informatique.",
+          "reponse": "Indéterminé",
+          "correction": "Le tableau indique le nombre d'agents formés et de jours de formation, mais jamais le thème des formations. On ne peut pas trancher."
+        },
+        {
+          "id": "N-002-3",
+          "affirmation": "Les directions A et B réunies représentent plus de 80 % de l'effectif total.",
+          "reponse": "Faux",
+          "correction": "A + B = 80 + 120 = 200 agents sur un effectif total de 250. Cela fait 200 ÷ 250 = 0,80, soit exactement 80 %. « Plus de 80 % » exige un résultat strictement supérieur : l'affirmation est fausse."
+        },
+        {
+          "id": "N-002-4",
+          "affirmation": "En moyenne, un agent formé de la direction A a suivi 4 jours de formation.",
+          "reponse": "Vrai",
+          "correction": "La direction A compte 60 agents formés pour 240 jours de formation. La moyenne par agent formé est 240 ÷ 60 = 4 jours. Attention : on divise par les agents formés (60), pas par l'effectif total (80)."
+        }
+      ]
+    },
+    {
+      "id": "N-003",
+      "titre": "Dépenses d'un office public",
+      "theme": "finances publiques",
+      "niveau": "moyen",
+      "intro": "Dépenses d'un office public, par poste, en milliers d'euros.",
+      "entetes": [
+        "Poste",
+        "2023",
+        "2024"
+      ],
+      "alignements": [
+        "gauche",
+        "droite",
+        "droite"
+      ],
+      "lignes": [
+        [
+          "Personnel",
+          "400",
+          "440"
+        ],
+        [
+          "Fonctionnement",
+          "150",
+          "135"
+        ],
+        [
+          "Investissement",
+          "50",
+          "125"
+        ],
+        [
+          "Total",
+          "600",
+          "700"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "N-003-1",
+          "affirmation": "Les dépenses de personnel ont augmenté de 10 % entre 2023 et 2024.",
+          "reponse": "Vrai",
+          "correction": "Les dépenses de personnel passent de 400 à 440. L'augmentation est de 440 − 400 = 40. Par rapport à la base de 400, cela fait 40 ÷ 400 = 0,10, soit 10 %."
+        },
+        {
+          "id": "N-003-2",
+          "affirmation": "La part des dépenses de personnel dans le total des dépenses a augmenté entre 2023 et 2024.",
+          "reponse": "Faux",
+          "correction": "En 2023, le personnel représente 400 ÷ 600 ≈ 0,667, soit environ 66,7 % du total. En 2024, il représente 440 ÷ 700 ≈ 0,629, soit environ 62,9 %. La part a donc diminué, même si le montant a augmenté : le total a augmenté plus vite que les dépenses de personnel."
+        },
+        {
+          "id": "N-003-3",
+          "affirmation": "La hausse des dépenses d'investissement s'explique par la construction d'un nouveau bâtiment.",
+          "reponse": "Indéterminé",
+          "correction": "Le tableau montre que l'investissement passe de 50 à 125, mais il n'indique jamais la raison de cette hausse. On ne peut ni confirmer ni infirmer cette explication à partir du tableau."
+        },
+        {
+          "id": "N-003-4",
+          "affirmation": "Les dépenses de fonctionnement ont baissé de 15 % entre 2023 et 2024.",
+          "reponse": "Faux",
+          "correction": "Les dépenses de fonctionnement passent de 150 à 135. La baisse est de 150 − 135 = 15 (en milliers d'euros). Par rapport à la base de 150, cela fait 15 ÷ 150 = 0,10, soit 10 %. Attention : 15 est une valeur, pas un pourcentage. La baisse est de 10 %, pas de 15 %."
+        }
+      ]
+    },
+    {
+      "id": "N-004",
+      "titre": "Enquête de satisfaction auprès des usagers",
+      "theme": "service aux usagers",
+      "niveau": "difficile",
+      "intro": "Résultats d'une enquête menée auprès des usagers de trois guichets. Le taux de satisfaction est la part des répondants qui se déclarent satisfaits.",
+      "entetes": [
+        "Site",
+        "Répondants",
+        "Taux de satisfaction",
+        "Temps d'attente moyen (minutes)"
+      ],
+      "alignements": [
+        "gauche",
+        "droite",
+        "droite",
+        "droite"
+      ],
+      "lignes": [
+        [
+          "Luxembourg-Ville",
+          "400",
+          "70 %",
+          "12"
+        ],
+        [
+          "Esch-sur-Alzette",
+          "250",
+          "80 %",
+          "8"
+        ],
+        [
+          "Diekirch",
+          "150",
+          "60 %",
+          "15"
+        ],
+        [
+          "Total",
+          "800",
+          "–",
+          "–"
+        ]
+      ],
+      "questions": [
+        {
+          "id": "N-004-1",
+          "affirmation": "Pour les trois sites réunis, le taux de satisfaction global est de 70 %.",
+          "reponse": "Faux",
+          "correction": "Il ne faut pas faire la moyenne simple des trois taux, car les sites n'ont pas le même nombre de répondants. Satisfaits : Luxembourg-Ville = 400 × 70 % = 280 ; Esch-sur-Alzette = 250 × 80 % = 200 ; Diekirch = 150 × 60 % = 90. Total des satisfaits = 280 + 200 + 90 = 570 sur 800 répondants. Le taux global est 570 ÷ 800 = 0,7125, soit 71,25 %, et non 70 %."
+        },
+        {
+          "id": "N-004-2",
+          "affirmation": "À Esch-sur-Alzette, 200 répondants se sont déclarés satisfaits.",
+          "reponse": "Vrai",
+          "correction": "Esch-sur-Alzette compte 250 répondants, avec un taux de satisfaction de 80 %. Le nombre de satisfaits est 250 × 0,80 = 200."
+        },
+        {
+          "id": "N-004-3",
+          "affirmation": "Le site où le temps d'attente moyen est le plus long est aussi celui où le taux de satisfaction est le plus faible.",
+          "reponse": "Vrai",
+          "correction": "Temps d'attente : Luxembourg-Ville = 12 min ; Esch-sur-Alzette = 8 min ; Diekirch = 15 min. L'attente la plus longue est à Diekirch. Taux de satisfaction : 70 %, 80 % et 60 %. Le taux le plus faible est aussi à Diekirch. C'est bien le même site."
+        },
+        {
+          "id": "N-004-4",
+          "affirmation": "Les usagers de Diekirch sont moins satisfaits parce que le temps d'attente y est plus long.",
+          "reponse": "Indéterminé",
+          "correction": "Le tableau montre que Diekirch cumule l'attente la plus longue et le taux de satisfaction le plus faible. Mais deux données qui vont ensemble ne prouvent pas que l'une cause l'autre. Le tableau ne donne pas les raisons de l'insatisfaction : on ne peut ni confirmer ni infirmer cette affirmation."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "id": "N-005",
+      "titre": "Calcul et pourcentages (1)",
+      "theme": "calcul appliqué",
+      "niveau": "moyen",
+      "questions": [
+        {
+          "id": "N-005-1",
+          "enonce": "Un agent a un salaire brut de 3 200 €. Les cotisations représentent 12 % de ce salaire. Quel est son salaire net ?",
+          "choix": [
+            "3 584 €",
+            "384 €",
+            "3 188 €",
+            "2 816 €"
+          ],
+          "reponse": 3,
+          "correction": "Les cotisations valent 3 200 × 0,12 = 384 €. Le net est 3 200 − 384 = 2 816 €. Autre méthode : 3 200 × 0,88 = 2 816 €. Les erreurs classiques : 3 584 € (on ajoute les cotisations au lieu de les retirer), 384 € (c'est le montant des cotisations, pas le net), 3 188 € (on retire 12 € au lieu de 12 %)."
+        },
+        {
+          "id": "N-005-2",
+          "enonce": "Un candidat a obtenu 10, 14 et 11 sur 20 aux trois premières épreuves. Quelle note doit-il obtenir à la quatrième épreuve pour avoir une moyenne de 12 sur 20 ?",
+          "choix": [
+            "13",
+            "12",
+            "14",
+            "11"
+          ],
+          "reponse": 0,
+          "correction": "Pour une moyenne de 12 sur 4 épreuves, la somme des notes doit être 4 × 12 = 48. Les trois premières notes font 10 + 14 + 11 = 35. Il manque 48 − 35 = 13. Vérification : (10 + 14 + 11 + 13) ÷ 4 = 48 ÷ 4 = 12. Autre méthode, avec les écarts à 12 : −2, +2 et −1 font −1 au total, donc il faut +1 à la quatrième note, soit 12 + 1 = 13. Les erreurs classiques : 12 (on répond avec la moyenne visée), 14 (on se trompe dans la somme : 34 au lieu de 35) et 11 (avec la méthode des écarts, on retire l'écart de 1 au lieu de l'ajouter)."
+        },
+        {
+          "id": "N-005-3",
+          "enonce": "Après une remise de 20 %, un article coûte 60 €. Quel était son prix avant la remise ?",
+          "choix": [
+            "48 €",
+            "72 €",
+            "75 €",
+            "80 €"
+          ],
+          "reponse": 2,
+          "correction": "Après une remise de 20 %, le prix payé est 80 % du prix initial. On a donc prix initial × 0,80 = 60, d'où prix initial = 60 ÷ 0,80 = 75 €. Vérification : 75 × 0,80 = 60. Les erreurs classiques : 72 € (on ajoute 20 % à 60 €, alors que les 20 % portent sur le prix initial), 80 € (on ajoute 20 €, qui est un pourcentage pris pour une valeur) et 48 € (on retire encore 20 % à 60 €)."
+        },
+        {
+          "id": "N-005-4",
+          "enonce": "Un prix de 80 € augmente de 25 %. Le nouveau prix baisse ensuite de 20 %. Quel est le prix final ?",
+          "choix": [
+            "64 €",
+            "80 €",
+            "84 €",
+            "100 €"
+          ],
+          "reponse": 1,
+          "correction": "Après la hausse de 25 %, le prix est 80 × 1,25 = 100 €. La baisse de 20 % porte sur ce nouveau prix : 100 × 0,80 = 80 €. Le prix revient à son niveau de départ. Les erreurs classiques : 64 € (on oublie la hausse et on applique seulement la baisse : 80 × 0,80), 84 € (on calcule +25 % − 20 % = +5 %, alors que les deux pourcentages n'ont pas la même base) et 100 € (on s'arrête après la hausse)."
+        }
+      ]
+    },
+    {
+      "id": "N-006",
+      "titre": "Calcul et pourcentages (2)",
+      "theme": "calcul appliqué",
+      "niveau": "moyen à difficile",
+      "questions": [
+        {
+          "id": "N-006-1",
+          "enonce": "Un service traite 45 dossiers en 3 heures. À ce rythme, combien de dossiers traite-t-il en 5 heures et 20 minutes ?",
+          "choix": [
+            "78",
+            "80",
+            "95",
+            "75"
+          ],
+          "reponse": 1,
+          "correction": "Le service traite 45 ÷ 3 = 15 dossiers par heure. En 5 heures, il en traite 15 × 5 = 75. En 20 minutes, soit un tiers d'heure, il en traite 15 ÷ 3 = 5. Le total est 75 + 5 = 80 dossiers. Vérification : 5 h 20 min = 320 min, et 45 dossiers pour 180 min donne 0,25 dossier par minute, soit 0,25 × 320 = 80. Les erreurs classiques : 78 (on lit 5 h 20 comme 5,2 h : 15 × 5,2), 95 (on ajoute 20 dossiers pour 20 minutes, ce qui confond minutes et dossiers) et 75 (on oublie les 20 minutes)."
+        },
+        {
+          "id": "N-006-2",
+          "enonce": "Un service compte 150 agents. 40 % d'entre eux sont des hommes. 20 % des hommes et 50 % des femmes travaillent à temps partiel. Quel pourcentage des 150 agents travaille à temps partiel ?",
+          "choix": [
+            "32 %",
+            "35 %",
+            "70 %",
+            "38 %"
+          ],
+          "reponse": 3,
+          "correction": "Il y a 150 × 0,40 = 60 hommes et 150 − 60 = 90 femmes. À temps partiel : 60 × 0,20 = 12 hommes et 90 × 0,50 = 45 femmes, soit 12 + 45 = 57 agents. Le pourcentage est 57 ÷ 150 = 0,38, soit 38 %. Les erreurs classiques : 35 % (on fait la moyenne simple de 20 % et 50 %, sans tenir compte du nombre d'hommes et de femmes), 70 % (on additionne les deux pourcentages) et 32 % (on inverse les poids : 0,60 × 20 + 0,40 × 50 = 12 + 20)."
+        },
+        {
+          "id": "N-006-3",
+          "enonce": "Un budget passe de 250 000 € à 300 000 €, puis augmente encore de 10 %. Quelle est la hausse totale, en pourcentage du budget de départ ?",
+          "choix": [
+            "32 %",
+            "30 %",
+            "20 %",
+            "24 %"
+          ],
+          "reponse": 0,
+          "correction": "La première hausse est 300 000 ÷ 250 000 = 1,2, soit +20 %. Après la seconde hausse, le budget est 300 000 × 1,10 = 330 000 €. La hausse totale est 330 000 − 250 000 = 80 000 €. Rapportée au budget de départ : 80 000 ÷ 250 000 = 0,32, soit 32 %. Autre méthode : 1,2 × 1,1 = 1,32. Les erreurs classiques : 30 % (on additionne 20 % et 10 %, alors que la seconde hausse porte sur un budget déjà augmenté), 20 % (on oublie la seconde hausse) et 24 % (on rapporte la hausse de 80 000 € au budget final de 330 000 € au lieu du budget de départ : environ 24,2 %)."
+        },
+        {
+          "id": "N-006-4",
+          "enonce": "Un agent classe seul un lot d'archives en 6 heures. Sa collègue le classe seule en 3 heures. Ils travaillent ensemble, chacun à son rythme habituel. En combien de temps classent-ils le lot ?",
+          "choix": [
+            "4 h 30",
+            "9 h",
+            "2 h",
+            "1 h 30"
+          ],
+          "reponse": 2,
+          "correction": "En 1 heure, l'agent classe 1/6 du lot et sa collègue en classe 1/3, soit 2/6. Ensemble, ils classent 1/6 + 2/6 = 3/6 = 1/2 du lot par heure. Il leur faut donc 2 heures pour le lot entier. Vérification : en 2 heures, l'agent classe 2/6 du lot et sa collègue 4/6, soit 6/6 = 1 lot. Les erreurs classiques : 4 h 30 (on fait la moyenne de 6 h et 3 h), 9 h (on additionne les deux durées, alors qu'à deux on va plus vite) et 1 h 30 (on suppose que les deux vont aussi vite que la collègue : 3 h ÷ 2)."
+        }
+      ]
+    },
+    {
+      "id": "N-007",
+      "titre": "Suites numériques (1)",
+      "theme": "suites de nombres",
+      "niveau": "moyen à difficile",
+      "questions": [
+        {
+          "id": "N-007-1",
+          "enonce": "Quel nombre complète la suite : 4 ; 7 ; 12 ; 19 ; 28 ; ... ?",
+          "choix": [
+            "35",
+            "37",
+            "39",
+            "38"
+          ],
+          "reponse": 2,
+          "correction": "Les écarts entre deux termes consécutifs sont 7 − 4 = 3, 12 − 7 = 5, 19 − 12 = 7 et 28 − 19 = 9. Ils augmentent de 2 à chaque fois. Le prochain écart est 11, donc le terme suivant est 28 + 11 = 39. Vérification : chaque terme est un carré plus 3 (1 + 3, 4 + 3, 9 + 3, 16 + 3, 25 + 3), donc le suivant est 36 + 3 = 39. Les erreurs classiques : 35 (on ajoute 7, un écart déjà passé), 37 (on ajoute encore 9, le dernier écart) et 38 (on ajoute 10, comme si les écarts augmentaient de 1)."
+        },
+        {
+          "id": "N-007-2",
+          "enonce": "Quel nombre complète la suite : 5 ; 10 ; 8 ; 16 ; 14 ; 28 ; ... ?",
+          "choix": [
+            "26",
+            "30",
+            "56",
+            "14"
+          ],
+          "reponse": 0,
+          "correction": "Deux opérations se répètent à tour de rôle : multiplier par 2, puis retirer 2. On le vérifie : 5 × 2 = 10, 10 − 2 = 8, 8 × 2 = 16, 16 − 2 = 14, 14 × 2 = 28. L'opération suivante est « retirer 2 » : 28 − 2 = 26. Les erreurs classiques : 30 (on ajoute 2 au lieu de le retirer), 56 (on double encore, alors que c'est le tour de « − 2 ») et 14 (on soustrait le terme précédent, 14, au lieu de retirer 2)."
+        },
+        {
+          "id": "N-007-3",
+          "enonce": "Quel nombre complète la suite : 2 ; 50 ; 5 ; 45 ; 8 ; 40 ; 11 ; ... ?",
+          "choix": [
+            "14",
+            "40",
+            "30",
+            "35"
+          ],
+          "reponse": 3,
+          "correction": "Cette suite mélange deux suites. Aux rangs impairs (1er, 3e, 5e, 7e termes), on lit 2 ; 5 ; 8 ; 11 : on ajoute 3 à chaque fois. Aux rangs pairs (2e, 4e, 6e termes), on lit 50 ; 45 ; 40 : on retire 5 à chaque fois. Le terme à trouver est le 8e, donc un rang pair : 40 − 5 = 35. Les erreurs classiques : 14 (on poursuit la suite des rangs impairs, 11 + 3, alors que c'est le tour de l'autre suite), 40 (on répète le dernier terme de la suite des rangs pairs) et 30 (on retire 10 au lieu de 5, en comptant deux pas)."
+        },
+        {
+          "id": "N-007-4",
+          "enonce": "Quel nombre complète la suite : 3 ; 4 ; 6 ; 10 ; 18 ; 34 ; ... ?",
+          "choix": [
+            "68",
+            "66",
+            "50",
+            "52"
+          ],
+          "reponse": 1,
+          "correction": "Les écarts entre deux termes consécutifs sont 1, 2, 4, 8 et 16 : chaque écart est le double du précédent. Le prochain écart est 32, donc le terme suivant est 34 + 32 = 66. Vérification : 3 + (1 + 2 + 4 + 8 + 16 + 32) = 3 + 63 = 66. Les erreurs classiques : 68 (on double le dernier terme, 34 × 2, alors que ce sont les écarts qui doublent), 50 (on ajoute encore 16, le dernier écart) et 52 (on ajoute 18, comme si les écarts augmentaient de 2)."
+        }
+      ]
+    },
+    {
+      "id": "N-008",
+      "titre": "Suites numériques (2)",
+      "theme": "suites de nombres",
+      "niveau": "moyen à difficile",
+      "questions": [
+        {
+          "id": "N-008-1",
+          "enonce": "Quel nombre complète la suite : 2 ; 3 ; 5 ; 8 ; 13 ; 21 ; ... ?",
+          "choix": [
+            "29",
+            "42",
+            "32",
+            "34"
+          ],
+          "reponse": 3,
+          "correction": "Chaque terme est la somme des deux termes qui le précèdent. On le vérifie : 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13 et 8 + 13 = 21. Le terme suivant est donc 13 + 21 = 34. Les erreurs classiques : 29 (on ajoute 8, le dernier écart, alors que l'écart suivant est 13), 42 (on double le dernier terme, 21 × 2) et 32 (on ajoute 11, comme si les écarts 5 puis 8 augmentaient de 3 à chaque fois)."
+        },
+        {
+          "id": "N-008-2",
+          "enonce": "Quel nombre complète la suite : 100 ; 91 ; 83 ; 76 ; 70 ; 65 ; ... ?",
+          "choix": [
+            "60",
+            "61",
+            "62",
+            "59"
+          ],
+          "reponse": 1,
+          "correction": "Les écarts entre deux termes consécutifs sont −9, −8, −7, −6 et −5 : la baisse diminue de 1 à chaque fois. Le prochain écart est −4, donc le terme suivant est 65 − 4 = 61. Les erreurs classiques : 60 (on retire encore 5, le dernier écart), 62 (on retire 3, comme si la baisse diminuait de 2 au lieu de 1) et 59 (on retire 6, l'avant-dernier écart, au lieu de 4)."
+        },
+        {
+          "id": "N-008-3",
+          "enonce": "Quel nombre complète la suite : 1 ; 2 ; 6 ; 24 ; 120 ; ... ?",
+          "choix": [
+            "720",
+            "600",
+            "840",
+            "125"
+          ],
+          "reponse": 0,
+          "correction": "On multiplie chaque terme par un nombre qui augmente de 1 à chaque fois : 1 × 2 = 2, 2 × 3 = 6, 6 × 4 = 24 et 24 × 5 = 120. Le multiplicateur suivant est 6, donc le terme suivant est 120 × 6 = 720. Les erreurs classiques : 600 (on multiplie encore par 5, le dernier multiplicateur), 840 (on multiplie par 7, en sautant un multiplicateur) et 125 (on ajoute 5 au lieu de multiplier)."
+        },
+        {
+          "id": "N-008-4",
+          "enonce": "Quel nombre complète la suite : 3 ; 7 ; 13 ; 27 ; 53 ; ... ?",
+          "choix": [
+            "106",
+            "105",
+            "107",
+            "108"
+          ],
+          "reponse": 2,
+          "correction": "À chaque étape, on double le terme puis on ajuste de 1, en alternant « + 1 » et « − 1 ». On le vérifie : 3 × 2 + 1 = 7, 7 × 2 − 1 = 13, 13 × 2 + 1 = 27 et 27 × 2 − 1 = 53. L'ajustement suivant est « + 1 » : 53 × 2 + 1 = 107. Les erreurs classiques : 106 (on double sans faire l'ajustement), 105 (on retire 1 au lieu de l'ajouter, en répétant le dernier ajustement) et 108 (on ajoute 2 au lieu de 1)."
+        }
+      ]
+    },
+    {
+      "id": "N-009",
+      "titre": "Problèmes appliqués (1)",
+      "theme": "problèmes appliqués",
+      "niveau": "moyen à difficile",
+      "questions": [
+        {
+          "id": "N-009-1",
+          "enonce": "Une commune répartit une subvention de 21 000 € entre trois associations, proportionnellement à leur nombre de membres : 12, 18 et 30. Quelle somme reçoit l'association de 18 membres ?",
+          "choix": [
+            "7 000 €",
+            "6 300 €",
+            "3 780 €",
+            "350 €"
+          ],
+          "reponse": 1,
+          "correction": "Il y a 12 + 18 + 30 = 60 membres au total. Chaque membre correspond à 21 000 ÷ 60 = 350 €. L'association de 18 membres reçoit donc 18 × 350 = 6 300 €. Vérification : 12 × 350 + 18 × 350 + 30 × 350 = 4 200 + 6 300 + 10 500 = 21 000 €. Les erreurs classiques : 7 000 € (on partage en parts égales : 21 000 ÷ 3), 3 780 € (on lit 18 membres comme 18 % : 21 000 × 0,18) et 350 € (c'est la part d'un seul membre, pas celle de l'association)."
+        },
+        {
+          "id": "N-009-2",
+          "enonce": "Un agent fait un trajet de 60 km à l'aller à 60 km/h, puis revient par le même chemin à 40 km/h. Quelle est sa vitesse moyenne sur l'ensemble de l'aller-retour ?",
+          "choix": [
+            "50 km/h",
+            "24 km/h",
+            "48 km/h",
+            "100 km/h"
+          ],
+          "reponse": 2,
+          "correction": "À l'aller, il roule 60 km à 60 km/h, soit 1 heure. Au retour, il roule 60 km à 40 km/h, soit 1,5 heure. Au total, il parcourt 120 km en 2,5 heures. La vitesse moyenne est 120 ÷ 2,5 = 48 km/h. Les erreurs classiques : 50 km/h (on fait la moyenne simple de 60 et 40, alors que le retour dure plus longtemps), 24 km/h (on divise la distance de l'aller seul par la durée totale : 60 ÷ 2,5) et 100 km/h (on additionne les deux vitesses)."
+        },
+        {
+          "id": "N-009-3",
+          "enonce": "Une salle de formation est louée 45 € de l'heure pour les 3 premières heures. Au-delà, chaque heure supplémentaire coûte 30 €. Quel est le prix d'une location de 7 heures ?",
+          "choix": [
+            "210 €",
+            "315 €",
+            "285 €",
+            "255 €"
+          ],
+          "reponse": 3,
+          "correction": "Les 3 premières heures coûtent 3 × 45 = 135 €. Il reste 7 − 3 = 4 heures supplémentaires, qui coûtent 4 × 30 = 120 €. Le total est 135 + 120 = 255 €. Les erreurs classiques : 210 € (on applique le tarif réduit à toutes les heures : 7 × 30), 315 € (on applique le plein tarif à toutes les heures : 7 × 45) et 285 € (on compte 5 heures supplémentaires au lieu de 4 : 135 + 5 × 30)."
+        },
+        {
+          "id": "N-009-4",
+          "enonce": "Un agent et sa fille ont aujourd'hui 50 ans à eux deux. Dans 5 ans, l'agent aura exactement 3 fois l'âge de sa fille. Quel âge a sa fille aujourd'hui ?",
+          "choix": [
+            "10 ans",
+            "40 ans",
+            "15 ans",
+            "20 ans"
+          ],
+          "reponse": 0,
+          "correction": "Appelons f l'âge actuel de la fille. Celui de l'agent est 50 − f. Dans 5 ans, la fille aura f + 5 ans et l'agent 55 − f ans. On écrit 55 − f = 3 × (f + 5), soit 55 − f = 3f + 15, donc 40 = 4f et f = 10. Vérification : aujourd'hui, la fille a 10 ans et l'agent 40 ans, soit 50 ans à eux deux. Dans 5 ans, ils auront 15 et 45 ans, et 45 = 3 × 15. Les erreurs classiques : 40 ans (c'est l'âge de l'agent, pas celui de sa fille), 15 ans (c'est l'âge de la fille dans 5 ans, pas aujourd'hui) et 20 ans (on ajoute 5 ans à cet âge de 15 ans au lieu d'en retirer)."
+        }
+      ]
+    },
+    {
+      "id": "N-010",
+      "titre": "Problèmes appliqués (2)",
+      "theme": "problèmes appliqués",
+      "niveau": "moyen à difficile",
+      "questions": [
+        {
+          "id": "N-010-1",
+          "enonce": "Sur un plan à l'échelle 1/25 000, la distance entre deux bureaux mesure 4,8 cm. Quelle est la distance réelle entre ces deux bureaux ?",
+          "choix": [
+            "12 km",
+            "120 km",
+            "1,2 km",
+            "0,12 km"
+          ],
+          "reponse": 2,
+          "correction": "À l'échelle 1/25 000, 1 cm sur le plan représente 25 000 cm dans la réalité. Pour 4,8 cm, on a 4,8 × 25 000 = 120 000 cm. Or 1 km = 1 000 m = 100 000 cm. La distance réelle est donc 120 000 ÷ 100 000 = 1,2 km. Vérification : 25 000 cm = 250 m, donc 1 cm représente 250 m et 4,8 × 250 = 1 200 m = 1,2 km. Les erreurs classiques : 12 km (on compte 10 000 cm dans 1 km au lieu de 100 000), 120 km (on lit 120 000 comme des mètres alors que ce sont des centimètres) et 0,12 km (on compte 1 000 000 cm dans 1 km)."
+        },
+        {
+          "id": "N-010-2",
+          "enonce": "Un agent doit relire un rapport de 240 pages. Lundi, il en relit le quart. Mardi, il relit le tiers des pages qui lui restent. Combien de pages lui reste-t-il à relire mercredi ?",
+          "choix": [
+            "120 pages",
+            "100 pages",
+            "180 pages",
+            "60 pages"
+          ],
+          "reponse": 0,
+          "correction": "Lundi, il relit 240 ÷ 4 = 60 pages, il en reste 240 − 60 = 180. Mardi, il relit le tiers de ces 180 pages, soit 180 ÷ 3 = 60 pages. Il lui reste donc 180 − 60 = 120 pages. Vérification : 60 + 60 + 120 = 240 pages. Les erreurs classiques : 100 pages (on applique le tiers au total de 240 pages au lieu du reste : 240 − 60 − 80), 180 pages (on oublie la relecture de mardi) et 60 pages (c'est le nombre de pages relues chaque jour, pas ce qui reste à relire)."
+        },
+        {
+          "id": "N-010-3",
+          "enonce": "Une antenne administrative tient une permanence tous les 4 jours, une deuxième tous les 6 jours et une troisième tous les 10 jours. Les trois permanences ont lieu aujourd'hui. Dans combien de jours auront-elles de nouveau lieu toutes les trois le même jour ?",
+          "choix": [
+            "12 jours",
+            "60 jours",
+            "30 jours",
+            "240 jours"
+          ],
+          "reponse": 1,
+          "correction": "Il faut trouver le plus petit nombre divisible à la fois par 4, 6 et 10. On décompose : 4 = 2 × 2, 6 = 2 × 3 et 10 = 2 × 5. Le plus petit multiple commun est 2 × 2 × 3 × 5 = 60. Vérification : 60 ÷ 4 = 15, 60 ÷ 6 = 10 et 60 ÷ 10 = 6, ce sont bien des nombres entiers de permanences. Les erreurs classiques : 12 jours (on oublie le rythme de 10 jours : 12 n'est pas divisible par 10), 30 jours (on oublie le rythme de 4 jours : 30 n'est pas divisible par 4) et 240 jours (on multiplie les trois nombres : 4 × 6 × 10, ce qui donne un multiple commun mais pas le plus petit)."
+        },
+        {
+          "id": "N-010-4",
+          "enonce": "Une dépense de 240 € est partagée à parts égales entre les membres d'une équipe. Si l'équipe comptait 4 personnes de plus, chacun paierait 2 € de moins. Combien de personnes compte l'équipe ?",
+          "choix": [
+            "24",
+            "12",
+            "10",
+            "20"
+          ],
+          "reponse": 3,
+          "correction": "Appelons n le nombre de personnes. Chacun paie 240 ÷ n €. Avec 4 personnes de plus, chacun paierait 240 ÷ (n + 4) €, soit 2 € de moins. Méthode rapide : on teste les propositions. Avec n = 20, chacun paie 240 ÷ 20 = 12 €. Avec 24 personnes, chacun paierait 240 ÷ 24 = 10 €. L'écart est bien de 2 € : la réponse est 20. À l'inverse, avec n = 12, chacun paierait 20 € puis 240 ÷ 16 = 15 € : l'écart est de 5 €, ce n'est pas la bonne réponse. Autre méthode, par le calcul : 240 ÷ n − 240 ÷ (n + 4) = 2 donne n² + 4n − 480 = 0, soit (n − 20)(n + 24) = 0, donc n = 20. Les erreurs classiques : 24 (c'est le nombre de personnes après l'ajout, pas dans l'équipe de départ), 12 (c'est la part de chacun avant l'ajout, en euros) et 10 (c'est la part de chacun après l'ajout, en euros)."
+        }
+      ]
+    }
+  ]
+}

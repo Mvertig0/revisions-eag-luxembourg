@@ -368,3 +368,34 @@
   font-weight: 400;
   color: var(--texte-2);
 }
+
+/* Tableau de données (numérique) */
+.tableau-defile {
+  overflow-x: auto;
+}
+
+.tableau-donnees {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.tableau-donnees th,
+.tableau-donnees td {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--verre-bord);
+  text-align: left;
+}
+
+.tableau-donnees thead th {
+  background: var(--verre);
+  font-size: 0.9rem;
+}
+
+.tableau-donnees tbody th {
+  font-weight: 600;
+}
+
+.tableau-donnees .tableau-donnees__droite {
+  text-align: right;
+}
