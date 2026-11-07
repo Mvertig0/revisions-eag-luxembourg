@@ -399,3 +399,18 @@
 .tableau-donnees .tableau-donnees__droite {
   text-align: right;
 }
+
+/* Graphique du numérique (SVG) et choix du niveau */
+.graphique svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.formats__niveaux {
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+}
+
+.formats__niveaux .choix__corps {
+  align-items: center;
+  justify-content: center;
+}

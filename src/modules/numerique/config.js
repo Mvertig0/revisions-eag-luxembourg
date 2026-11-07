@@ -13,7 +13,18 @@ export const CLE_SESSIONS = 'numerique:sessions'
 
 // Formats de session proposés sur l'écran d'accueil.
 export const TYPES_SESSION = [
-  { id: 'melange', nom: 'Mélange', description: 'Tableaux de données et QCM ensemble.' },
+  { id: 'melange', nom: 'Mélange', description: 'Tableaux, graphiques, suites et calculs ensemble.' },
+  { id: 'graphiques', nom: 'Graphiques', description: 'Barres, courbes et camemberts : lire et calculer.' },
+  { id: 'suites', nom: 'Suites de nombres', description: 'Trouver le nombre qui complète la suite.' },
+  { id: 'calcul', nom: 'Calculs et problèmes', description: 'Pourcentages, proportions, moyennes, vitesses…' },
   { id: 'tableaux', nom: 'Tableaux de données', description: "Vrai, Faux ou Indéterminé d'après un tableau." },
-  { id: 'qcm', nom: 'Calcul, suites et problèmes', description: 'QCM : pourcentages, suites de nombres, problèmes appliqués.' },
+  { id: 'qcm', nom: 'QCM rédigés', description: 'Les 24 questions écrites à la main (calcul, suites, problèmes).' },
+]
+
+// Niveau des exercices générés (graphiques, suites, calculs). Les tableaux et les QCM rédigés ont leur propre niveau.
+export const NIVEAUX = [
+  { id: 'facile', nom: 'Facile' },
+  { id: 'moyen', nom: 'Moyen' },
+  { id: 'difficile', nom: 'Difficile' },
+  { id: 'expert', nom: 'Expert' },
 ]

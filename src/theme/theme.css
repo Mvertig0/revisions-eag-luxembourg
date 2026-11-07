@@ -64,6 +64,14 @@
 
   /* Raisonnement abstrait : couleur de fond sous les formes (liseré du point sur une forme noire) */
   --abs-fond: #f4f6fb;
+
+  /* Graphiques du module numérique (barres, courbes, camembert) */
+  --graph-1: #d97706;
+  --graph-2: #2563eb;
+  --graph-3: #059669;
+  --graph-4: #7c3aed;
+  --graph-5: #db2777;
+  --graph-6: #64748b;
 }
 
 /* ---------- Thème SOMBRE ---------- */
@@ -103,6 +111,13 @@
     --test-texte: #ddd6fe;
     --test-bord: rgba(196, 181, 253, 0.45);
     --abs-fond: #121626;
+
+    --graph-1: #fbbf24;
+    --graph-2: #60a5fa;
+    --graph-3: #34d399;
+    --graph-4: #a78bfa;
+    --graph-5: #f472b6;
+    --graph-6: #94a3b8;
   }
 }
 
@@ -141,4 +156,11 @@
   --test-texte: #ddd6fe;
   --test-bord: rgba(196, 181, 253, 0.45);
   --abs-fond: #121626;
+
+  --graph-1: #fbbf24;
+  --graph-2: #60a5fa;
+  --graph-3: #34d399;
+  --graph-4: #a78bfa;
+  --graph-5: #f472b6;
+  --graph-6: #94a3b8;
 }

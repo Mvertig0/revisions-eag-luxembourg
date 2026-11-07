@@ -23,6 +23,7 @@ function nouvelIdentifiant() {
 export default function Numerique() {
   const [phase, setPhase] = useState('accueil') // 'accueil' | 'question' | 'correction' | 'fin'
   const [type, setType] = useState('melange') // format de la session
+  const [niveau, setNiveau] = useState('moyen') // niveau des exercices générés
   const [questions, setQuestions] = useState([])
   const [debut, setDebut] = useState(0) // heure de départ du chrono (ms)
   const [index, setIndex] = useState(0)
@@ -34,10 +35,12 @@ export default function Numerique() {
   // Session en cours = écrans « question » et « correction » : toute sortie demande confirmation.
   useGardeSortie(phase === 'question' || phase === 'correction')
 
-  const commencer = useCallback((nouveauType) => {
-    const t = typeof nouveauType === 'string' ? nouveauType : type
+  const commencer = useCallback((choix) => {
+    const t = choix?.type ?? type
+    const n = choix?.niveau ?? niveau
     setType(t)
-    setQuestions(tirerSessionType(t))
+    setNiveau(n)
+    setQuestions(tirerSessionType(t, n))
     setDebut(Date.now())
     setIndex(0)
     setChoix(null)
@@ -45,7 +48,7 @@ export default function Numerique() {
     setResultat(null)
     enCours.current = true
     setPhase('question')
-  }, [type])
+  }, [type, niveau])
 
   const valider = useCallback(() => {
     if (phase !== 'question' || !choix) return
@@ -59,7 +62,8 @@ export default function Numerique() {
     const dureeSecondes = Math.max(0, Math.round((Date.now() - debut) / 1000))
     const details = questions.map((q, i) => ({
       idQuestion: q.id,
-      type: q.type, // 'tableau' ou 'qcm'
+      type: q.type, // 'tableau', 'qcm', 'graphique', 'suite' ou 'calcul'
+      ...(q.graine ? { graine: q.graine, niveau: q.niveau, modele: q.modele } : {}), // exercice généré : on peut le rejouer
       reponseDonnee: reponses[i],
       reponseAttendue: q.reponseAttendue,
       correct: reponses[i] === q.reponseAttendue,
@@ -72,6 +76,7 @@ export default function Numerique() {
       score,
       total: questions.length,
       format: type,
+      niveau,
       details,
     }
     // On n'enregistre qu'ici, à la fin. Si le navigateur refuse, on le dit sans bloquer le score.
@@ -93,7 +98,7 @@ export default function Numerique() {
       })),
     })
     setPhase('fin')
-  }, [debut, questions, reponses, type])
+  }, [debut, questions, reponses, type, niveau])
 
   const suivante = useCallback(() => {
     if (phase !== 'correction') return

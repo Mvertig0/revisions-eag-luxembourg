@@ -70,12 +70,15 @@ export default function QuestionVerbal({
       {texte && (
       <article className="texte-ref verre" aria-labelledby="texte-ref-titre">
         <p className="texte-ref__etiquette">
-          {texte.regles ? 'Consignes' : texte.tableau ? `Tableau · ${texte.theme}` : `Texte de référence · ${texte.theme}`}
+          {texte.regles ? 'Consignes' : texte.tableau ? `Tableau · ${texte.theme}` : texte.graphique ? 'Graphique' : `Texte de référence · ${texte.theme}`}
         </p>
         <h3 id="texte-ref-titre" className="texte-ref__titre">
           {texte.titre}
         </h3>
-        {texte.tableau ? (
+        {texte.graphique ? (
+          // SVG fabriqué par notre propre programme (graphiques.js), jamais du texte saisi par quelqu'un
+          <div className="graphique" dangerouslySetInnerHTML={{ __html: texte.graphique }} />
+        ) : texte.tableau ? (
           <>
             {texte.intro && <p className="texte-ref__corps">{texte.intro}</p>}
             <div className="tableau-defile">

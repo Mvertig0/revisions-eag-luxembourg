@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Calculator, CircleCheck, Lightbulb, Play, Timer } from 'lucide-react'
 import { lire } from '../../storage/stockage'
-import { CLE_SESSIONS, DUREE_SESSION_SECONDES, NB_QUESTIONS, TYPES_SESSION } from './config'
+import { CLE_SESSIONS, DUREE_SESSION_SECONDES, NB_QUESTIONS, NIVEAUX, TYPES_SESSION } from './config'
 import { nombreQuestions } from './tirage'
 import '../verbal/verbal.css'
 
@@ -19,11 +19,16 @@ function derniereSession() {
 export default function AccueilNumerique({ onCommencer }) {
   const [derniere] = useState(derniereSession)
   const [type, setType] = useState('melange')
+  const [niveau, setNiveau] = useState('moyen')
+  const genere = ['melange', 'graphiques', 'suites', 'calcul'].includes(type) // le niveau ne joue que sur les exercices générés
   const nb = nombreQuestions(type)
   // Le temps est proportionnel au nombre de questions (20 minutes pour 20 questions).
   const minutes = Math.max(1, Math.round((DUREE_SESSION_SECONDES * nb) / NB_QUESTIONS / 60))
   const consigne = {
-    melange: "Selon la question : Vrai, Faux ou Indéterminé d'après un tableau, ou la bonne proposition.",
+    melange: "Selon la question : Vrai, Faux ou Indéterminé d'après un tableau, ou la bonne proposition parmi quatre.",
+    graphiques: "Lis le graphique, puis choisis la bonne proposition parmi quatre.",
+    suites: 'Trouve le nombre qui complète chaque suite : une seule règle est possible.',
+    calcul: 'Pour chaque problème, choisis la bonne proposition parmi quatre.',
     tableaux: "Pour chaque affirmation, réponds Vrai, Faux ou Indéterminé d'après le tableau.",
     qcm: 'Pour chaque question, choisis la bonne proposition parmi les quatre.',
   }[type]
@@ -84,7 +89,28 @@ export default function AccueilNumerique({ onCommencer }) {
           </div>
         </fieldset>
 
-        <button type="button" className="bouton bouton--plein" onClick={() => onCommencer(type)}>
+        {genere && (
+          <fieldset className="choix-groupe formats">
+            <legend className="formats__titre">Niveau (exercices générés)</legend>
+            <div className="choix-liste formats__niveaux">
+              {NIVEAUX.map((n) => (
+                <label key={n.id} className="choix">
+                  <input
+                    type="radio"
+                    name="niveau"
+                    className="choix__entree"
+                    value={n.id}
+                    checked={niveau === n.id}
+                    onChange={() => setNiveau(n.id)}
+                  />
+                  <span className="choix__corps verre">{n.nom}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        )}
+
+        <button type="button" className="bouton bouton--plein" onClick={() => onCommencer({ type, niveau })}>
           <Play aria-hidden="true" />
           Commencer une session
         </button>
