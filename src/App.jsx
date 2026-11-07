@@ -9,6 +9,7 @@ import Abstrait from './pages/Abstrait'
 import Numerique from './pages/Numerique'
 import Planification from './pages/Planification'
 import Situationnel from './pages/Situationnel'
+import Suivi from './pages/Suivi'
 import Verbal from './pages/Verbal'
 import { modulesDisponibles } from './data/modules'
 
@@ -60,6 +61,7 @@ function Contenu() {
           <Route path="/numerique" element={<Numerique />} />
           <Route path="/planification" element={<Planification />} />
           <Route path="/situationnel" element={<Situationnel />} />
+          <Route path="/suivi" element={<Suivi />} />
           {modulesDisponibles
             .filter((m) => m.id !== 'verbal' && m.id !== 'abstrait' && m.id !== 'numerique' && m.id !== 'planification' && m.id !== 'situationnel')
             .map((m) => (
