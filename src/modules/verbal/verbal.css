@@ -333,3 +333,38 @@
     width: 100%;
   }
 }
+
+/* Consignes à suivre : liste numérotée des règles */
+.texte-ref__regles {
+  margin: 0;
+  padding-left: 1.4rem;
+  line-height: 1.65;
+}
+
+.texte-ref__regles li + li {
+  margin-top: 0.3rem;
+}
+
+/* Choix du format de session (écran d'accueil) */
+.formats {
+  margin-top: 1rem;
+}
+
+.formats__titre {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.formats .choix__corps {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  min-height: 0;
+}
+
+.formats__description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--texte-2);
+}

@@ -13,6 +13,7 @@ export default function QuestionVerbal({
   numero,
   total,
   debut,
+  dureeSecondes = DUREE_SESSION_SECONDES,
   choix,
   valide,
   onChoisir,
@@ -54,6 +55,8 @@ export default function QuestionVerbal({
   }, [dialogueOuvert, valide, choix, onValider, onSuivante])
 
   const { texte } = question
+  // Vrai / Faux / Indéterminé pour le format d'origine ; propositions déjà mélangées pour les QCM et les consignes.
+  const propositions = question.choix ?? REPONSES
 
   return (
     <section className="question" aria-label={`Question ${numero} sur ${total}`}>
@@ -61,21 +64,32 @@ export default function QuestionVerbal({
         <h2 ref={titreRef} tabIndex={-1} className="question__progression">
           Question {numero} sur {total}
         </h2>
-        <Chrono debut={debut} dureeSecondes={DUREE_SESSION_SECONDES} />
+        <Chrono debut={debut} dureeSecondes={dureeSecondes} />
       </div>
 
       <article className="texte-ref verre" aria-labelledby="texte-ref-titre">
-        <p className="texte-ref__etiquette">Texte de référence · {texte.theme}</p>
+        <p className="texte-ref__etiquette">{texte.regles ? 'Consignes' : `Texte de référence · ${texte.theme}`}</p>
         <h3 id="texte-ref-titre" className="texte-ref__titre">
           {texte.titre}
         </h3>
-        <p className="texte-ref__corps">{texte.texte}</p>
+        {texte.regles ? (
+          <>
+            <p className="texte-ref__corps">{texte.intro}</p>
+            <ol className="texte-ref__regles">
+              {texte.regles.map((regle, i) => (
+                <li key={i}>{regle}</li>
+              ))}
+            </ol>
+          </>
+        ) : (
+          <p className="texte-ref__corps">{texte.texte}</p>
+        )}
       </article>
 
       <fieldset className="choix-groupe">
         <legend className="affirmation">{question.affirmation}</legend>
         <div className="choix-liste">
-          {REPONSES.map((reponse) => {
+          {propositions.map((reponse) => {
             const attendue = valide && reponse === question.reponseAttendue
             const fausse = valide && reponse === choix && reponse !== question.reponseAttendue
             const etat = attendue ? ' choix__corps--bonne' : fausse ? ' choix__corps--mauvaise' : ''

@@ -13,3 +13,11 @@ export const CLE_SESSIONS = 'verbal:sessions'
 
 // Les trois réponses possibles, dans l'ordre d'affichage.
 export const REPONSES = ['Vrai', 'Faux', 'Indéterminé']
+
+// Formats de session proposés sur l'écran d'accueil du verbal.
+export const TYPES_SESSION = [
+  { id: 'melange', nom: 'Mélange', description: 'Les trois formats ensemble.' },
+  { id: 'vfi', nom: 'Vrai / Faux / Indéterminé', description: "Juger des affirmations d'après un texte." },
+  { id: 'qcm', nom: 'QCM de compréhension', description: "Choisir la bonne proposition d'après un texte." },
+  { id: 'consignes', nom: 'Consignes à suivre', description: 'Appliquer des règles à un cas précis.' },
+]

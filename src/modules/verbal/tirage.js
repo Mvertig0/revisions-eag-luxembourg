@@ -1,5 +1,6 @@
 // Préparation d'une session de « Raisonnement verbal ».
 // Ce fichier ne contient aucun affichage : il prend la banque d'exercices et renvoie la liste des questions.
+// Trois formats : Vrai / Faux / Indéterminé (vfi), QCM de compréhension (qcm), consignes à suivre (consignes).
 
 import banque from '../../data/exercices/verbal.json'
 import { NB_QUESTIONS } from './config'
@@ -15,54 +16,104 @@ export function melanger(liste, hasard = Math.random) {
   return copie
 }
 
-// Renvoie les questions d'une session, dans l'ordre où elles seront posées.
-// Chaque question : { id, affirmation, reponseAttendue, correction, texte }
-// où `texte` est le texte complet (id, titre, theme, niveau, texte).
-//
-// On tire des TEXTES entiers (comme à l'examen : quelques textes, plusieurs affirmations chacun),
-// jusqu'à avoir au moins NB_QUESTIONS affirmations. Si on dépasse, on retire au hasard l'excédent
-// sans jamais vider un texte. Les textes récents ont une affirmation vraie, une fausse et une
-// indéterminée ; on vérifie en plus l'équilibre de la session (voir plus bas).
-export function tirerSession(textes = banque.textes, hasard = Math.random) {
-  // Les textes à 2 affirmations (anciens lots) ne sont pas équilibrés : on retire au sort jusqu'à obtenir
-  // une session où chaque réponse (Vrai, Faux, Indéterminé) pèse entre 25 % et 45 % des questions.
-  const min = Math.ceil(NB_QUESTIONS * 0.25)
-  const max = Math.ceil(NB_QUESTIONS * 0.45)
-  let session = tirerUneSession(textes, hasard)
-  for (let essai = 0; essai < 200; essai++) {
-    const nombres = ['Vrai', 'Faux', 'Indéterminé'].map((r) => session.filter((q) => q.reponseAttendue === r).length)
-    if (nombres.every((n) => n >= min && n <= max) || session.length < NB_QUESTIONS) break
-    session = tirerUneSession(textes, hasard)
-  }
-  return session
-}
+// ---------- mise en forme : tout devient des « groupes » { texte, questions } ----------
+// Une question : { id, affirmation, reponseAttendue, correction, texte, type, choix? }
+// - `affirmation` est l'énoncé affiché (affirmation à juger ou question posée) ;
+// - `reponseAttendue` est le TEXTE de la bonne réponse (« Vrai », ou le texte du bon choix) ;
+// - `choix` n'existe que pour les QCM et les consignes (propositions déjà mélangées).
 
-function tirerUneSession(textes, hasard) {
-  // 1. Textes au hasard, jusqu'à avoir assez d'affirmations.
-  const choisis = []
-  let total = 0
-  for (const texte of melanger(textes, hasard)) {
-    if (total >= NB_QUESTIONS) break
-    choisis.push({ texte, affirmations: [...texte.affirmations] })
-    total += texte.affirmations.length
-  }
-
-  // 2. On retire l'excédent : au hasard, parmi les textes qui gardent au moins 1 affirmation.
-  for (let aRetirer = total - NB_QUESTIONS; aRetirer > 0; aRetirer--) {
-    const candidats = choisis.filter((c) => c.affirmations.length > 1)
-    if (candidats.length === 0) break
-    const c = candidats[Math.floor(hasard() * candidats.length)]
-    c.affirmations.splice(Math.floor(hasard() * c.affirmations.length), 1)
-  }
-
-  // 3. Les affirmations d'un même texte restent côte à côte, dans leur ordre d'origine.
-  return choisis.flatMap(({ texte, affirmations }) =>
-    affirmations.map((a) => ({
+function groupesVfi(textes) {
+  return textes.map((texte) => ({
+    texte,
+    questions: texte.affirmations.map((a) => ({
       id: a.id,
       affirmation: a.affirmation,
       reponseAttendue: a.reponse,
       correction: a.correction,
       texte,
+      type: 'vfi',
     })),
-  )
+  }))
+}
+
+function groupesChoix(blocs, type, hasard) {
+  return blocs.map(({ questions, ...texte }) => ({
+    texte,
+    questions: questions.map((q) => ({
+      id: q.id,
+      affirmation: q.enonce,
+      reponseAttendue: q.choix[q.reponse],
+      correction: q.correction,
+      texte,
+      type,
+      choix: melanger(q.choix, hasard), // l'ordre des propositions change à chaque session
+    })),
+  }))
+}
+
+const compter = (groupes) => groupes.reduce((n, g) => n + g.questions.length, 0)
+
+// Tire des GROUPES entiers (comme à l'examen : quelques textes, plusieurs questions chacun) jusqu'à avoir
+// au moins `nb` questions. Si on dépasse, on retire l'excédent au hasard sans jamais vider un groupe.
+function piocher(groupes, nb, hasard) {
+  const choisis = []
+  let total = 0
+  for (const g of melanger(groupes, hasard)) {
+    if (total >= nb) break
+    choisis.push({ questions: [...g.questions] })
+    total += g.questions.length
+  }
+  for (let aRetirer = total - nb; aRetirer > 0; aRetirer--) {
+    const candidats = choisis.filter((c) => c.questions.length > 1)
+    if (candidats.length === 0) break
+    const c = candidats[Math.floor(hasard() * candidats.length)]
+    c.questions.splice(Math.floor(hasard() * c.questions.length), 1)
+  }
+  return choisis.flatMap((c) => c.questions)
+}
+
+// ---------- session « Vrai / Faux / Indéterminé » (le format d'origine) ----------
+// Les textes à 2 affirmations (anciens lots) ne sont pas équilibrés : on retire au sort jusqu'à obtenir
+// une session où chaque réponse (Vrai, Faux, Indéterminé) pèse entre 25 % et 45 % des questions.
+export function tirerSession(textes = banque.textes, hasard = Math.random) {
+  const groupes = groupesVfi(textes)
+  const min = Math.ceil(NB_QUESTIONS * 0.25)
+  const max = Math.ceil(NB_QUESTIONS * 0.45)
+  let session = piocher(groupes, NB_QUESTIONS, hasard)
+  for (let essai = 0; essai < 200; essai++) {
+    const nombres = ['Vrai', 'Faux', 'Indéterminé'].map((r) => session.filter((q) => q.reponseAttendue === r).length)
+    if (nombres.every((n) => n >= min && n <= max) || session.length < NB_QUESTIONS) break
+    session = piocher(groupes, NB_QUESTIONS, hasard)
+  }
+  return session
+}
+
+// ---------- sessions par type ----------
+// type : 'melange' (les trois formats), 'vfi', 'qcm' ou 'consignes'.
+// Le mélange prend jusqu'à 5 questions de QCM et 5 de consignes, le reste en Vrai / Faux / Indéterminé.
+export function tirerSessionType(type = 'melange', donnees = banque, hasard = Math.random) {
+  if (type === 'vfi') return tirerSession(donnees.textes, hasard)
+  const qcm = groupesChoix(donnees.qcm ?? [], 'qcm', hasard)
+  const consignes = groupesChoix(donnees.consignes ?? [], 'consignes', hasard)
+  if (type === 'qcm') return piocher(qcm, NB_QUESTIONS, hasard)
+  if (type === 'consignes') return piocher(consignes, NB_QUESTIONS, hasard)
+  const nbQcm = Math.min(5, compter(qcm))
+  const nbConsignes = Math.min(5, compter(consignes))
+  const parties = [
+    piocher(groupesVfi(donnees.textes), NB_QUESTIONS - nbQcm - nbConsignes, hasard),
+    piocher(qcm, nbQcm, hasard),
+    piocher(consignes, nbConsignes, hasard),
+  ].filter((p) => p.length > 0)
+  return melanger(parties, hasard).flat() // les formats se suivent par blocs, dans un ordre aléatoire
+}
+
+// Nombre de questions d'une session de ce type (peut être inférieur à NB_QUESTIONS si la banque est petite).
+export function nombreQuestions(type = 'melange', donnees = banque) {
+  const vfi = compter(groupesVfi(donnees.textes))
+  const qcm = (donnees.qcm ?? []).reduce((n, b) => n + b.questions.length, 0)
+  const consignes = (donnees.consignes ?? []).reduce((n, b) => n + b.questions.length, 0)
+  if (type === 'vfi') return Math.min(NB_QUESTIONS, vfi)
+  if (type === 'qcm') return Math.min(NB_QUESTIONS, qcm)
+  if (type === 'consignes') return Math.min(NB_QUESTIONS, consignes)
+  return Math.min(NB_QUESTIONS, vfi + Math.min(5, qcm) + Math.min(5, consignes))
 }

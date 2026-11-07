@@ -8,8 +8,8 @@ import { modules } from '../data/modules'
 import { lire, ecrire } from '../storage/stockage'
 import AccueilVerbal from '../modules/verbal/AccueilVerbal'
 import QuestionVerbal from '../modules/verbal/QuestionVerbal'
-import { CLE_SESSIONS } from '../modules/verbal/config'
-import { tirerSession } from '../modules/verbal/tirage'
+import { CLE_SESSIONS, DUREE_SESSION_SECONDES, NB_QUESTIONS } from '../modules/verbal/config'
+import { tirerSessionType } from '../modules/verbal/tirage'
 import '../modules/verbal/verbal.css'
 
 const module = modules.find((m) => m.id === 'verbal')
@@ -22,6 +22,7 @@ function nouvelIdentifiant() {
 // Page « Raisonnement verbal » : accueil du module -> questions -> fin de session.
 export default function Verbal() {
   const [phase, setPhase] = useState('accueil') // 'accueil' | 'question' | 'correction' | 'fin'
+  const [type, setType] = useState('melange') // format de la session
   const [questions, setQuestions] = useState([])
   const [debut, setDebut] = useState(0) // heure de départ du chrono (ms)
   const [index, setIndex] = useState(0)
@@ -33,8 +34,10 @@ export default function Verbal() {
   // Session en cours = écrans « question » et « correction » : toute sortie demande confirmation.
   useGardeSortie(phase === 'question' || phase === 'correction')
 
-  const commencer = useCallback(() => {
-    setQuestions(tirerSession())
+  const commencer = useCallback((nouveauType) => {
+    const t = typeof nouveauType === 'string' ? nouveauType : type
+    setType(t)
+    setQuestions(tirerSessionType(t))
     setDebut(Date.now())
     setIndex(0)
     setChoix(null)
@@ -42,7 +45,7 @@ export default function Verbal() {
     setResultat(null)
     enCours.current = true
     setPhase('question')
-  }, [])
+  }, [type])
 
   const valider = useCallback(() => {
     if (phase !== 'question' || !choix) return
@@ -56,6 +59,7 @@ export default function Verbal() {
     const dureeSecondes = Math.max(0, Math.round((Date.now() - debut) / 1000))
     const details = questions.map((q, i) => ({
       idAffirmation: q.id,
+      type: q.type, // 'vfi', 'qcm' ou 'consignes' (ajouté le 8/11 ; les anciennes sessions n'ont pas ce champ = 'vfi')
       reponseDonnee: reponses[i],
       reponseAttendue: q.reponseAttendue,
       correct: reponses[i] === q.reponseAttendue,
@@ -67,6 +71,7 @@ export default function Verbal() {
       dureeSecondes,
       score,
       total: questions.length,
+      format: type,
       details,
     }
     // On n'enregistre qu'ici, à la fin. Si le navigateur refuse, on le dit sans bloquer le score.
@@ -88,7 +93,7 @@ export default function Verbal() {
       })),
     })
     setPhase('fin')
-  }, [debut, questions, reponses])
+  }, [debut, questions, reponses, type])
 
   const suivante = useCallback(() => {
     if (phase !== 'correction') return
@@ -113,6 +118,7 @@ export default function Verbal() {
           numero={index + 1}
           total={questions.length}
           debut={debut}
+          dureeSecondes={Math.max(60, Math.round((DUREE_SESSION_SECONDES * questions.length) / NB_QUESTIONS))}
           choix={choix}
           valide={phase === 'correction'}
           onChoisir={setChoix}
@@ -134,7 +140,7 @@ export default function Verbal() {
               <strong>Et maintenant ?</strong>
             </p>
             <div className="fin-actions__boutons">
-              <button type="button" className="bouton bouton--plein" onClick={commencer}>
+              <button type="button" className="bouton bouton--plein" onClick={() => commencer()}>
                 <RotateCcw aria-hidden="true" />
                 Refaire une session
               </button>

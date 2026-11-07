@@ -612,5 +612,293 @@
         }
       ]
     }
+  ],
+  "qcm": [
+    {
+      "id": "Q-001",
+      "titre": "Le recyclage du verre",
+      "theme": "sciences",
+      "niveau": "facile",
+      "texte": "Le verre est recyclable presque à l'infini : une bouteille usagée peut être fondue puis transformée en une bouteille neuve, sans perte de qualité. Cette opération demande moins d'énergie que la fabrication à partir de matières premières, car le verre recyclé fond à une température plus basse. Pour que le procédé fonctionne bien, le tri est essentiel : un seul objet étranger, comme un morceau de céramique, peut fragiliser tout un lot. C'est pourquoi les collectivités demandent aux habitants de ne déposer dans les conteneurs que des bouteilles, des pots et des bocaux, sans bouchons ni couvercles. Les vitres et la vaisselle, dont la composition est différente, sont refusées.",
+      "questions": [
+        {
+          "id": "Q-001-1",
+          "enonce": "Quelle est l'idée principale du texte ?",
+          "choix": [
+            "Le verre est un matériau fragile.",
+            "Le recyclage du verre est efficace à condition de bien trier ce que l'on dépose.",
+            "Les collectivités fabriquent elles-mêmes les bouteilles neuves à partir du verre collecté.",
+            "La vaisselle est plus facile à recycler que les bouteilles, car elle fond plus vite."
+          ],
+          "correction": "Le texte montre que le verre se recycle très bien, avec moins d'énergie, mais insiste sur le tri : « le tri est essentiel ». L'idée principale est donc que le recyclage est efficace si l'on trie correctement. Les trois autres propositions ne sont pas dites dans le texte ou le contredisent.",
+          "reponse": 1
+        },
+        {
+          "id": "Q-001-2",
+          "enonce": "Pourquoi les vitres et la vaisselle sont-elles refusées dans les conteneurs à verre ?",
+          "choix": [
+            "Elles sont fermées par des bouchons qu'il faut d'abord retirer.",
+            "Elles sont trop lourdes pour être transportées avec les bouteilles.",
+            "Elles ne peuvent jamais être fondues.",
+            "Leur composition est différente."
+          ],
+          "correction": "Le texte précise que les vitres et la vaisselle sont refusées parce que leur « composition est différente ». Rien n'est dit sur leur poids ni sur leur impossibilité d'être fondues, et les bouchons concernent les bouteilles et les pots.",
+          "reponse": 3
+        }
+      ]
+    },
+    {
+      "id": "Q-002",
+      "titre": "Les métiers du soin à domicile",
+      "theme": "société",
+      "niveau": "moyen",
+      "texte": "Dans de nombreux pays, les métiers du soin à domicile peinent à recruter. Ces emplois, occupés surtout par des femmes, sont souvent à temps partiel, avec des horaires morcelés entre plusieurs bénéficiaires et des déplacements non toujours rémunérés. Pour rendre ces postes plus attractifs, certaines structures expérimentent des plannings stables, une formation continue financée et le regroupement des tournées par quartier afin de réduire les trajets. Les premiers résultats d'une expérimentation menée dans une région montrent une baisse du nombre de démissions, mais les responsables précisent que les salaires restent le principal frein cité par les candidats.",
+      "questions": [
+        {
+          "id": "Q-002-1",
+          "enonce": "Selon le texte, quel est le principal frein cité par les candidats ?",
+          "choix": [
+            "Les horaires morcelés.",
+            "Le manque de formation continue.",
+            "Le niveau des salaires.",
+            "La longueur des trajets."
+          ],
+          "correction": "Le texte le dit explicitement : « les salaires restent le principal frein cité par les candidats ». Les horaires morcelés et les trajets sont cités comme difficultés du métier, mais pas comme le principal frein.",
+          "reponse": 2
+        },
+        {
+          "id": "Q-002-2",
+          "enonce": "Que montrent les premiers résultats de l'expérimentation menée dans une région ?",
+          "choix": [
+            "Une baisse du nombre de démissions.",
+            "La disparition de toutes les démissions.",
+            "Une hausse des salaires.",
+            "Une préférence des candidats pour le temps partiel."
+          ],
+          "correction": "Le texte parle d'« une baisse du nombre de démissions ». Il ne dit ni que les démissions ont disparu, ni que les salaires ont augmenté, ni que les candidats préfèrent le temps partiel.",
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "id": "Q-003",
+      "titre": "La pollution lumineuse",
+      "theme": "sciences",
+      "niveau": "moyen",
+      "texte": "L'éclairage nocturne des villes perturbe de nombreuses espèces animales. Les oiseaux migrateurs, qui s'orientent en partie grâce aux étoiles, peuvent être attirés par les lumières et s'épuiser en tournant autour des bâtiments. Chez les insectes, la lumière artificielle provoque des regroupements autour des lampadaires, ce qui les expose aux prédateurs. Plusieurs communes éteignent désormais l'éclairage public au milieu de la nuit, ce qui réduit aussi la facture d'électricité. Les habitants s'inquiètent parfois d'une baisse de la sécurité, mais les statistiques de la police locale ne montrent pas, pour l'instant, de hausse des cambriolages dans ces communes.",
+      "questions": [
+        {
+          "id": "Q-003-1",
+          "enonce": "Pourquoi les oiseaux migrateurs sont-ils perturbés par l'éclairage des villes ?",
+          "choix": [
+            "Parce qu'ils s'orientent grâce aux étoiles et peuvent être attirés par les lumières.",
+            "Parce que l'éclairage les empêche de trouver de la nourriture pendant leur migration.",
+            "Parce que les lampadaires les regroupent et les exposent à de nombreux prédateurs.",
+            "Parce qu'ils cherchent un abri contre le froid près des bâtiments chauffés."
+          ],
+          "correction": "Le texte explique que ces oiseaux « s'orientent en partie grâce aux étoiles » et « peuvent être attirés par les lumières ». C'est la raison donnée. L'exposition aux prédateurs concerne les insectes, et la nourriture ou le froid ne sont pas évoqués.",
+          "reponse": 0
+        },
+        {
+          "id": "Q-003-2",
+          "enonce": "Que disent les statistiques de la police locale ?",
+          "choix": [
+            "Les cambriolages ont nettement diminué dans ces communes depuis l'extinction de l'éclairage.",
+            "Les cambriolages ont fortement augmenté dans ces communes depuis l'extinction de l'éclairage.",
+            "Elles ne montrent pas, pour l'instant, de hausse des cambriolages dans ces communes.",
+            "Les habitants se sentent plus en sécurité depuis l'extinction de l'éclairage public."
+          ],
+          "correction": "Le texte indique que les statistiques « ne montrent pas, pour l'instant, de hausse des cambriolages dans ces communes ». Cela ne veut pas dire que les cambriolages ont baissé, et le texte ne parle pas du sentiment de sécurité des habitants.",
+          "reponse": 2
+        }
+      ]
+    },
+    {
+      "id": "Q-004",
+      "titre": "Le sport à l'école primaire",
+      "theme": "société",
+      "niveau": "difficile",
+      "texte": "Une étude menée dans plusieurs écoles primaires compare deux organisations de la journée. Dans la première, les élèves bénéficient de trente minutes d'activité physique supplémentaires chaque matin ; dans la seconde, l'emploi du temps reste inchangé. À la fin de l'année, les enseignants des classes de la première organisation décrivent des élèves plus calmes en classe, mais les résultats aux évaluations de lecture et de calcul ne diffèrent pas de ceux de l'autre groupe. Les auteurs soulignent que l'étude n'a duré qu'un an et que les écoles participantes avaient été choisies parce qu'elles disposaient déjà d'installations sportives.",
+      "questions": [
+        {
+          "id": "Q-004-1",
+          "enonce": "Quelles limites les auteurs reconnaissent-ils à leur étude ?",
+          "choix": [
+            "Elle porte sur un nombre d'élèves trop faible et sur une seule école de campagne.",
+            "Elle n'a duré qu'un an et concerne des écoles déjà équipées en installations sportives.",
+            "Elle n'a pas mesuré les résultats en lecture, seulement ceux de calcul et le comportement.",
+            "Elle compare plus de deux organisations de la journée, ce qui rend les résultats confus."
+          ],
+          "correction": "Les auteurs soulignent que l'étude « n'a duré qu'un an » et que les écoles avaient été « choisies parce qu'elles disposaient déjà d'installations sportives ». Les évaluations de lecture et de calcul ont bien été mesurées, et seules deux organisations sont comparées.",
+          "reponse": 1
+        },
+        {
+          "id": "Q-004-2",
+          "enonce": "Laquelle de ces conclusions est la mieux soutenue par le texte ?",
+          "choix": [
+            "L'activité physique supplémentaire améliore les résultats en calcul, mais pas ceux en lecture.",
+            "Les élèves du groupe sans activité supplémentaire étaient décrits comme plus calmes en classe.",
+            "Toutes les écoles devraient construire des installations sportives pour améliorer les résultats.",
+            "L'activité n'a pas changé les résultats, mais les élèves semblent plus calmes."
+          ],
+          "correction": "Le texte dit que les élèves du premier groupe sont décrits comme « plus calmes en classe » et que les résultats « ne diffèrent pas de ceux de l'autre groupe ». Les autres propositions affirment des choses que l'étude ne montre pas.",
+          "reponse": 3
+        }
+      ]
+    }
+  ],
+  "consignes": [
+    {
+      "id": "C-001",
+      "titre": "Le classement du courrier",
+      "niveau": "facile",
+      "intro": "Un service administratif classe chaque courrier reçu selon les règles suivantes :",
+      "regles": [
+        "Un courrier marqué « urgent » est placé dans la boîte rouge.",
+        "Un courrier non urgent qui contient une facture est placé dans la boîte verte.",
+        "Tous les autres courriers sont placés dans la boîte bleue.",
+        "Un courrier urgent qui contient une facture est, en plus d'être placé dans la boîte rouge, photocopié."
+      ],
+      "questions": [
+        {
+          "id": "C-001-1",
+          "enonce": "Un courrier non urgent contient une demande de renseignements. Où est-il placé ?",
+          "choix": [
+            "Dans la boîte rouge.",
+            "Dans la boîte verte.",
+            "Dans la boîte bleue.",
+            "Dans la boîte rouge, puis photocopié."
+          ],
+          "correction": "Le courrier n'est pas urgent (règle 1 non applicable) et ne contient pas de facture (règle 2 non applicable). C'est donc la règle 3 qui s'applique : boîte bleue.",
+          "reponse": 2
+        },
+        {
+          "id": "C-001-2",
+          "enonce": "Un courrier marqué « urgent » contient une facture. Que fait-on ?",
+          "choix": [
+            "On le place dans la boîte verte.",
+            "On le place dans la boîte rouge et on le photocopie.",
+            "On le place dans la boîte rouge sans le photocopier.",
+            "On le place dans la boîte bleue et on le photocopie."
+          ],
+          "correction": "Le courrier est urgent : il va dans la boîte rouge (règle 1). Comme il contient aussi une facture, la règle 4 ajoute une photocopie. Il n'est pas placé dans la boîte verte, qui concerne les courriers non urgents.",
+          "reponse": 1
+        }
+      ]
+    },
+    {
+      "id": "C-002",
+      "titre": "La réservation des salles",
+      "niveau": "moyen",
+      "intro": "Pour réserver une salle de réunion, on applique les règles suivantes :",
+      "regles": [
+        "La salle A accueille de 1 à 8 personnes.",
+        "La salle B accueille de 9 à 20 personnes.",
+        "Une réunion avec visioconférence doit avoir lieu dans une salle équipée d'un écran. La salle A est équipée d'un écran ; la salle B ne l'est pas.",
+        "L'auditorium est réservé aux réunions de plus de 20 personnes."
+      ],
+      "questions": [
+        {
+          "id": "C-002-1",
+          "enonce": "Une réunion de 6 personnes avec visioconférence doit être organisée. Quelle salle convient ?",
+          "choix": [
+            "La salle A.",
+            "La salle B.",
+            "L'auditorium.",
+            "Aucune des salles décrites."
+          ],
+          "correction": "Six personnes entrent dans la salle A (de 1 à 8 personnes, règle 1), qui est équipée d'un écran (règle 3). La salle B n'a pas d'écran et l'auditorium est réservé aux réunions de plus de 20 personnes.",
+          "reponse": 0
+        },
+        {
+          "id": "C-002-2",
+          "enonce": "Une réunion de 12 personnes avec visioconférence doit être organisée. Que peut-on conclure ?",
+          "choix": [
+            "La salle A convient.",
+            "La salle B convient.",
+            "L'auditorium convient.",
+            "Aucune des salles décrites ne convient."
+          ],
+          "correction": "La salle A est trop petite (8 personnes au maximum). La salle B a la bonne capacité (de 9 à 20 personnes), mais elle n'a pas d'écran, donc elle ne convient pas à une visioconférence. L'auditorium est réservé aux réunions de plus de 20 personnes. Aucune salle ne convient.",
+          "reponse": 3
+        }
+      ]
+    },
+    {
+      "id": "C-003",
+      "titre": "Les congés du service",
+      "niveau": "moyen",
+      "intro": "Dans un service de quatre agents (Alix, Bruno, Chloé et David), la direction impose les règles suivantes pour les congés d'une même semaine :",
+      "regles": [
+        "Deux agents au maximum peuvent être absents en même temps.",
+        "Alix et Bruno ne peuvent pas être absents la même semaine.",
+        "Si Chloé est absente, David doit être présent.",
+        "Alix a déjà obtenu un congé pour la semaine 2."
+      ],
+      "questions": [
+        {
+          "id": "C-003-1",
+          "enonce": "Laquelle de ces situations est possible la semaine 2 ?",
+          "choix": [
+            "Alix et Bruno sont absents.",
+            "Alix, Chloé et David sont absents.",
+            "Alix et Chloé sont absents.",
+            "Alix, Bruno et Chloé sont absents."
+          ],
+          "correction": "Alix est absent la semaine 2 (règle 4). A et D sont impossibles car Alix et Bruno ne peuvent pas être absents ensemble (règle 2). B est impossible car trois absents dépassent le maximum de deux (règle 1). C est possible : deux absents au maximum, et David est présent comme l'exige la règle 3.",
+          "reponse": 2
+        },
+        {
+          "id": "C-003-2",
+          "enonce": "Chloé et David demandent un congé pour la même semaine. Que peut décider la direction en appliquant strictement les règles ?",
+          "choix": [
+            "Accorder les deux congés.",
+            "Ne pas accorder les deux congés ensemble, car si Chloé est absente David doit être présent.",
+            "Accorder seulement le congé de David, quelle que soit la semaine.",
+            "Accorder les deux congés si Alix est présent."
+          ],
+          "correction": "La règle 3 impose que David soit présent quand Chloé est absente : ils ne peuvent donc pas être absents ensemble. La présence d'Alix ne change rien à cette règle. Rien n'oblige à refuser Chloé plutôt que David : la direction doit simplement n'en accorder qu'un des deux cette semaine-là.",
+          "reponse": 1
+        }
+      ]
+    },
+    {
+      "id": "C-004",
+      "titre": "Le tarif de la cantine",
+      "niveau": "difficile",
+      "intro": "Une commune fixe ainsi le prix des repas à la cantine scolaire :",
+      "regles": [
+        "Le tarif de base est de 4 € par repas.",
+        "Les familles dont le revenu mensuel est inférieur à 2 000 € paient la moitié du tarif de base.",
+        "À partir du troisième enfant inscrit dans la même famille, le repas de cet enfant est gratuit, quel que soit le revenu.",
+        "Pour un même repas, les réductions ne se cumulent pas : on applique la plus avantageuse pour la famille."
+      ],
+      "questions": [
+        {
+          "id": "C-004-1",
+          "enonce": "Une famille dont le revenu mensuel est de 2 400 € a deux enfants inscrits. Chacun prend 10 repas dans le mois. Combien paie-t-elle ?",
+          "choix": [
+            "40 €",
+            "60 €",
+            "100 €",
+            "80 €"
+          ],
+          "correction": "Le revenu (2 400 €) n'est pas inférieur à 2 000 € : pas de demi-tarif. Il n'y a que deux enfants : pas de repas gratuit. Tous les repas sont au tarif de base : 2 enfants × 10 repas × 4 € = 80 €.",
+          "reponse": 3
+        },
+        {
+          "id": "C-004-2",
+          "enonce": "Une famille dont le revenu mensuel est de 1 800 € a trois enfants inscrits. Chacun prend 10 repas dans le mois. Combien paie-t-elle ?",
+          "choix": [
+            "20 €",
+            "40 €",
+            "60 €",
+            "80 €"
+          ],
+          "correction": "Le revenu est inférieur à 2 000 € : les repas des deux premiers enfants sont à moitié prix, soit 2 €. Le troisième enfant mange gratuitement (règle 3), ce qui est plus avantageux que le demi-tarif : on applique la règle la plus avantageuse pour chaque repas (règle 4). Total : 2 enfants × 10 repas × 2 € = 40 €.",
+          "reponse": 1
+        }
+      ]
+    }
   ]
 }

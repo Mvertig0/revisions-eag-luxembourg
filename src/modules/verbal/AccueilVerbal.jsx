@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { CircleCheck, Lightbulb, Play, Timer } from 'lucide-react'
 import { lire } from '../../storage/stockage'
-import { CLE_SESSIONS, DUREE_SESSION_SECONDES, NB_QUESTIONS } from './config'
+import { CLE_SESSIONS, DUREE_SESSION_SECONDES, NB_QUESTIONS, TYPES_SESSION } from './config'
 import CartoucheTest from './CartoucheTest'
 import { estSimulee } from './sessionSimulee'
+import { nombreQuestions } from './tirage'
 import './verbal.css'
 
 // Dernière session enregistrée (la plus récente est en dernier), ou null s'il n'y en a pas.
@@ -25,7 +26,16 @@ function formaterDate(date) {
 // Écran d'accueil du module : les règles, le bouton pour commencer, la dernière session.
 export default function AccueilVerbal({ onCommencer }) {
   const [derniere, setDerniere] = useState(derniereSession)
-  const minutes = Math.round(DUREE_SESSION_SECONDES / 60)
+  const [type, setType] = useState('melange')
+  const nb = nombreQuestions(type)
+  // Le temps est proportionnel au nombre de questions (15 minutes pour 20 questions).
+  const minutes = Math.max(1, Math.round((DUREE_SESSION_SECONDES * nb) / NB_QUESTIONS / 60))
+  const consigne = {
+    melange: 'Selon la question : Vrai, Faux ou Indéterminé, ou la bonne proposition d\'après le texte ou les consignes.',
+    vfi: 'Pour chaque affirmation, réponds Vrai, Faux ou Indéterminé d\'après le texte.',
+    qcm: 'Pour chaque question, choisis la bonne proposition d\'après le texte.',
+    consignes: 'Pour chaque question, applique les règles données pour trouver la bonne proposition.',
+  }[type]
 
   return (
     <>
@@ -37,8 +47,7 @@ export default function AccueilVerbal({ onCommencer }) {
           <li>
             <CircleCheck aria-hidden="true" />
             <span>
-              <strong>{NB_QUESTIONS} questions.</strong> Pour chaque affirmation, réponds Vrai, Faux ou Indéterminé
-              d'après le texte.
+              <strong>{nb} questions.</strong> {consigne}
             </span>
           </li>
           <li>
@@ -55,7 +64,29 @@ export default function AccueilVerbal({ onCommencer }) {
             </span>
           </li>
         </ul>
-        <button type="button" className="bouton bouton--plein" onClick={onCommencer}>
+        <fieldset className="choix-groupe formats">
+          <legend className="formats__titre">Format</legend>
+          <div className="choix-liste">
+            {TYPES_SESSION.map((t) => (
+              <label key={t.id} className="choix">
+                <input
+                  type="radio"
+                  name="format"
+                  className="choix__entree"
+                  value={t.id}
+                  checked={type === t.id}
+                  onChange={() => setType(t.id)}
+                />
+                <span className="choix__corps verre">
+                  <span>{t.nom}</span>
+                  <span className="formats__description">{t.description}</span>
+                </span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <button type="button" className="bouton bouton--plein" onClick={() => onCommencer(type)}>
           <Play aria-hidden="true" />
           Commencer une session
         </button>
