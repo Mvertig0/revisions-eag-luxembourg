@@ -206,6 +206,411 @@
           "correction": "Le texte dit que le PIB ne tient pas compte du travail non rémunéré. Il ne donne aucune indication sur son ampleur. On ne peut ni confirmer ni infirmer le mot « importante »."
         }
       ]
+    },
+    {
+      "id": "V-010",
+      "titre": "Le sommeil des adolescents",
+      "theme": "sciences",
+      "niveau": "moyen",
+      "texte": "Pendant l'adolescence, l'horloge biologique se décale : les jeunes ont tendance à s'endormir plus tard le soir et à se réveiller plus tard le matin. Des chercheurs ont observé que, dans un groupe d'établissements ayant reculé de trente minutes l'heure de début des cours, les élèves dormaient en moyenne vingt-cinq minutes de plus par nuit. Ces établissements ont signalé moins de retards, mais les résultats scolaires n'ont pas changé de manière nette au bout d'un an. Les spécialistes recommandent entre huit et dix heures de sommeil par nuit à cet âge. Selon plusieurs enquêtes, une grande partie des adolescents dorment moins que cette durée les jours de classe.",
+      "affirmations": [
+        {
+          "id": "V-010-1",
+          "affirmation": "Dans les établissements ayant reculé de trente minutes le début des cours, les élèves dormaient en moyenne vingt-cinq minutes de plus par nuit.",
+          "reponse": "Vrai",
+          "correction": "Le texte l'indique directement : « les élèves dormaient en moyenne vingt-cinq minutes de plus par nuit »."
+        },
+        {
+          "id": "V-010-2",
+          "affirmation": "Les adolescents qui dorment moins de huit heures obtiennent de moins bons résultats scolaires.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que beaucoup d'adolescents dorment moins que la durée recommandée, mais il ne relie jamais la durée de sommeil d'un adolescent à ses résultats scolaires. On ne peut ni confirmer ni infirmer cette affirmation."
+        },
+        {
+          "id": "V-010-3",
+          "affirmation": "Au bout d'un an, les résultats scolaires avaient nettement progressé dans ces établissements.",
+          "reponse": "Faux",
+          "correction": "Le texte précise que « les résultats scolaires n'ont pas changé de manière nette au bout d'un an ». Une nette progression est donc contredite."
+        }
+      ]
+    },
+    {
+      "id": "V-011",
+      "titre": "Le paiement par carte",
+      "theme": "économie",
+      "niveau": "moyen",
+      "texte": "Le paiement par carte s'est fortement développé dans les commerces de proximité. Selon une enquête menée auprès de commerçants, la part des paiements par carte dans leur chiffre d'affaires est passée de 40 % à 65 % en six ans. Les commerçants apprécient la rapidité du paiement, mais regrettent les frais prélevés sur chaque transaction, qui pèsent surtout sur les petits montants. Certains imposent donc un montant minimum pour payer par carte. Les associations de consommateurs rappellent que cette pratique est encadrée et ne doit pas être appliquée de façon arbitraire. Les paiements en espèces restent courants pour les achats de faible valeur.",
+      "affirmations": [
+        {
+          "id": "V-011-1",
+          "affirmation": "Les commerçants regrettent la rapidité du paiement par carte.",
+          "reponse": "Faux",
+          "correction": "Le texte dit au contraire que les commerçants « apprécient la rapidité du paiement ». Ce qu'ils regrettent, ce sont les frais prélevés sur chaque transaction."
+        },
+        {
+          "id": "V-011-2",
+          "affirmation": "Selon l'enquête, la part des paiements par carte dans le chiffre d'affaires des commerçants a augmenté de 25 points en six ans.",
+          "reponse": "Vrai",
+          "correction": "La part est passée de 40 % à 65 %. Or 65 − 40 = 25 : l'augmentation est bien de 25 points de pourcentage."
+        },
+        {
+          "id": "V-011-3",
+          "affirmation": "Le montant minimum imposé par certains commerçants pour payer par carte est de dix euros.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte indique que certains commerçants imposent un montant minimum, mais ne donne aucun chiffre. On ne peut pas trancher."
+        }
+      ]
+    },
+    {
+      "id": "V-012",
+      "titre": "Le travail des enfants dans les usines",
+      "theme": "histoire",
+      "niveau": "facile",
+      "texte": "Au XIXe siècle, la mécanisation de la production textile a transformé le travail dans plusieurs pays d'Europe. Les usines employaient une main-d'œuvre nombreuse, y compris des enfants, dont les salaires étaient inférieurs à ceux des adultes. Les journées de travail dépassaient souvent douze heures. Face aux critiques de médecins et de réformateurs sociaux, des lois ont progressivement limité l'âge d'admission et la durée du travail des enfants, d'abord dans les grandes usines, puis dans les petits ateliers. L'application de ces lois est restée inégale, car les inspecteurs chargés des contrôles étaient peu nombreux.",
+      "affirmations": [
+        {
+          "id": "V-012-1",
+          "affirmation": "Les médecins ont été les premiers à critiquer le travail des enfants dans les usines.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte cite des critiques venues de médecins et de réformateurs sociaux, mais ne dit pas qui a critiqué en premier. On ne peut pas trancher."
+        },
+        {
+          "id": "V-012-2",
+          "affirmation": "Les enfants employés dans les usines étaient payés moins que les adultes.",
+          "reponse": "Vrai",
+          "correction": "Le texte le précise : les usines employaient des enfants, « dont les salaires étaient inférieurs à ceux des adultes »."
+        },
+        {
+          "id": "V-012-3",
+          "affirmation": "Le nombre d'inspecteurs était suffisant pour faire appliquer partout les lois sur le travail des enfants.",
+          "reponse": "Faux",
+          "correction": "Le texte explique que « l'application de ces lois est restée inégale, car les inspecteurs chargés des contrôles étaient peu nombreux ». Leur nombre n'était donc pas suffisant."
+        }
+      ]
+    },
+    {
+      "id": "V-013",
+      "titre": "Les abeilles et la pollinisation",
+      "theme": "sciences",
+      "niveau": "facile",
+      "texte": "Les abeilles jouent un rôle essentiel dans la pollinisation : en passant de fleur en fleur pour récolter le nectar, elles transportent le pollen et permettent aux plantes de se reproduire. On estime qu'une grande partie des cultures destinées à l'alimentation humaine dépend, au moins en partie, des insectes pollinisateurs. Depuis plusieurs années, les apiculteurs de nombreuses régions signalent une hausse de la mortalité des colonies. Les chercheurs citent plusieurs causes possibles : certains pesticides, des parasites, la disparition des fleurs sauvages. Ils précisent que l'importance relative de chaque cause varie selon les régions et reste débattue.",
+      "affirmations": [
+        {
+          "id": "V-013-1",
+          "affirmation": "Les abeilles transportent le pollen en récoltant le nectar.",
+          "reponse": "Vrai",
+          "correction": "Le texte le dit : « en passant de fleur en fleur pour récolter le nectar, elles transportent le pollen »."
+        },
+        {
+          "id": "V-013-2",
+          "affirmation": "Les chercheurs s'accordent sur une cause principale de la mortalité des colonies.",
+          "reponse": "Faux",
+          "correction": "Le texte cite plusieurs causes possibles et précise que leur importance relative « reste débattue ». Il n'y a donc pas d'accord sur une cause principale."
+        },
+        {
+          "id": "V-013-3",
+          "affirmation": "La mortalité des colonies a augmenté plus fortement en Europe que dans les autres régions du monde.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte parle de « nombreuses régions » sans les comparer entre elles et ne cite pas l'Europe. On ne peut pas trancher."
+        }
+      ]
+    },
+    {
+      "id": "V-014",
+      "titre": "Les bibliothèques municipales",
+      "theme": "société",
+      "niveau": "facile",
+      "texte": "Les bibliothèques municipales ne se limitent plus au prêt de livres. Beaucoup proposent désormais des ateliers numériques, des espaces de travail silencieux et des activités pour les enfants. Une enquête menée dans une grande ville montre que la fréquentation a augmenté de 12 % en deux ans, alors que le nombre de livres empruntés est resté stable. Les responsables y voient le signe que les visiteurs viennent aussi pour d'autres services. Les budgets d'achat de livres n'ont pas augmenté, car les dépenses ont surtout servi à aménager les locaux.",
+      "affirmations": [
+        {
+          "id": "V-014-1",
+          "affirmation": "Dans la ville étudiée, le nombre de livres empruntés a augmenté en deux ans.",
+          "reponse": "Faux",
+          "correction": "Le texte précise que « le nombre de livres empruntés est resté stable ». Il n'a donc pas augmenté."
+        },
+        {
+          "id": "V-014-2",
+          "affirmation": "Les ateliers numériques sont le service que les visiteurs apprécient le plus.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte cite les ateliers numériques parmi d'autres services, mais ne dit jamais lequel les visiteurs préfèrent. On ne peut pas trancher."
+        },
+        {
+          "id": "V-014-3",
+          "affirmation": "Dans la ville étudiée, la fréquentation des bibliothèques a augmenté de 12 % en deux ans.",
+          "reponse": "Vrai",
+          "correction": "Le texte l'indique : « la fréquentation a augmenté de 12 % en deux ans »."
+        }
+      ]
+    },
+    {
+      "id": "V-015",
+      "titre": "Les premières universités",
+      "theme": "histoire",
+      "niveau": "difficile",
+      "texte": "Les premières universités européennes apparaissent aux XIIe et XIIIe siècles, notamment à Bologne, à Paris et à Oxford. Elles naissent de regroupements de maîtres et d'étudiants qui cherchent à s'organiser pour défendre leurs intérêts. L'enseignement, dispensé en latin, repose sur la lecture commentée de textes anciens et sur des débats. À Paris, la faculté des arts, qui forme aux disciplines de base, accueille la majorité des étudiants ; ceux-ci peuvent ensuite poursuivre en théologie, en droit ou en médecine. Les étudiants viennent de régions très diverses, ce qui explique que beaucoup d'entre eux soient regroupés par nation d'origine.",
+      "affirmations": [
+        {
+          "id": "V-015-1",
+          "affirmation": "À Paris, les étudiants devaient obligatoirement passer par la faculté des arts avant de poursuivre en théologie, en droit ou en médecine.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que les étudiants de la faculté des arts « peuvent ensuite poursuivre » dans les autres disciplines, mais n'indique pas que ce passage était obligatoire. On ne peut pas trancher."
+        },
+        {
+          "id": "V-015-2",
+          "affirmation": "À Paris, la faculté de médecine accueillait la majorité des étudiants.",
+          "reponse": "Faux",
+          "correction": "Le texte précise que c'est la faculté des arts qui « accueille la majorité des étudiants ». La médecine n'est citée que comme une poursuite d'études possible."
+        },
+        {
+          "id": "V-015-3",
+          "affirmation": "L'enseignement dans ces premières universités reposait notamment sur la lecture commentée de textes anciens.",
+          "reponse": "Vrai",
+          "correction": "Le texte indique que l'enseignement « repose sur la lecture commentée de textes anciens et sur des débats »."
+        }
+      ]
+    },
+    {
+      "id": "V-016",
+      "titre": "Les déplacements à vélo en ville",
+      "theme": "société",
+      "niveau": "moyen",
+      "texte": "Pour réduire la pollution et les embouteillages, plusieurs villes encouragent les déplacements à vélo et à pied. Elles créent des pistes cyclables protégées et limitent la vitesse des voitures dans certains quartiers. Dans une ville de taille moyenne, la part des trajets quotidiens effectués à vélo est passée de 4 % à 9 % en cinq ans, tandis que celle des trajets en voiture est passée de 58 % à 51 %. Les commerçants de certaines rues piétonnes avaient craint une baisse de leur clientèle ; les mesures de fréquentation réalisées par la ville montrent plutôt une stabilité du nombre de passants.",
+      "affirmations": [
+        {
+          "id": "V-016-1",
+          "affirmation": "Dans la ville étudiée, la part des trajets à vélo a plus que doublé en cinq ans.",
+          "reponse": "Vrai",
+          "correction": "La part est passée de 4 % à 9 %. Doubler 4 % donnerait 8 % ; comme 9 % est supérieur à 8 %, la part a bien plus que doublé."
+        },
+        {
+          "id": "V-016-2",
+          "affirmation": "Le chiffre d'affaires des commerçants des rues piétonnes est resté stable.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte mesure le nombre de passants (la fréquentation), pas le chiffre d'affaires. Des passants aussi nombreux n'achètent pas forcément autant : on ne peut pas trancher."
+        },
+        {
+          "id": "V-016-3",
+          "affirmation": "Dans la ville étudiée, la part des trajets en voiture a baissé de dix points en cinq ans.",
+          "reponse": "Faux",
+          "correction": "La part est passée de 58 % à 51 %. Or 58 − 51 = 7 : la baisse est de 7 points, et non de 10."
+        }
+      ]
+    },
+    {
+      "id": "V-017",
+      "titre": "L'eau douce et l'eau potable",
+      "theme": "sciences",
+      "niveau": "moyen",
+      "texte": "Sur Terre, la quasi-totalité de l'eau est salée, et l'eau douce ne représente qu'une faible part du total. Plus des deux tiers de cette eau douce sont immobilisés sous forme de glace dans les régions polaires et les glaciers. L'eau directement accessible pour les besoins humains, issue des rivières, des lacs et des nappes souterraines, ne constitue donc qu'une petite fraction. Pour produire de l'eau potable, les usines de traitement filtrent l'eau, puis la désinfectent. Dans certaines régions côtières très sèches, des pays dessalent aussi l'eau de mer, un procédé qui consomme beaucoup d'énergie.",
+      "affirmations": [
+        {
+          "id": "V-017-1",
+          "affirmation": "Les usines de traitement désinfectent l'eau avant de la filtrer.",
+          "reponse": "Faux",
+          "correction": "Le texte indique l'ordre inverse : les usines « filtrent l'eau, puis la désinfectent »."
+        },
+        {
+          "id": "V-017-2",
+          "affirmation": "Plus de la moitié de l'eau douce de la planète est immobilisée sous forme de glace.",
+          "reponse": "Vrai",
+          "correction": "Le texte dit que « plus des deux tiers » de l'eau douce sont immobilisés sous forme de glace. Comme deux tiers est supérieur à la moitié, l'affirmation est vraie."
+        },
+        {
+          "id": "V-017-3",
+          "affirmation": "Dessaler l'eau de mer coûte plus cher que traiter l'eau d'une rivière.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que le dessalement consomme beaucoup d'énergie, mais ne compare jamais les coûts des deux procédés. On ne peut pas trancher."
+        }
+      ]
+    },
+    {
+      "id": "V-018",
+      "titre": "Le commerce équitable",
+      "theme": "économie",
+      "niveau": "moyen",
+      "texte": "Le commerce équitable vise à garantir aux producteurs de pays en développement un prix d'achat minimum pour leurs récoltes. Les produits concernés, comme le café ou le cacao, portent un label délivré après des contrôles réguliers. Les organisations qui défendent ce modèle affirment qu'il permet aux petits producteurs de mieux planifier leurs investissements, parce que leurs revenus sont plus prévisibles. Des économistes soulignent cependant que le surcoût payé par le consommateur ne revient pas intégralement au producteur, une partie couvrant les frais de certification et de distribution. Les ventes de produits labellisés augmentent chaque année, mais restent minoritaires sur le marché mondial du café.",
+      "affirmations": [
+        {
+          "id": "V-018-1",
+          "affirmation": "Le label du commerce équitable est délivré par des organismes publics.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que le label est « délivré après des contrôles réguliers », mais ne précise pas qui le délivre. On ne peut pas trancher."
+        },
+        {
+          "id": "V-018-2",
+          "affirmation": "Les organisations qui défendent le commerce équitable estiment que des revenus plus prévisibles aident les petits producteurs à planifier leurs investissements.",
+          "reponse": "Vrai",
+          "correction": "Le texte rapporte leur point de vue : le modèle permet de « mieux planifier leurs investissements, parce que leurs revenus sont plus prévisibles »."
+        },
+        {
+          "id": "V-018-3",
+          "affirmation": "Les produits labellisés représentent la majorité des ventes mondiales de café.",
+          "reponse": "Faux",
+          "correction": "Le texte précise que les ventes de produits labellisés « restent minoritaires sur le marché mondial du café ». Elles ne sont donc pas majoritaires."
+        }
+      ]
+    },
+    {
+      "id": "V-019",
+      "titre": "Relire ou se tester ?",
+      "theme": "sciences",
+      "niveau": "difficile",
+      "texte": "Des études en psychologie cognitive comparent deux méthodes pour apprendre une liste de notions. Dans la première, les participants relisent plusieurs fois leur cours. Dans la seconde, ils se testent régulièrement sans regarder leurs notes. Une semaine plus tard, les participants de la seconde méthode retrouvent en moyenne davantage d'informations, alors qu'ils se disent moins confiants juste après la séance. Les auteurs en concluent que la relecture donne une impression de maîtrise qui n'est pas toujours justifiée. Ils précisent que leurs résultats concernent des listes d'informations factuelles et ne permettent pas de généraliser à tous les types d'apprentissage.",
+      "affirmations": [
+        {
+          "id": "V-019-1",
+          "affirmation": "Une semaine plus tard, les participants qui se testaient retrouvaient en moyenne davantage d'informations que ceux qui relisaient.",
+          "reponse": "Vrai",
+          "correction": "Le texte l'indique : une semaine plus tard, les participants de la seconde méthode (se tester) « retrouvent en moyenne davantage d'informations »."
+        },
+        {
+          "id": "V-019-2",
+          "affirmation": "Juste après la séance, les participants qui se testaient se disaient plus confiants que ceux qui relisaient.",
+          "reponse": "Faux",
+          "correction": "Le texte dit l'inverse : les participants qui se testaient « se disent moins confiants juste après la séance »."
+        },
+        {
+          "id": "V-019-3",
+          "affirmation": "Se tester est la meilleure méthode pour apprendre une langue étrangère.",
+          "reponse": "Indéterminé",
+          "correction": "Les auteurs précisent que leurs résultats concernent des listes d'informations factuelles et « ne permettent pas de généraliser à tous les types d'apprentissage ». Les langues étrangères ne sont pas évoquées : on ne peut pas trancher."
+        }
+      ]
+    },
+    {
+      "id": "V-020",
+      "titre": "L'arrivée du chemin de fer",
+      "theme": "histoire",
+      "niveau": "moyen",
+      "texte": "Le développement du chemin de fer au XIXe siècle a réduit considérablement la durée des voyages. Un trajet qui prenait plusieurs jours en diligence pouvait être effectué en quelques heures. Le transport des marchandises est devenu à la fois plus rapide et moins coûteux, ce qui a favorisé la création de marchés à l'échelle nationale. Les compagnies ferroviaires ont aussi imposé une heure commune entre les villes, car des horaires fondés sur l'heure locale rendaient les correspondances impossibles à organiser. Cependant, dans les régions rurales isolées, l'arrivée de la ligne a parfois entraîné la disparition d'artisans locaux, concurrencés par des produits venus de loin.",
+      "affirmations": [
+        {
+          "id": "V-020-1",
+          "affirmation": "Selon le texte, l'arrivée du chemin de fer a toujours profité aux artisans des régions rurales.",
+          "reponse": "Faux",
+          "correction": "Le texte indique que dans les régions rurales isolées, l'arrivée de la ligne « a parfois entraîné la disparition d'artisans locaux ». Elle n'a donc pas toujours profité aux artisans."
+        },
+        {
+          "id": "V-020-2",
+          "affirmation": "Le chemin de fer a été inventé en Angleterre.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte parle des effets du chemin de fer au XIXe siècle, mais ne dit rien de son origine. On ne peut pas trancher à partir du texte seul."
+        },
+        {
+          "id": "V-020-3",
+          "affirmation": "Les compagnies ferroviaires ont imposé une heure commune entre les villes.",
+          "reponse": "Vrai",
+          "correction": "Le texte le dit : les compagnies ferroviaires ont « imposé une heure commune entre les villes »."
+        }
+      ]
+    },
+    {
+      "id": "V-021",
+      "titre": "Le vieillissement de la population",
+      "theme": "société",
+      "niveau": "difficile",
+      "texte": "Dans la plupart des pays européens, la proportion de personnes de plus de soixante-cinq ans augmente, sous l'effet conjugué de la hausse de l'espérance de vie et de la baisse de la natalité. Pour une région donnée, l'âge médian est passé de 38 ans à 43 ans en vingt ans. Cette évolution pèse sur les systèmes de retraite, financés en grande partie par les cotisations des actifs. Certains pays ont relevé l'âge de départ à la retraite, d'autres ont choisi d'augmenter les cotisations. Des démographes précisent qu'une hausse de l'immigration peut ralentir le vieillissement sans pour autant l'inverser à long terme.",
+      "affirmations": [
+        {
+          "id": "V-021-1",
+          "affirmation": "Dans tous les pays qui n'ont pas relevé l'âge de départ à la retraite, les cotisations ont augmenté.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que certains pays ont relevé l'âge de départ et que d'autres ont augmenté les cotisations. Il n'exclut pas que certains pays n'aient fait ni l'un ni l'autre : on ne peut pas trancher."
+        },
+        {
+          "id": "V-021-2",
+          "affirmation": "Selon les démographes, une hausse de l'immigration permet d'inverser le vieillissement à long terme.",
+          "reponse": "Faux",
+          "correction": "Les démographes disent qu'elle peut ralentir le vieillissement « sans pour autant l'inverser à long terme ». L'affirmation est donc contredite."
+        },
+        {
+          "id": "V-021-3",
+          "affirmation": "Dans la région citée, l'âge médian a augmenté de cinq ans en vingt ans.",
+          "reponse": "Vrai",
+          "correction": "L'âge médian est passé « de 38 ans à 43 ans en vingt ans ». Or 43 − 38 = 5."
+        }
+      ]
+    },
+    {
+      "id": "V-022",
+      "titre": "Les centres de données et l'énergie",
+      "theme": "sciences",
+      "niveau": "moyen",
+      "texte": "Les centres de données, qui hébergent les sites internet et les services en ligne, consomment beaucoup d'électricité, surtout pour alimenter les serveurs et pour les refroidir. Selon une estimation, leur consommation représente environ 1 % de l'électricité mondiale. Leur nombre augmente avec l'usage du stockage en ligne et des vidéos, mais l'efficacité des équipements s'est améliorée : la consommation par opération de calcul a nettement diminué en dix ans. Certains exploitants installent leurs centres dans des régions froides pour limiter les besoins de refroidissement, ou réutilisent la chaleur produite pour chauffer des bâtiments voisins.",
+      "affirmations": [
+        {
+          "id": "V-022-1",
+          "affirmation": "Certains exploitants réutilisent la chaleur produite par leurs centres pour chauffer des bâtiments voisins.",
+          "reponse": "Vrai",
+          "correction": "Le texte le dit : certains exploitants « réutilisent la chaleur produite pour chauffer des bâtiments voisins »."
+        },
+        {
+          "id": "V-022-2",
+          "affirmation": "La consommation totale d'électricité des centres de données a diminué en dix ans.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que la consommation par opération de calcul a nettement diminué, mais aussi que le nombre de centres augmente. Sans chiffre sur la consommation totale, on ne peut pas trancher."
+        },
+        {
+          "id": "V-022-3",
+          "affirmation": "Le refroidissement des serveurs ne consomme pas d'électricité.",
+          "reponse": "Faux",
+          "correction": "Le texte dit que les centres consomment de l'électricité « surtout pour alimenter les serveurs et pour les refroidir ». Le refroidissement en consomme donc."
+        }
+      ]
+    },
+    {
+      "id": "V-023",
+      "titre": "Le microcrédit",
+      "theme": "économie",
+      "niveau": "moyen",
+      "texte": "Le microcrédit consiste à prêter de petites sommes à des personnes qui n'ont pas accès aux banques classiques, afin qu'elles lancent ou développent une petite activité. Les prêts sont souvent accordés à des groupes dont les membres se portent garants les uns des autres. Dans plusieurs programmes, la grande majorité des emprunteurs sont des femmes, et les taux de remboursement dépassent 90 %. Des études récentes nuancent cependant l'effet du microcrédit sur la réduction de la pauvreté : il améliore la gestion du quotidien de certains foyers, mais n'entraîne pas toujours de hausse durable des revenus.",
+      "affirmations": [
+        {
+          "id": "V-023-1",
+          "affirmation": "Selon les études récentes, le microcrédit réduit toujours la pauvreté de façon durable.",
+          "reponse": "Faux",
+          "correction": "Le texte précise que le microcrédit « n'entraîne pas toujours de hausse durable des revenus ». L'affirmation est donc contredite."
+        },
+        {
+          "id": "V-023-2",
+          "affirmation": "Dans plusieurs programmes de microcrédit, la plupart des emprunteurs sont des femmes.",
+          "reponse": "Vrai",
+          "correction": "Le texte indique que dans plusieurs programmes, « la grande majorité des emprunteurs sont des femmes »."
+        },
+        {
+          "id": "V-023-3",
+          "affirmation": "Les taux d'intérêt des microcrédits sont plus élevés que ceux des banques classiques.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte parle des taux de remboursement, pas des taux d'intérêt. On ne peut pas trancher."
+        }
+      ]
+    },
+    {
+      "id": "V-024",
+      "titre": "L'Encyclopédie des Lumières",
+      "theme": "histoire",
+      "niveau": "difficile",
+      "texte": "Au XVIIIe siècle, l'Encyclopédie, dirigée par Diderot et d'Alembert, vise à rassembler et à diffuser les connaissances de son temps. Elle compte plusieurs dizaines de milliers d'articles rédigés par de nombreux contributeurs, et s'accompagne de planches illustrées montrant les métiers et les machines. Son édition est plusieurs fois interrompue : les autorités craignent que certains articles ne remettent en cause l'ordre établi, et l'ouvrage est un temps interdit. Malgré ces obstacles, l'entreprise se poursuit et les volumes se vendent bien auprès d'un public lettré, qui dépasse largement le cercle des savants.",
+      "affirmations": [
+        {
+          "id": "V-024-1",
+          "affirmation": "Les planches illustrées de l'Encyclopédie ont été dessinées par des artisans.",
+          "reponse": "Indéterminé",
+          "correction": "Le texte dit que l'ouvrage s'accompagne de planches montrant les métiers et les machines, mais ne dit pas qui les a dessinées. On ne peut pas trancher."
+        },
+        {
+          "id": "V-024-2",
+          "affirmation": "L'Encyclopédie a été interdite pendant un certain temps.",
+          "reponse": "Vrai",
+          "correction": "Le texte indique que « l'ouvrage est un temps interdit »."
+        },
+        {
+          "id": "V-024-3",
+          "affirmation": "Tous les articles de l'Encyclopédie ont été rédigés par Diderot et d'Alembert.",
+          "reponse": "Faux",
+          "correction": "Le texte précise que les articles sont « rédigés par de nombreux contributeurs » ; Diderot et d'Alembert dirigent l'ouvrage, ils n'en écrivent pas tous les articles."
+        }
+      ]
     }
   ]
 }
