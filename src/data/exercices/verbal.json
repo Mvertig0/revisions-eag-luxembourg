@@ -745,6 +745,204 @@
           "reponse": 3
         }
       ]
+    },
+    {
+      "id": "Q-005",
+      "titre": "La rénovation énergétique des logements",
+      "theme": "économie",
+      "niveau": "moyen",
+      "texte": "Les bâtiments anciens consomment beaucoup d'énergie, surtout pour le chauffage. Isoler les murs et le toit permet de réduire cette consommation, mais l'investissement initial est élevé et seuls les propriétaires disposant d'une épargne suffisante peuvent le financer facilement. Pour encourager les travaux, plusieurs États accordent des aides, dont le montant dépend des revenus du ménage. Ces aides ne suffisent pas toujours : les artisans qualifiés sont peu nombreux, et les délais d'attente pour réaliser les travaux peuvent dépasser un an. Selon une estimation, un logement correctement isolé consomme environ un tiers d'énergie de moins qu'un logement non rénové.",
+      "questions": [
+        {
+          "id": "Q-005-1",
+          "enonce": "Quelle est l'idée principale du texte ?",
+          "choix": [
+            "Les aides publiques ont réglé le problème de la consommation d'énergie des logements.",
+            "Rénover l'isolation réduit la consommation d'énergie, mais le coût et le manque d'artisans freinent les travaux.",
+            "Les artisans qualifiés refusent de travailler sur les bâtiments anciens.",
+            "Le chauffage est la seule cause de la consommation d'énergie des logements."
+          ],
+          "correction": "Le texte explique que l'isolation réduit la consommation, mais qu'elle coûte cher et que les artisans qualifiés sont peu nombreux (« les délais d'attente pour réaliser les travaux peuvent dépasser un an »). Les aides existent mais « ne suffisent pas toujours » : on ne peut donc pas dire qu'elles ont réglé le problème. Le texte ne dit pas que les artisans refusent ces travaux ni que le chauffage est la seule cause de consommation.",
+          "reponse": 1
+        },
+        {
+          "id": "Q-005-2",
+          "enonce": "D'après le texte, de quoi dépend le montant des aides accordées par les États ?",
+          "choix": [
+            "Du type de bâtiment rénové.",
+            "De la surface du logement à isoler.",
+            "Du nombre d'artisans disponibles dans la région.",
+            "Des revenus du ménage."
+          ],
+          "correction": "Le texte précise que les aides ont un montant qui « dépend des revenus du ménage ». Le type de bâtiment, la surface ou le nombre d'artisans ne sont pas cités comme critères.",
+          "reponse": 3
+        }
+      ]
+    },
+    {
+      "id": "Q-006",
+      "titre": "L'arrivée du télégraphe",
+      "theme": "histoire",
+      "niveau": "moyen",
+      "texte": "Avant le XIXe siècle, une nouvelle ne voyageait pas plus vite qu'un cavalier ou qu'un navire. L'arrivée du télégraphe électrique, dans les années 1840, change cette situation : un message codé peut désormais traverser un pays en quelques minutes. Les journaux, les banques et les armées comprennent rapidement l'intérêt de cet outil. Les premières lignes suivent les voies ferrées, ce qui facilite leur entretien. Les câbles sous-marins, posés à partir des années 1850, relient ensuite les continents, mais leur fabrication coûte cher et plusieurs tentatives échouent avant qu'une liaison durable ne soit établie entre l'Europe et l'Amérique.",
+      "questions": [
+        {
+          "id": "Q-006-1",
+          "enonce": "Dans le texte, que signifie l'expression « une liaison durable » ?",
+          "choix": [
+            "Une liaison qui fonctionne sur le long terme.",
+            "Une liaison particulièrement rapide.",
+            "Une liaison peu coûteuse à fabriquer.",
+            "Une liaison réservée aux armées."
+          ],
+          "correction": "Le texte explique que plusieurs tentatives échouent « avant qu'une liaison durable ne soit établie » : une liaison durable est donc une liaison qui tient dans le temps, par opposition aux tentatives qui ont échoué. Le texte ne dit rien de sa rapidité, de son prix par rapport aux autres ni d'une réservation aux armées.",
+          "reponse": 0
+        },
+        {
+          "id": "Q-006-2",
+          "enonce": "Pourquoi les premières lignes télégraphiques suivent-elles les voies ferrées ?",
+          "choix": [
+            "Parce que les trains transportent les messages codés.",
+            "Parce que les banques en font la demande.",
+            "Parce que cela facilite leur entretien.",
+            "Parce que les câbles coûtent moins cher sur les rails."
+          ],
+          "correction": "Le texte donne la raison : les premières lignes suivent les voies ferrées, « ce qui facilite leur entretien ». Aucune des trois autres raisons n'est avancée.",
+          "reponse": 2
+        }
+      ]
+    },
+    {
+      "id": "Q-007",
+      "titre": "Les îlots de chaleur urbains",
+      "theme": "sciences",
+      "niveau": "difficile",
+      "texte": "Dans les grandes villes, la température nocturne est souvent plus élevée de plusieurs degrés que dans les campagnes environnantes : on parle d'îlot de chaleur urbain. Ce phénomène s'explique en partie par les matériaux, comme le béton et l'asphalte, qui emmagasinent la chaleur le jour et la restituent la nuit. Les espaces verts jouent un rôle inverse : les arbres font de l'ombre et rafraîchissent l'air par évaporation. Une étude menée dans plusieurs quartiers montre que les rues bordées d'arbres sont en moyenne plus fraîches que les rues sans arbres, mais l'écart varie selon l'orientation de la rue et la densité des bâtiments. Les auteurs invitent donc à ne pas généraliser la valeur de cet écart.",
+      "questions": [
+        {
+          "id": "Q-007-1",
+          "enonce": "Que peut-on conclure de l'étude citée dans le texte ?",
+          "choix": [
+            "Les arbres rafraîchissent toutes les rues exactement de la même façon.",
+            "Les arbres réchauffent l'air pendant la nuit dans les quartiers étudiés.",
+            "Les rues bordées d'arbres sont en moyenne plus fraîches, mais l'écart n'est pas le même partout.",
+            "L'orientation de la rue est le seul facteur qui explique la température."
+          ],
+          "correction": "L'étude montre que les rues bordées d'arbres sont « en moyenne plus fraîches » mais que « l'écart varie selon l'orientation de la rue et la densité des bâtiments ». Les auteurs invitent d'ailleurs à ne pas généraliser. L'orientation n'est qu'un des facteurs cités, et rien ne dit que les arbres réchauffent l'air.",
+          "reponse": 2
+        },
+        {
+          "id": "Q-007-2",
+          "enonce": "Quel rôle le texte attribue-t-il au béton et à l'asphalte dans l'îlot de chaleur urbain ?",
+          "choix": [
+            "Ils emmagasinent la chaleur le jour et la restituent la nuit.",
+            "Ils rafraîchissent l'air par évaporation.",
+            "Ils font de l'ombre aux rues voisines.",
+            "Ils diminuent la densité des bâtiments."
+          ],
+          "correction": "Le texte dit que ces matériaux « emmagasinent la chaleur le jour et la restituent la nuit ». Le rafraîchissement par évaporation et l'ombre sont le rôle des arbres, et la densité des bâtiments n'est pas modifiée par ces matériaux.",
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "id": "Q-008",
+      "titre": "Les objets d'occasion",
+      "theme": "économie",
+      "niveau": "facile",
+      "texte": "Les ventes d'objets d'occasion, vêtements, meubles ou appareils électroniques, se sont fortement développées grâce aux plateformes en ligne. Les vendeurs y trouvent un moyen de gagner un peu d'argent en se séparant d'objets inutilisés, tandis que les acheteurs apprécient des prix inférieurs à ceux du neuf. Cette pratique présente aussi un intérêt écologique, car prolonger la vie d'un objet évite d'en produire un nouveau. Les plateformes doivent toutefois lutter contre les annonces trompeuses : certains vendeurs décrivent l'état des objets de manière inexacte ou proposent des articles contrefaits.",
+      "questions": [
+        {
+          "id": "Q-008-1",
+          "enonce": "Quel intérêt écologique des ventes d'occasion le texte mentionne-t-il ?",
+          "choix": [
+            "Elles font baisser le prix des objets neufs.",
+            "Elles obligent les vendeurs à décrire précisément leurs objets.",
+            "Elles font disparaître les annonces trompeuses des plateformes.",
+            "Elles évitent de produire un nouvel objet."
+          ],
+          "correction": "Le texte indique que « prolonger la vie d'un objet évite d'en produire un nouveau ». Les autres propositions ne concernent pas l'écologie, ou ne sont pas dites dans le texte.",
+          "reponse": 3
+        },
+        {
+          "id": "Q-008-2",
+          "enonce": "Contre quel problème les plateformes doivent-elles lutter ?",
+          "choix": [
+            "Le manque d'acheteurs.",
+            "Les annonces trompeuses.",
+            "Des prix trop bas pour les vendeurs.",
+            "Le manque de vêtements d'occasion."
+          ],
+          "correction": "Le texte précise que les plateformes doivent « lutter contre les annonces trompeuses » : descriptions inexactes de l'état des objets ou articles contrefaits.",
+          "reponse": 1
+        }
+      ]
+    },
+    {
+      "id": "Q-009",
+      "titre": "Les routes de la soie",
+      "theme": "histoire",
+      "niveau": "moyen",
+      "texte": "Pendant plusieurs siècles, un ensemble de routes terrestres et maritimes, que l'on nomme aujourd'hui « routes de la soie », a relié la Chine à la Méditerranée. On n'y transportait pas seulement de la soie : les caravanes échangeaient des épices, du papier, des métaux et des techniques. Aucun marchand ne parcourait l'ensemble du trajet : les marchandises passaient de main en main, et chaque intermédiaire prélevait sa part. Les idées et les religions circulaient aussi le long de ces routes, ce qui explique la présence de monuments bouddhistes dans des régions éloignées de leur lieu d'origine.",
+      "questions": [
+        {
+          "id": "Q-009-1",
+          "enonce": "Laquelle de ces affirmations est la mieux appuyée par le texte ?",
+          "choix": [
+            "Un même marchand parcourait toute la route entre la Chine et la Méditerranée.",
+            "Les marchandises passaient de main en main, chaque intermédiaire prélevant sa part.",
+            "Les routes de la soie servaient uniquement à transporter de la soie.",
+            "Le bouddhisme est né dans les régions bordant la Méditerranée."
+          ],
+          "correction": "Le texte dit que « les marchandises passaient de main en main, et chaque intermédiaire prélevait sa part ». Il précise qu'aucun marchand ne parcourait l'ensemble du trajet, qu'on y transportait d'autres produits que la soie, et il ne dit rien de l'origine du bouddhisme.",
+          "reponse": 1
+        },
+        {
+          "id": "Q-009-2",
+          "enonce": "Que montre, selon le texte, la présence de monuments bouddhistes dans des régions éloignées de leur lieu d'origine ?",
+          "choix": [
+            "Que les caravanes transportaient surtout des monuments.",
+            "Que les routes étaient réservées aux pèlerins.",
+            "Que la soie était fabriquée dans ces régions.",
+            "Que les idées et les religions circulaient aussi le long des routes."
+          ],
+          "correction": "Le texte relie cette présence au fait que « les idées et les religions circulaient aussi le long de ces routes ». Il ne dit pas que les routes étaient réservées aux pèlerins ni que la soie y était fabriquée.",
+          "reponse": 3
+        }
+      ]
+    },
+    {
+      "id": "Q-010",
+      "titre": "Le bruit dans les bureaux",
+      "theme": "société",
+      "niveau": "moyen",
+      "texte": "Dans les bureaux paysagers, le bruit ambiant est l'une des premières causes d'insatisfaction des salariés. Une enquête menée auprès de plusieurs entreprises montre que les conversations proches gênent davantage que les bruits de fond réguliers, comme celui d'une ventilation. Plusieurs entreprises ont réagi en aménageant des espaces de téléphone isolés et des zones de travail silencieuses. D'après les salariés interrogés, ces mesures ont amélioré leur concentration, mais certains regrettent que ces espaces soient trop peu nombreux aux heures de forte affluence. Les chercheurs notent qu'aucune solution unique ne convient à tous les types de tâches.",
+      "questions": [
+        {
+          "id": "Q-010-1",
+          "enonce": "Selon l'enquête, qu'est-ce qui gêne le plus les salariés ?",
+          "choix": [
+            "Les conversations proches.",
+            "Le bruit régulier de la ventilation.",
+            "Le manque d'espaces de pause.",
+            "La température des bureaux."
+          ],
+          "correction": "L'enquête montre que « les conversations proches gênent davantage que les bruits de fond réguliers, comme celui d'une ventilation ». La pause et la température ne sont pas évoquées.",
+          "reponse": 0
+        },
+        {
+          "id": "Q-010-2",
+          "enonce": "Quel reproche certains salariés adressent-ils aux nouveaux espaces aménagés ?",
+          "choix": [
+            "Ils sont trop bruyants.",
+            "Ils nuisent à la concentration.",
+            "Ils sont trop peu nombreux aux heures de forte affluence.",
+            "Ils sont réservés aux responsables."
+          ],
+          "correction": "Certains salariés regrettent que ces espaces soient « trop peu nombreux aux heures de forte affluence ». Les mesures ont au contraire amélioré la concentration, selon les salariés interrogés.",
+          "reponse": 2
+        }
+      ]
     }
   ],
   "consignes": [
@@ -897,6 +1095,234 @@
           ],
           "correction": "Le revenu est inférieur à 2 000 € : les repas des deux premiers enfants sont à moitié prix, soit 2 €. Le troisième enfant mange gratuitement (règle 3), ce qui est plus avantageux que le demi-tarif : on applique la règle la plus avantageuse pour chaque repas (règle 4). Total : 2 enfants × 10 repas × 2 € = 40 €.",
           "reponse": 1
+        }
+      ]
+    },
+    {
+      "id": "C-005",
+      "titre": "Les priorités au guichet",
+      "niveau": "facile",
+      "intro": "Au guichet d'une administration, les personnes sont reçues dans l'ordre suivant :",
+      "regles": [
+        "Les personnes munies d'un rendez-vous passent avant les personnes sans rendez-vous.",
+        "Entre personnes munies d'un rendez-vous, on passe selon l'heure du rendez-vous.",
+        "Entre personnes sans rendez-vous, on passe selon l'ordre d'arrivée.",
+        "Une personne à mobilité réduite passe en premier, quelle que soit sa situation."
+      ],
+      "questions": [
+        {
+          "id": "C-005-1",
+          "enonce": "Léa a rendez-vous à 10 h 30 et est arrivée à 10 h 05. Marc n'a pas de rendez-vous et est arrivé à 9 h 50. Nora a rendez-vous à 10 h 00 et est arrivée à 10 h 00. Aucune des trois personnes n'est à mobilité réduite. Dans quel ordre passent-elles ?",
+          "choix": [
+            "Marc, Nora, Léa.",
+            "Nora, Léa, Marc.",
+            "Léa, Nora, Marc.",
+            "Nora, Marc, Léa."
+          ],
+          "correction": "Nora et Léa ont un rendez-vous : elles passent avant Marc, qui n'en a pas, même s'il est arrivé le premier (règle 1). Entre elles, on suit l'heure du rendez-vous : Nora (10 h 00) avant Léa (10 h 30) (règle 2). L'ordre est Nora, Léa, Marc.",
+          "reponse": 1
+        },
+        {
+          "id": "C-005-2",
+          "enonce": "Même situation, mais Marc est une personne à mobilité réduite. Dans quel ordre passent-elles ?",
+          "choix": [
+            "Marc, Nora, Léa.",
+            "Nora, Marc, Léa.",
+            "Marc, Léa, Nora.",
+            "Nora, Léa, Marc."
+          ],
+          "correction": "Une personne à mobilité réduite passe en premier quelle que soit sa situation (règle 4), même sans rendez-vous : Marc passe donc en premier. Nora et Léa passent ensuite selon l'heure de leur rendez-vous (règles 1 et 2) : Nora, puis Léa.",
+          "reponse": 0
+        }
+      ]
+    },
+    {
+      "id": "C-006",
+      "titre": "Le remboursement des frais de déplacement",
+      "niveau": "moyen",
+      "intro": "Une entreprise rembourse les frais de déplacement de ses salariés selon les règles suivantes :",
+      "regles": [
+        "Le trajet en train est remboursé à 100 % sur présentation du billet.",
+        "Le trajet en voiture personnelle est remboursé à raison de 0,50 € par kilomètre.",
+        "Le remboursement du trajet en voiture personnelle est plafonné à 60 € par déplacement.",
+        "Un salarié ne peut demander qu'un seul mode de remboursement pour un même déplacement."
+      ],
+      "questions": [
+        {
+          "id": "C-006-1",
+          "enonce": "Un salarié parcourt 90 km en voiture personnelle pour un déplacement. Quel remboursement reçoit-il ?",
+          "choix": [
+            "90 €",
+            "60 €",
+            "30 €",
+            "45 €"
+          ],
+          "correction": "90 km × 0,50 € = 45 €. Ce montant est inférieur au plafond de 60 € (règle 3) : le remboursement est de 45 €.",
+          "reponse": 3
+        },
+        {
+          "id": "C-006-2",
+          "enonce": "Un salarié parcourt 160 km en voiture personnelle pour un déplacement. Quel remboursement reçoit-il ?",
+          "choix": [
+            "80 €",
+            "60 €",
+            "100 €",
+            "50 €"
+          ],
+          "correction": "160 km × 0,50 € = 80 €. Ce montant dépasse le plafond de 60 € par déplacement (règle 3) : le remboursement est limité à 60 €.",
+          "reponse": 1
+        }
+      ]
+    },
+    {
+      "id": "C-007",
+      "titre": "Le tri des dossiers de candidature",
+      "niveau": "moyen",
+      "intro": "Un service classe les dossiers de candidature selon les règles suivantes :",
+      "regles": [
+        "Un dossier incomplet est renvoyé au candidat, quelle que soit sa date de réception.",
+        "Un dossier complet reçu avant le 1er mars est examiné par la commission A.",
+        "Un dossier complet reçu à partir du 1er mars est examiné par la commission B.",
+        "Le dossier complet d'un candidat déjà employé dans le service est examiné par la commission A, quelle que soit sa date de réception."
+      ],
+      "questions": [
+        {
+          "id": "C-007-1",
+          "enonce": "Un candidat déjà employé dans le service envoie un dossier complet le 15 avril. Qui examine ce dossier ?",
+          "choix": [
+            "La commission A.",
+            "La commission B.",
+            "Personne : le dossier est renvoyé au candidat.",
+            "Les deux commissions ensemble."
+          ],
+          "correction": "Le dossier est complet (la règle 1 ne s'applique pas) et le candidat est déjà employé dans le service : la règle 4 s'applique. Le dossier est examiné par la commission A, même s'il est reçu après le 1er mars (ce que la règle 3 prévoirait sinon).",
+          "reponse": 0
+        },
+        {
+          "id": "C-007-2",
+          "enonce": "Un candidat déjà employé dans le service envoie un dossier incomplet le 10 février. Que devient ce dossier ?",
+          "choix": [
+            "Il est examiné par la commission A.",
+            "Il est examiné par la commission B.",
+            "Il est renvoyé au candidat.",
+            "Il est examiné par la commission A, puis par la commission B."
+          ],
+          "correction": "La règle 1 s'applique à tout dossier incomplet, quelle que soit sa date de réception. La règle 4 ne concerne que le dossier complet d'un candidat déjà employé : elle ne s'applique pas ici. Le dossier est renvoyé au candidat.",
+          "reponse": 2
+        }
+      ]
+    },
+    {
+      "id": "C-008",
+      "titre": "L'organisation des sessions de formation",
+      "niveau": "difficile",
+      "intro": "Un service organise trois sessions de formation (S1, S2 et S3). Chaque session a lieu un jour différent, parmi le lundi, le mardi et le mercredi, selon les contraintes suivantes :",
+      "regles": [
+        "S1 a lieu avant S2.",
+        "S3 n'a pas lieu le mardi.",
+        "S2 n'a pas lieu le lundi."
+      ],
+      "questions": [
+        {
+          "id": "C-008-1",
+          "enonce": "Quel programme respecte toutes les contraintes ?",
+          "choix": [
+            "S1 le lundi, S2 le mercredi, S3 le mardi.",
+            "S1 le mercredi, S2 le mardi, S3 le lundi.",
+            "S1 le lundi, S2 le mardi, S3 le mercredi.",
+            "S1 le mardi, S2 le lundi, S3 le mercredi."
+          ],
+          "correction": "A est impossible : S3 y a lieu le mardi (règle 2). B est impossible : S1 y a lieu après S2 (règle 1). D est impossible : S2 y a lieu le lundi (règle 3) et avant S1 (règle 1). Dans C, S1 (lundi) précède S2 (mardi), S3 n'a pas lieu le mardi et S2 n'a pas lieu le lundi.",
+          "reponse": 2
+        },
+        {
+          "id": "C-008-2",
+          "enonce": "La session S1 a lieu le mardi. Que peut-on en conclure ?",
+          "choix": [
+            "S3 a lieu le mercredi.",
+            "S2 a lieu le mardi.",
+            "Aucun programme n'est possible.",
+            "S3 a lieu le lundi."
+          ],
+          "correction": "S1 a lieu le mardi et S2 doit avoir lieu après S1 (règle 1) : S2 a donc lieu le mercredi. Il ne reste que le lundi pour S3, ce qui respecte la règle 2 (S3 n'a pas lieu le mardi). S3 a lieu le lundi.",
+          "reponse": 3
+        }
+      ]
+    },
+    {
+      "id": "C-009",
+      "titre": "Le prêt de livres",
+      "niveau": "facile",
+      "intro": "Une bibliothèque municipale applique les règles de prêt suivantes :",
+      "regles": [
+        "Un adulte peut emprunter 5 livres en même temps.",
+        "Un enfant de moins de 12 ans peut en emprunter 3 en même temps.",
+        "Un livre est prêté pour 21 jours.",
+        "Un livre peut être prolongé une seule fois de 7 jours, sauf s'il a été réservé par un autre lecteur."
+      ],
+      "questions": [
+        {
+          "id": "C-009-1",
+          "enonce": "Un adulte a déjà emprunté 4 livres. Combien peut-il encore en emprunter ?",
+          "choix": [
+            "0",
+            "1",
+            "3",
+            "5"
+          ],
+          "correction": "Un adulte peut emprunter 5 livres en même temps (règle 1). Il en a déjà 4 : 5 − 4 = 1 livre.",
+          "reponse": 1
+        },
+        {
+          "id": "C-009-2",
+          "enonce": "Un adulte souhaite prolonger un livre emprunté depuis 21 jours, mais un autre lecteur l'a réservé. Que doit-il faire ?",
+          "choix": [
+            "Le prolonger de 7 jours.",
+            "Le prolonger de 14 jours.",
+            "Le garder jusqu'à la fin du mois.",
+            "Le rendre au terme des 21 jours, sans prolongation."
+          ],
+          "correction": "La prolongation de 7 jours n'est pas possible si le livre a été réservé par un autre lecteur (règle 4). Le livre est prêté pour 21 jours (règle 3) : il doit être rendu à la fin de ce délai.",
+          "reponse": 3
+        }
+      ]
+    },
+    {
+      "id": "C-010",
+      "titre": "Les codes d'accès",
+      "niveau": "difficile",
+      "intro": "Le code d'accès d'un bâtiment est composé selon les règles suivantes :",
+      "regles": [
+        "Le code comporte quatre chiffres.",
+        "Le premier chiffre est le numéro de l'étage du service, de 1 à 5.",
+        "Le deuxième chiffre est pair.",
+        "Le troisième chiffre est la somme des deux premiers chiffres si cette somme est inférieure à 10 ; sinon, c'est 9.",
+        "Le quatrième chiffre est 0 pour le personnel et 1 pour les visiteurs."
+      ],
+      "questions": [
+        {
+          "id": "C-010-1",
+          "enonce": "Un membre du personnel travaille au 3e étage et son deuxième chiffre est 4. Quel est son code ?",
+          "choix": [
+            "3480",
+            "3471",
+            "3407",
+            "3470"
+          ],
+          "correction": "Premier chiffre : 3 (étage). Deuxième chiffre : 4 (pair). Troisième chiffre : 3 + 4 = 7, inférieur à 10, donc 7. Quatrième chiffre : 0 (personnel). Le code est 3470.",
+          "reponse": 3
+        },
+        {
+          "id": "C-010-2",
+          "enonce": "Un visiteur se rend au 5e étage et son deuxième chiffre est 8. Quel est son code ?",
+          "choix": [
+            "5891",
+            "5871",
+            "5890",
+            "5813"
+          ],
+          "correction": "Premier chiffre : 5 (étage). Deuxième chiffre : 8 (pair). Troisième chiffre : 5 + 8 = 13, qui n'est pas inférieur à 10 : c'est donc 9. Quatrième chiffre : 1 (visiteur). Le code est 5891.",
+          "reponse": 0
         }
       ]
     }
